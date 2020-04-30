@@ -1,0 +1,13 @@
+<import src="../../../common/head.wxml"></import>
+<import src="../../../common/foot.wxml"></import>
+
+<view  class="container">
+  <template  is="head" data="{{title: 'backgroundAudio'}}"></template>
+
+  <view  class="page-section">
+    <button  type="default" size="default" bindtap="onMusicTap"> Button </button>
+    <view  class="page-body-text tc">注意：离开当前页面后背景音乐将保持播放，但退出小程序将停止</view>
+  </view>
+
+  <template  is="foot"></template>
+</view>

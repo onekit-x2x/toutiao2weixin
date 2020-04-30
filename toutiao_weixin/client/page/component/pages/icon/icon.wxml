@@ -1,0 +1,20 @@
+<import src="../../../common/head.wxml"></import>
+<import src="../../../common/foot.wxml"></import>
+
+<view  class="ttui-flex icon-line" wx:for="{{icons}}" wx:for-item="iconline">
+    <view  class="ttui-flex__item icon-single-wrapper" wx:for="{{iconline}}" wx:for-item="icon">
+        <label >
+            <icon  class="tt-icon" type="{{icon}}"></icon>
+            {{icon}}
+        </label>
+    </view>
+</view>
+
+<view  class="icon-wrapper" wx:for="{{sizes}}">
+    <icon  class="tt-icon" size="{{item}}" type="success"></icon>
+    <view  class="icon-size">{{item}}</view>
+</view>
+
+<view  class="icon-wrapper" wx:for="{{colors}}">
+    <icon  class="tt-icon" size="36" color="{{item}}" type="success"></icon>
+</view>

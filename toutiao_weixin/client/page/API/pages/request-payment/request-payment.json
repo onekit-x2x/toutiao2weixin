@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发起支付",
+  "usingComponents": {
+    "tt_ad": "/onekit/ui/ad/ad",
+    "tt_video": "/onekit/ui/video/video"
+  }
+}

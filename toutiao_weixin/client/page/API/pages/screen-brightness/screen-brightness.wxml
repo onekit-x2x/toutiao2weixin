@@ -1,0 +1,13 @@
+<import src="../../../common/head.wxml"></import>
+<import src="../../../common/foot.wxml"></import>
+
+<view  class="container">
+  <template  is="head" data="{{title: 'setKeepScreenOn'}}"></template>
+  <view  class="page-body">
+    <view  class="page-section page-section-gap">
+        <button  type="primary" size="default" bindtap="setKeepScreenOn"> 设置屏幕常亮关闭 </button>
+    </view>
+  </view>
+
+  <template  is="foot"></template>
+</view>
