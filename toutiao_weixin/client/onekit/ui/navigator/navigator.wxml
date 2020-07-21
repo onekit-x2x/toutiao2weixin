@@ -1,0 +1,13 @@
+<navigator
+class="onekit-navigator {{Class}}"
+style="{{Style}}"
+url="{{url}}"
+delta="{{delta}}"
+open-type="{{openType}}"
+hover-class="{{hoverClass}}"
+hover-start-time="{{hoverStartTime}}"
+hover-stay-time="{{hoverStayTime}}"
+hover-stop-propagation="{{hoverStopPropagation}}"
+>
+<slot/>
+</navigator>

@@ -13,9 +13,9 @@
             <view  class="weui-label">当前选择</view>
           </view>
           <view  class="weui-cell__bd">
-            <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <onekit-picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
               <view  class="weui-input">{{array[index]}}</view>
-            </picker>
+            </onekit-picker>
           </view>
         </view>
       </view>
@@ -27,9 +27,9 @@
             <view  class="weui-label">当前选择</view>
           </view>
           <view  class="weui-cell__bd">
-            <picker  mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <onekit-picker  mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
               <view  class="weui-input">{{time}}</view>
-            </picker>
+            </onekit-picker>
           </view>
         </view>
       </view>
@@ -41,9 +41,9 @@
             <view  class="weui-label">当前选择</view>
           </view>
           <view  class="weui-cell__bd">
-            <picker  mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <onekit-picker  mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
               <view  class="weui-input">{{date}}</view>
-            </picker>
+            </onekit-picker>
           </view>
         </view>
       </view>

@@ -1,7 +1,9 @@
 {
   "navigationBarTitleText": "canvas",
   "usingComponents": {
-    "tt_ad": "/onekit/ui/ad/ad",
-    "tt_video": "/onekit/ui/video/video"
+    "onekit-ad": "/onekit/ui/ad/ad",
+    "onekit-video": "/onekit/ui/video/video",
+    "onekit-view": "/onekit/ui/view/view",
+    "onekit-canvas": "/onekit/ui/canvas/canvas"
   }
 }

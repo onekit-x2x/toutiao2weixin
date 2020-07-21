@@ -8,8 +8,8 @@
     <view  class="page-section page-section-gap">
       <view  class="page-section-title">默认样式</view>
       <view  class="body-view">
-        <switch  checked bindchange="switch1Change"></switch>
-        <switch  bindchange="switch2Change"></switch>
+        <onekit-switch  checked bindchange="switch1Change"></onekit-switch>
+        <onekit-switch  bindchange="switch2Change"></onekit-switch>
       </view>
     </view>
 
@@ -19,13 +19,13 @@
         <view  class="weui-cell weui-cell_switch">
           <view  class="weui-cell__bd">开启中</view>
           <view  class="weui-cell__ft">
-            <switch  checked></switch>
+            <onekit-switch  checked></onekit-switch>
           </view>
         </view>
         <view  class="weui-cell weui-cell_switch">
           <view  class="weui-cell__bd">关闭</view>
           <view  class="weui-cell__ft">
-            <switch ></switch>
+            <onekit-switch ></onekit-switch>
           </view>
         </view>
       </view>

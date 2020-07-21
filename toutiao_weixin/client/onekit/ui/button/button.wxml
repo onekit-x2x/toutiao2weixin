@@ -1,0 +1,18 @@
+<button
+class="onekit_button Class {{Class}}"
+style="{{Style}}"
+  size="{{size}}"
+  type="{{type}}"
+  plain="{{plain}}"
+  disabled="{{disabled}}"
+  loading="{{loading}}"
+  form-type="{{formType}}"
+  open-type="{{openType}}"
+  hover-class="{{hoverClass}}"
+  hover-stop-propagation="{{hoverStopPropagation}}"
+  hover-start-time="{{hoverStartTime}}"
+  hover-stay-time="{{hoverStayTime}}"
+  bindgetphonenumber="bindgetphonenumber"
+  >
+ <slot/>
+</button> 

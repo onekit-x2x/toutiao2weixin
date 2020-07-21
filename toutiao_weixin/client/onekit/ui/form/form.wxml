@@ -1,0 +1,10 @@
+<form
+class="onekit-form {{Class}}"
+style="{{Style}}"
+report-submit="{{reportSubmit}}"
+report-submit-timeout="{{reportSubmitTimeout}}"
+bindreset="form_bindreset"
+bindsubmit="{{form_bindsubmit}}"
+>
+<slot></slot>
+</form>

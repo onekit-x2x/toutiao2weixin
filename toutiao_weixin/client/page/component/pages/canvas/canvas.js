@@ -1,65 +1,136 @@
 import tt from "../../../../onekit/tt"
 
 Page({
-  onShareAppMessage() {
-    return {
-      title: 'canvas',
-      path: 'page/component/pages/canvas/canvas'
-    }
+  onLoad(res) {
+
+  },
+  onShow: function (res) {
+      this.ctx = tt.createCanvasContext('canvas')
+      this.r = 300 / 2;
+      this.rem = 300 / 200;
+
+      this.interval = setInterval(() => {
+          this.draw();
+      }, 1000);
+  },
+  drawBackground() {
+      let ctx = this.ctx;
+      let r = this.r;
+      let rem = this.rem;
+
+      ctx.save();
+      ctx.translate(r, r);
+      ctx.beginPath();
+      ctx.lineWidth = 10 * rem;
+      ctx.arc(0, 0, r - ctx.lineWidth / 2, 0, 2 * Math.PI, false);
+      ctx.stroke();
+
+      var hourNumber = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];
+      ctx.font = 18 * rem + 'px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      hourNumber.forEach(function (number, i) {
+          var rad = 2 * Math.PI / 12 * i;
+          var x = Math.cos(rad) * (r - 30 * rem);
+          var y = Math.sin(rad) * (r - 30 * rem);
+          ctx.fillText(number, x, y);
+      });
+      for (var i = 0; i < 60; i++) {
+          var rad = 2 * Math.PI / 60 * i;
+          var x = Math.cos(rad) * (r - 18 * rem);
+          var y = Math.sin(rad) * (r - 18 * rem);
+          ctx.beginPath();
+          if (i % 5 === 0) {
+              ctx.fillStyle = '#000';
+              ctx.arc(x, y, 2 * rem, 0, 2, 2 * Math.PI, false);
+          } else {
+              ctx.fillStyle = '#ccc';
+              ctx.arc(x, y, 2 * rem, 0, 2, 2 * Math.PI, false);
+          }
+          ctx.fill();
+      }
+  },
+  drawHour(hour, minute) {
+      let ctx = this.ctx;
+      let r = this.r;
+      let rem = this.rem;
+
+      ctx.save();
+      ctx.beginPath();
+      var rad = 2 * Math.PI / 12 * hour; //计算时钟转动的弧度
+      var mrad = 2 * Math.PI / 12 / 60 * minute; //计算分针转动的弧度
+      ctx.rotate(rad + mrad);
+      ctx.lineWidth = 6;
+      ctx.lineCap = 'round';
+      ctx.moveTo(0, 10 * rem);
+      ctx.lineTo(0, -r / 2);
+      ctx.stroke();
+      ctx.restore();
+  },
+  drawMinute(minute) {
+      let ctx = this.ctx;
+      let r = this.r;
+      let rem = this.rem;
+
+      ctx.save();
+      ctx.beginPath();
+      var rad = 2 * Math.PI / 60 * minute; //计算分针转动的弧度
+      ctx.rotate(rad);
+      ctx.lineWidth = 3 * rem;
+      ctx.lineCap = 'round';
+      ctx.moveTo(0, 10);
+      ctx.lineTo(0, -r + 30 * rem);
+      ctx.stroke();
+      ctx.restore();
   },
 
-  onReady() {
-    this.position = {
-      x: 150,
-      y: 150,
-      vx: 2,
-      vy: 2
-    }
 
-    this.drawBall()
-    this.interval = setInterval(this.drawBall, 17)
+  drawSecond(second) {
+      let ctx = this.ctx;
+      let r = this.r;
+      let rem = this.rem;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.fillStyle = '#c14443';
+      var rad = 2 * Math.PI / 60 * second; //计算秒针转动的弧度
+      ctx.rotate(rad);
+      ctx.moveTo(-2, 20 * rem);
+      ctx.lineTo(2, 20 * rem);
+      ctx.lineTo(1, -r + 18 * rem);
+      ctx.lineTo(-1, -r + 18 * rem);
+      ctx.fill();
+      ctx.restore();
   },
 
-  drawBall() {
-    const p = this.position
-    p.x += p.vx
-    p.y += p.vy
-    if (p.x >= 300) {
-      p.vx = -2
-    }
-    if (p.x <= 7) {
-      p.vx = 2
-    }
-    if (p.y >= 300) {
-      p.vy = -2
-    }
-    if (p.y <= 7) {
-      p.vy = 2
-    }
-
-    const context = tt.createCanvasContext('canvas')
-
-    function ball(x, y) {
-      context.beginPath(0)
-      context.arc(x, y, 5, 0, Math.PI * 2)
-      context.setFillStyle('#1aad19')
-      context.setStrokeStyle('rgba(1,1,1,0)')
-      context.fill()
-      context.stroke()
-    }
-
-    ball(p.x, 150)
-    ball(150, p.y)
-    ball(300 - p.x, 150)
-    ball(150, 300 - p.y)
-    ball(p.x, p.y)
-    ball(300 - p.x, 300 - p.y)
-    ball(p.x, 300 - p.y)
-    ball(300 - p.x, p.y)
-    context.draw()
+  drawDot() {
+      let ctx = this.ctx;
+      let rem = this.rem;
+      ctx.beginPath();
+      ctx.fillStyle = '#fff';
+      ctx.arc(0, 0, 3 * rem, 0, 2 * Math.PI, false);
+      ctx.fill();
   },
-  onUnload() {
-    clearInterval(this.interval)
-    if (this._worker) this._worker.terminate()
+
+  draw() {
+      let ctx = this.ctx;
+
+      ctx.clearRect(0, 0, 300, 300); //每一次都要将canvas清空一下，不然秒针就会一直显示在canvas上面
+      var now = new Date(); //获得当前时间
+      var hour = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      this.drawBackground();
+      this.drawHour(hour, minutes);
+      this.drawMinute(minutes);
+      this.drawSecond(seconds);
+      this.drawDot();
+      ctx.restore();
+
+      ctx.draw();
+  },
+
+  onUnload: function () {
+      clearInterval(this.interval)
   }
 })

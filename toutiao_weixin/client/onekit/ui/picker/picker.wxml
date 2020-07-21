@@ -1,0 +1,19 @@
+<picker
+class="onekit-picker {{Class}}"
+style="{{Style}}"
+range="{{range}}"
+range-key="{{rangeKey}}"
+value="{{value}}"
+start="{{start}}"
+end="{{start}}"
+fields="{{fields}}"
+custom-item="{{customItem}}"
+mode="{{mode}}"
+disabled="{{disabled}}"
+bindchange="piker_change"
+bindcancel="bindcancel"
+bindcolumnchange="bindcolumnchange"
+>
+<slot>
+</slot>
+</picker>

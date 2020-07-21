@@ -1,0 +1,20 @@
+<slider
+class="onekit-slider {{Class}}"
+style="{{Style}}"
+min="{{min}}"
+max="{{max}}"
+step="{{step}}"
+disabled="{{disabled}}"
+value="{{value}}"
+color="{{color}}"
+selected-color="{{selectedColor}}"
+activeColor="{{activeColor}}"
+backgroundColor="{{backgroundColor}}"
+block-size="{{blockSize}}"
+block-color="{{blockColor}}"
+show-value="{{showValue}}"
+bindchange="slider_change"
+bindchanging="slider_changing"
+>
+<slot></slot>
+</slider>
