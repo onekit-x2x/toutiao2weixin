@@ -1,2 +1,12 @@
-<!--onekit/ui/image/image.wxml-->
-<text>onekit/ui/image/image.wxml</text>
+<image 
+class="onekit-image {{Class}}"
+style="{{Style}}"
+mode="{{mode}}" 
+src="{{src}}"
+webp="{{webp}}"
+lazy-load="{{lazyLoad}}"
+binderror="image_error"
+bindload="image_load"
+>
+   <slot/>
+</image> 

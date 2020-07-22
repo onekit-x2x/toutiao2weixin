@@ -1,8 +1,8 @@
 import onekit from "onekit"
-import CanvasContext from "./api/CanvasContext";
+// import CanvasContext from "./api/CanvasContext";
 import LivePlayerContext from "./api/LivePlayerContext";
 import VideoContext from "./api/VideoContext";
-import Context from "./api/Context";
+// import Context from "./api/Context";
 export default class tt {
   /////////////////// animation //////////////////////////
   static createAnimation(object) {
