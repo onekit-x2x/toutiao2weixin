@@ -1,3 +1,18 @@
+<onekit-view Class="container">
+  <onekit-view Class="body body-space">
+
+    <onekit-view Class="btn-area">
+      <onekit-navigator url="navigate?title=navigate" hover-class="navigator-hover">
+        <button type="default">跳转到新页面</button>
+      </onekit-navigator>
+      <onekit-navigator url="redirect?title=redirect" redirect hover-class="other-navigator-hover">
+        <button type="default">在当前页打开</button>
+      </onekit-navigator>
+    </onekit-view>
+
+  </onekit-view>
+</onekit-view>
+<!--
 <import src="../../../common/head.wxml" />
 <import src="../../../common/foot.wxml" />
 
@@ -20,3 +35,4 @@
 
   <template is="foot" />
 </onekit-view>
+-->

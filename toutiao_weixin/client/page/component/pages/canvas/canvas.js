@@ -5,7 +5,7 @@ Page({
 
   },
   onShow: function (res) {
-      this.ctx = tt.createCanvasContext('canvas')
+      this.ctx = wx.createCanvasContext('canvas')
       this.r = 300 / 2;
       this.rem = 300 / 200;
 
