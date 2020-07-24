@@ -1,7 +1,5 @@
 Component({
-  options: {
-    styleIsolation: 'apply-shared'
-  },
+
   data: {},
   properties: { 
     Class:{type:String,value:""},

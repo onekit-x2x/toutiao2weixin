@@ -1,9 +1,6 @@
 // onekit/ui/navigator/navigator.js
 Component({
-  options: {
-    addGlobalClass: true,
-    styleIsolation: 'apply-shared'
-  },
+
   /**
    * 组件的属性列表
    */

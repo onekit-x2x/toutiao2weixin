@@ -1,7 +1,5 @@
 Component({
-  options: {
-    styleIsolation: 'apply-shared'
-  },
+
   attached() { 
     // var openType;
     // var scope;
