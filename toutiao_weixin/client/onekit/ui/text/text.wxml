@@ -1,2 +1,8 @@
-<!--onekit/ui/text/text.wxml-->
-<text>onekit/ui/text/text.wxml</text>
+<text
+class="onekit-text {{Class}}"
+style="{{Style}}"
+selectable="{{selectable}}"
+space="{{space}}"
+>
+<slot></slot>
+</text>

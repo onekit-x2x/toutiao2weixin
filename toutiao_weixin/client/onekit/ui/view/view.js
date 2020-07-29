@@ -8,37 +8,46 @@ Component({
     virtualHost: true
   },
   properties: {
-    Class:{type:String,value:""},
-    Style:{type:String,value:""},
-    Id:{type:String,value:""},
-    hoverClass:{
-      type:String,
-      value:""
+    Class: {
+      type: String,
+      value: ""
     },
-    hoverStarTime:{
-      type:Number,
-      value:""
+    Style: {
+      type: String,
+      value: ""
     },
-    hoverStayTime:{
-      type:Number,
-      value:""
+    Id: {
+      type: String,
+      value: ""
     },
-    hoverStopPropagation:{
-      type:Boolean,
-      value:false
+    hoverClass: {
+      type: String,
+      value: ""
     },
-    disableScroll:{
-      type:Boolean,
-      value:false
+    hoverStarTime: {
+      type: Number,
+      value: ""
     },
-    hidden:{
-      type:Boolean,
-      value:false
+    hoverStayTime: {
+      type: Number,
+      value: ""
     },
-    disableScroll:{
-      type:Object,
-      value:{}
-    },    
+    hoverStopPropagation: {
+      type: Boolean,
+      value: false
+    },
+    disableScroll: {
+      type: Boolean,
+      value: false
+    },
+    hidden: {
+      type: Boolean,
+      value: false
+    },
+    disableScroll: {
+      type: Object,
+      value: {}
+    },
   },
 
   /**
@@ -52,8 +61,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    view_Tap(e){
-      this.triggerEvent("Tap",e)
+    view_Tap(e) {
+      this.triggerEvent("Tap", e)
     }
   }
 })

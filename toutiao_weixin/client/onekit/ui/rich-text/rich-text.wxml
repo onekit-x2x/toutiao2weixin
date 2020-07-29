@@ -1,2 +1,6 @@
-<!--onekit/ui/rich-text/rich-text.wxml-->
-<text>onekit/ui/rich-text/rich-text.wxml</text>
+<rich-text
+class="onekit-rich-text {{Class}}"
+style="{{Style}}"
+nodes="{{nodes}}"
+>
+</rich-text>
