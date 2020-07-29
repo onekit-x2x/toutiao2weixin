@@ -1,4 +1,7 @@
 Component({
+  options: {
+    virtualHost: true
+  },
 
   attached() { 
     // var openType;
@@ -12,6 +15,7 @@ Component({
   properties: { 
     Class:{type:String,value:""},
     Style:{type:String,value:""},
+    Id:{type:String,value:""},
     size: { type: String, value:"default"},
     type: { type: String, value: "default" },
     plain: { type: Boolean, value: false },

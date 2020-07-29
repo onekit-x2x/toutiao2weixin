@@ -3,10 +3,13 @@ Component({
   /**
    * 组件的属性列表
    */
-
+  options: {
+    virtualHost: true
+  },
   properties: {
     Class:{type:String,value:""},
     Style:{type:String,value:""},
+    Id:{type:String,value:""},
     value:{type:String},
     name:{type:String},
     type:{type:String,value:"text"},

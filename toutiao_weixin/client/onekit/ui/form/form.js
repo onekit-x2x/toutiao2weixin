@@ -3,10 +3,13 @@ Component({
   /**
    * 组件的属性列表
    */
-
+  options: {
+    virtualHost: true
+  },
   properties: {
     Class:{type:String,value:""},
     Style:{type:String,value:""},
+    Id:{type:String,value:""},
     reportSubmit:{type:Boolean},
     reportSubmitTimeout:{type:Number,value:0},
   },
