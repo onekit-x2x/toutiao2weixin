@@ -1,5 +1,6 @@
 // onekit/ui/canvas/canvas.js
 Component({
+  behaviors: ['wx://form-field'],
   options: {
     virtualHost: true
   },
