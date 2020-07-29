@@ -1,6 +1,7 @@
 <button
 class="onekit_button Class {{Class}}"
 style="{{Style}}"
+id="{{Id}}"
   size="{{size}}"
   type="{{type}}"
   plain="{{plain}}"
