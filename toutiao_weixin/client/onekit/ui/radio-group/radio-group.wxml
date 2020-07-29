@@ -1,4 +1,5 @@
 <view
+id="{{Id}}"
 id="view_id"
 class="onekit-radio-group {{Class}}"
 style="{{Style}}"
