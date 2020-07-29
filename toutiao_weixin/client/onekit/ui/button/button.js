@@ -1,4 +1,6 @@
+import tt from "../../../onekit/tt"
 Component({
+  behaviors: ['wx://form-field-button'],
   options: {
     virtualHost: true
   },
@@ -30,5 +32,21 @@ Component({
     },
   methods: {   
     
+    button_bindtap(e) {
+      var that = this;
+      if (this.properties.openType) {
+        switch (this.properties.openType) {
+         
+          case "getPhoneNumber":
+            break;
+          
+          default:
+          throw new Error(this.properties.openType);
+        }
+      }
+
+      this.triggerEvent("tap",{}); 
+    },
+  
   },
 });

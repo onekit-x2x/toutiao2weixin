@@ -1,5 +1,6 @@
 {
   "pages": [
+    "page/component/pages/form/form",
     "page/component/pages/canvas/canvas",
     "page/component/pages/navigator/navigator",
     "page/component/pages/video/video"

@@ -1,34 +1,17 @@
 <import src="../../../common/head.wxml"></import>
 <import src="../../../common/foot.wxml"></import>
 
-<view  class="container">
-  <template  is="head" data="{{title: 'checkbox'}}"></template>
+<view  class="wrap">
+    <view  class="title">默认样式</view>
+    <onekit-checkbox-group  bindchange="radioChange" Class="checkbox-group">
+        <onekit-checkbox  Class="checkbox" checked>  选中</onekit-checkbox>
+        <onekit-checkbox  Class="checkbox" >  未选中</onekit-checkbox>
+    </onekit-checkbox-group>
 
-  <view  class="page-body">
-    <view  class="page-section page-section-gap">
-      <view  class="page-section-title">默认样式</view>
-      <onekit-label  class="checkbox">
-        <onekit-checkbox  value="cb" checked="true"></onekit-checkbox>选中
-      </onekit-label>
-      <onekit-label  class="checkbox">
-        <onekit-checkbox  value="cb"></onekit-checkbox>未选中
-      </onekit-label>
+    <view  class="title">推荐示例</view>
+    <view  class="item-wrap">
+        <view  class="check" wx:for-item="item" wx:key="item" wx:for="{{items}}">
+            <onekit-checkbox  Class="check-box" value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">{{item.text}}</onekit-checkbox>
+        </view>
     </view>
-
-    <view  class="page-section">
-      <view  class="page-section-title">推荐展示样式</view>
-      <view  class="weui-cells weui-cells_after-title">
-        <onekit-checkbox-group  bindchange="checkboxChange">
-          <onekit-label  class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
-            <view  class="weui-cell__hd">
-              <onekit-checkbox  value="{{item.value}}" checked="{{item.checked}}"></onekit-checkbox>
-            </view>
-            <view  class="weui-cell__bd">{{item.name}}</view>
-          </onekit-label>
-        </onekit-checkbox-group>
-      </view>
-    </view>
-  </view>
-
-  <template  is="foot"></template>
 </view>
