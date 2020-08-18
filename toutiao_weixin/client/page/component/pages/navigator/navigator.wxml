@@ -1,7 +1,7 @@
-<onekit-view Class="container">
-  <onekit-view Class="body body-space">
+<onekit-view onekit-class ="container">
+  <onekit-view onekit-class ="body body-space">
 
-    <onekit-view Class="btn-area">
+    <onekit-view onekit-class ="btn-area">
       <onekit-navigator url="navigate?title=navigate" hover-class="navigator-hover">
         <button type="default">跳转到新页面</button>
       </onekit-navigator>
@@ -16,11 +16,11 @@
 <import src="../../../common/head.wxml" />
 <import src="../../../common/foot.wxml" />
 
-<onekit-view Class="container">
+<onekit-view onekit-class ="container">
   <template is="head" data="{{title: 'navigator'}}"/>
 
-  <onekit-view Class="page-body">
-    <onekit-view Class="btn-area">
+  <onekit-view onekit-class ="page-body">
+    <onekit-view onekit-class ="btn-area">
       <onekit-navigator url="navigate?title=navigate" hover-class="navigator-hover">
         <button type="default">跳转到新页面</button>
       </onekit-navigator>

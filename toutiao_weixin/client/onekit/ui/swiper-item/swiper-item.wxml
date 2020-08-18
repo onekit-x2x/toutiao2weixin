@@ -1,7 +1,7 @@
 <swiper-item
 item-id="{{Id}}"
-class="onekit-swiper-item {{Class}}"
-style="{{Style}}"
+class="onekit-swiper-item {{onekitClass}}"
+style="{{onekitStyle}}"
 >
 <slot></slot>
 </swiper-item>

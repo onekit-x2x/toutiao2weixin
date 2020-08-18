@@ -1,6 +1,6 @@
 <button
-class="onekit_button Class {{Class}}"
-style="{{Style}}"
+class="onekit_button Class {{onekitClass}}"
+style="{{onekitStyle}}"
 id="{{Id}}"
   size="{{size}}"
   type="{{type}}"

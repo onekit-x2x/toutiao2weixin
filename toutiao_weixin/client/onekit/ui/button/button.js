@@ -15,8 +15,8 @@ Component({
   },
   detached() { },
   properties: { 
-    Class:{type:String,value:""},
-    Style:{type:String,value:""},
+    onekitClass:{type:String,value:""},
+    onekitStyle:{type:String,value:""},
     Id:{type:String,value:""},
     size: { type: String, value:"default"},
     type: { type: String, value: "default" },

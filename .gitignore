@@ -12,3 +12,4 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
+toutiao_weixin/client/project.config.json

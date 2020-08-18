@@ -1,6 +1,6 @@
 <rich-text
-class="onekit-rich-text {{Class}}"
-style="{{Style}}"
+class="onekit-rich-text {{onekitClass}}"
+style="{{onekitStyle}}"
 nodes="{{nodes}}"
 >
 </rich-text>
