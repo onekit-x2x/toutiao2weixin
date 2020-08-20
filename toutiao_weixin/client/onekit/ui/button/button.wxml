@@ -1,7 +1,7 @@
 <button
 class="onekit_button Class {{onekitClass}}"
 style="{{onekitStyle}}"
-id="{{Id}}"
+id="{{onekitId}}"
   size="{{size}}"
   type="{{type}}"
   plain="{{plain}}"

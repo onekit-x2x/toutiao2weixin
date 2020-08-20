@@ -1,5 +1,5 @@
 <switch
-id="{{Id}}"
+id="{{onekitId}}"
 class="onekit-switch {{onekitClass}}"
 style="{{onekitStyle}}"
 checked="{{checked}}"

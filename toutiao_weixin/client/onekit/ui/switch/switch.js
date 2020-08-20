@@ -10,7 +10,7 @@ Component({
   properties: {
     onekitClass:{type:String,value:""},
     onekitStyle:{type:String,value:""},
-    Id:{type:String,value:""},
+    onekitId:{type:String,value:""},
     checked:{type:Boolean,value:false},
     disabled:{type:Boolean,value:false},
     color:{type:String},

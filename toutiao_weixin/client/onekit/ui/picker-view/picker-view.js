@@ -9,7 +9,7 @@ Component({
   properties: {
     onekitClass:{type:String,value:""},
     onekitStyle:{type:String,value:""},
-    Id:{type:String,value:""},
+    onekitId:{type:String,value:""},
     value:{type:Array},
     indicatorStyle:{type:String},
     maskStyle:{type:String},

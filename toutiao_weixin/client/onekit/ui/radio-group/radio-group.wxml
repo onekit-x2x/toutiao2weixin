@@ -1,6 +1,5 @@
 <view
-id="{{Id}}"
-id="view_id"
+id="{{onekitId}}"
 class="onekit-radio-group {{onekitClass}}"
 style="{{onekitStyle}}"
 bindchange="radio_groupBindchange"

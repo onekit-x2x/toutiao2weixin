@@ -10,8 +10,7 @@ Component({
   properties: {
     onekitClass:{type:String,value:""},
     onekitStyle:{type:String,value:""},
-    Id:{type:String,value:""},
-
+    onekitId:{type:String,value:""},
     min:{type:String,value:0},
     max:{type:Number,value:100},
     step:{type:Number,value:1},

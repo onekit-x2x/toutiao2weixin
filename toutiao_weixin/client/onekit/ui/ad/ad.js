@@ -7,7 +7,7 @@ Component({
   properties: { 
     onekitClass:{type:String,value:""},
     onekitStyle:{type:String,value:""},
-    Id:{type:String,value:""},
+    onekitId:{type:String,value:""},
     unitId:{type:String,value:""},
     adIntervals:{type:Number,value:0},
   },

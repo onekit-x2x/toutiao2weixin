@@ -17,7 +17,7 @@ Component({
   properties: { 
     onekitClass:{type:String,value:""},
     onekitStyle:{type:String,value:""},
-    Id:{type:String,value:""},
+    onekitId:{type:String,value:""},
     size: { type: String, value:"default"},
     type: { type: String, value: "default" },
     plain: { type: Boolean, value: false },

@@ -1,8 +1,8 @@
 <video  
-id="{{Id}}"
+id="{{onekitId}}"
 class="onekit-video {{onekitClass}}"
 style="{{onekitStyle}}"
-id="video"
+id="{{onekitId}}"
 src="{{src}}"
 duration="{{duration}}" 
 controls="{{controls}}" 

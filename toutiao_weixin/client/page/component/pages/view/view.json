@@ -2,6 +2,7 @@
   "navigationBarTitleText": "view",
   "usingComponents": {
     "tt_ad": "/onekit/ui/ad/ad",
-    "tt_video": "/onekit/ui/video/video"
+    "tt_video": "/onekit/ui/video/video",
+    "onekit-view": "/onekit/ui/view/view"
   }
 }

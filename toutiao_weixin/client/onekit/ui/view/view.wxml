@@ -1,5 +1,5 @@
 <view
-id="{{Id}}"
+id="{{onekitId}}"
 class="onekit-view {{onekitClass}}"
 style="{{onekitStyle}}"
 hover-class="{{hoverClass}}"
