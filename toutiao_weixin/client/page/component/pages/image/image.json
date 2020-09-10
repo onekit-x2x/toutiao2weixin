@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "image",
-  "usingComponents": {
-    "onekit-ad": "/onekit/ui/ad/ad",
-    "onekit-video": "/onekit/ui/video/video",
-    "onekit-image": "/onekit/ui/image/image"
-  }
-}

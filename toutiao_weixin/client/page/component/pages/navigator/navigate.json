@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "navigatePage",
-  "usingComponents": {
-    "tt_ad": "/onekit/ui/ad/ad",
-    "tt_video": "/onekit/ui/video/video"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "video",
-  "usingComponents": {
-    "onekit-ad": "/onekit/ui/ad/ad",
-    "onekit-video": "/onekit/ui/video/video"
-  }
-}
