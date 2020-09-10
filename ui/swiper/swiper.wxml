@@ -1,0 +1,22 @@
+<swiper
+class="onekit-swiper {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+indicator-dots="{{indicatorDots}}"
+indicator-color="{{indicatorColor}}"
+indicator-active-color="{{indicatorActiveColor}}"
+autoplay="{{autoplay}}"
+current="{{current}}"
+interval="{{interval}}"
+duration="{{duration}}"
+circular="{{circular}}"
+vertical="{{vertical}}"
+previous-margin="{{previousMargin}}"
+next-margin="{{nextMargin}}"
+display-multiple-items="{{displayMultipleItems}}"
+bindchange="swiper_Change"
+bindanimationfinish="swiper_AnimationEnd"
+bindtransition="swiper_transition"
+>
+<slot></slot>
+</swiper>
