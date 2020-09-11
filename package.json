@@ -1,40 +1,21 @@
 {
   "name": "toutiao2weixin",
-  "version": "1.0.4",
-  "description": "",
-  "main": "miniprogram_dist/index.js",
-  "scripts": {
-    "dev": "gulp dev --develop",
-    "watch": "gulp watch --develop --watch",
-    "build": "gulp",
-    "dist": "npm run build",
-    "clean-dev": "gulp clean --develop",
-    "clean": "gulp clean",
-    "test": "jest --bail",
-    "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --bail",
-    "coverage": "jest ./test/* --coverage --bail",
-    "lint": "eslint \"src/**/*.js\" --fix",
-    "lint-tools": "eslint \"tools/**/*.js\" --rule \"import/no-extraneous-dependencies: false\" --fix"
-  },
-  "miniprogram": "miniprogram_dist",
-  "jest": {
-    "testEnvironment": "jsdom",
-    "testURL": "https://jest.test",
-    "collectCoverageFrom": [
-      "miniprogram_dist/**/*.js"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "miniprogram_dist"
-    ]
-  },
+  "version": "1.0.5",
+  "description": "Weixin-Miniprogram SDK for Alipay-Miniprogram",
   "repository": {
     "type": "git",
-    "url": "https://github.com/www-onekit-cn/toutiao2weixin.git"
+    "url": "git+https://github.com/www-onekit-cn/toutiao2weixin.git"
   },
-  "author": "wechat-miniprogram",
-  "license": "MIT",
+  "keywords": [
+    "custom-component",
+    "mini-program"
+  ],
   "devDependencies": {
+    "rc-tools": "6.x"
   },
-  "dependencies": {}
+  "scripts": {
+    "build": "rc-tools run compile && node scripts/cp.js && node scripts/rm.js",
+    "pub": "git push origin && npm run build && npm publish"
+  }
 }
+
