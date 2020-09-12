@@ -3,6 +3,7 @@
     "name": "sanfordsun"
   },
   "bundleDependencies": false,
+  "main": "miniprogram_dist/index.js",
   "dependencies": {},
   "deprecated": false,
   "description": "[![](https://img.shields.io/npm/v/miniprogram-barrage)](https://www.npmjs.com/package/miniprogram-barrage) [![](https://img.shields.io/npm/l/miniprogram-barrage)](https://github.com/wechat-miniprogram/miniprogram-barrage)",
@@ -63,5 +64,5 @@
     "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --bail",
     "watch": "gulp watch --develop --watch"
   },
-  "version": "1.0.13"
+  "version": "1.0.14"
 }
