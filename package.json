@@ -1,39 +1,11 @@
 {
-  "name": "toutiao2weixin",
-  "version": "1.0.11",
-  "description": "",
-  "main": "miniprogram_dist/index.js",
-  "scripts": {
-    "dev": "gulp dev --develop",
-    "watch": "gulp watch --develop --watch",
-    "build": "gulp",
-    "dist": "npm run build",
-    "clean-dev": "gulp clean --develop",
-    "clean": "gulp clean",
-    "test": "jest --bail",
-    "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --bail",
-    "coverage": "jest ./test/* --coverage --bail",
-    "lint": "eslint \"src/**/*.js\" --fix",
-    "lint-tools": "eslint \"tools/**/*.js\" --rule \"import/no-extraneous-dependencies: false\" --fix"
+  "author": {
+    "name": "sanfordsun"
   },
-  "miniprogram": "miniprogram_dist",
-  "jest": {
-    "testEnvironment": "jsdom",
-    "testURL": "https://jest.test",
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "sanfordsun",
-  "license": "MIT",
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "[![](https://img.shields.io/npm/v/miniprogram-barrage)](https://www.npmjs.com/package/miniprogram-barrage) [![](https://img.shields.io/npm/l/miniprogram-barrage)](https://github.com/wechat-miniprogram/miniprogram-barrage)",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -60,5 +32,37 @@
     "webpack": "^4.29.5",
     "webpack-node-externals": "^1.7.2"
   },
-  "dependencies": {}
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testURL": "https://jest.test",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "license": "MIT",
+  "main": "miniprogram_dist/index.js",
+  "miniprogram": "miniprogram_dist",
+  "name": "toutiao2weixin",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "gulp",
+    "clean": "gulp clean",
+    "clean-dev": "gulp clean --develop",
+    "coverage": "jest ./test/* --coverage --bail",
+    "dev": "gulp dev --develop",
+    "dist": "npm run build",
+    "lint": "eslint \"src/**/*.js\" --fix",
+    "lint-tools": "eslint \"tools/**/*.js\" --rule \"import/no-extraneous-dependencies: false\" --fix",
+    "test": "jest --bail",
+    "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --bail",
+    "watch": "gulp watch --develop --watch"
+  },
+  "version": "1.0.12"
 }
