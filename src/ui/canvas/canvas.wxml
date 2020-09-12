@@ -1,0 +1,7 @@
+<canvas
+class="onekit-canvas {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+canvas-id="{{canvasId}}"
+>
+</canvas>
