@@ -1,155 +1,165 @@
-const {mockData} = require('./util')
+//获取应用实例
+const app = getApp()
+let data = require('./data.js')
+let j = 1
+data = data.response.data
+const systemInfo = wx.getSystemInfoSync()
+
+// 提交wx.createRecycleContext能力
+const createRecycleContext = require('../../components/index.js')
 
 Page({
+
   data: {
-    src: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400',
-    open: false,
-    alpha: 1,
-    fontSize: 16,
-    duration: 15,
-    showSetting: false,
+    // placeholderImage: "data:image/svg+xml,%3Csvg height='140rpx' test='132rpx' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E %3Crect width='50%25' x='40' height='20%25' style='fill:rgb(204,204,204);' /%3E %3C/svg%3E"
   },
-
-  onUnload() {
-    clearInterval(this.timer)
-  },
-
-  onReady() {
-    this.addBarrage()
-  },
-
-  addBarrage() {
-    const barrageComp = this.selectComponent('.barrage')
-    this.barrage = barrageComp.getBarrageInstance({
-      font: 'bold 16px sans-serif',
-      duration: this.data.duration,
-      lineHeight: 2,
-      mode: 'separate',
-      padding: [10, 0, 10, 0],
-      range: [0, 1]
+  onLoad: function () {
+    var ctx = createRecycleContext({
+      id: 'recycleId',
+      dataKey: 'recycleList',
+      page: this,
+      itemSize: function(item, index) {
+        return {
+          width: systemInfo.windowWidth / 2,
+          height: 160
+        }
+      },
+      placeholderClass: ['recycle-image', 'recycle-text'],
+      // itemSize: function(item) {
+      //   return {
+      //     width: 195,
+      //     height: item.azFirst ? 130 : 120
+      //   }
+      // },
+      // useInPage: true
     })
+    this.ctx = ctx;
   },
-
-  addData() {
-    // 发送带图片的弹幕
-    // const data = [
-    //   {
-    //     content: '6666666666',
-    //     color: '#00ff00',
-    //     image: {
-    //       head: {
-    //         src: '/assets/bookmark.png',
-    //       },
-    //       tail: {
-    //         src: '/assets/bookmark.png',
-    //       }
-    //     }
-    //   },
-    // ]
-    // this.barrage.addData(data)
-
-    const data = mockData(100)
-    this.barrage.addData(data)
-    this.timer = setInterval(() => {
-      const data = mockData(100)
-      this.barrage.addData(data)
-    }, 2000)
+  onUnload: function () {
+    this.ctx.destroy()
+    this.ctx = null
   },
+  onReady: function () {
+    let newData = []
+    data.forEach((item, i) => {
 
-  openDanmu() {
-    this.barrage.open()
-    this.addData()
-  },
-
-  closeDanmu() {
-    if (this.timer) {
-      clearInterval(this.timer)
-    }
-    this.barrage.close()
-  },
-
-  toggleDanmu() {
-    const open = this.data.open
-    if (open) {
-      this.closeDanmu()
-    } else {
-      this.openDanmu()
-    }
-    this.setData({
-      open: !open
-    })
-  },
-
-  // fullscreenchange() {
-  //   this.setData({
-  //     toggle: false
-  //   })
-  //   setTimeout(() => {
-  //     if (this.barrage) this.barrage.close()
-  //     this.setData({
-  //       toggle: true
-  //     })
-  //     this.addBarrage()
-  //   }, 1000)
-  // },
-
-  disableDanmu() {
-    this.barrage.setRange([0, 0])
-  },
-
-  showTopDanmu() {
-    this.barrage.setRange([0, 0.3])
-  },
-
-  showAllDanmu() {
-    this.barrage.setRange([0, 1])
-  },
-
-  toggleBarrageSetting() {
-    this.setData({
-      showSetting: !this.data.showSetting
-    })
-  },
-
-  fontChange(e) {
-    const fontSize = e.detail.value
-    this.setData({
-      fontSize
-    })
-    this.barrage.setFont(`${fontSize}px sans-serif`)
-  },
-
-  transparentChange(e) {
-    const alpha = (e.detail.value / 100).toFixed(2)
-    this.setData({
-      alpha
-    })
-    this.barrage.setAlpha(Number(alpha))
-  },
-
-  durationChange(e) {
-    const duration = e.detail.value
-    this.setData({
-      duration
-    })
-    this.barrage.setDuration(duration)
-  },
-
-  send(e) {
-    const value = e.detail.value
-    this.barrage.send({
-      content: value,
-      color: '#ff0000',
-      image: {
-        head: {
-          src: '/assets/car.png',
-          gap: 10,
-        },
-        tail: {
-          src: '/assets/car.png',
-          gap: 10
-        },
+      if (item.goods) {
+        newData = newData.concat(item.goods)
       }
     })
+    this.showView()
   },
+  genData: function() {
+    let newData = []
+    data.forEach((item, i) => {
+      if (item.goods) {
+        newData = newData.concat(item.goods)
+      }
+      // 构造270份数据
+      var item = item.goods[0]
+      for (var i = 0; i < 50; i++) {
+        var newItem = Object.assign({}, item)
+        newData.push(newItem)
+      }
+    })
+    const newList = []
+    let k = 0
+    newData.forEach((item, i) => {
+      item.idx = i
+      if (k % 10 == 0) {
+        item.azFirst = true
+      } else {
+        item.azFirst = false
+      }
+      k++
+      newList.push(item)
+      item.id = item.id + (j++)
+      item.image_url = item.image_url.replace('https', 'http')
+      var newItem = Object.assign({}, item)
+      if (k % 10 == 0) {
+        newItem.azFirst = true
+        // console.log('first item', newList.length)
+      }
+      k++
+      newItem.id = newItem.id + '_1'
+      newItem.image_url = newItem.image_url.replace('https', 'http')
+      newList.push(newItem)
+    })
+    return newList
+  },
+  showView: function () {
+    const ctx = this.ctx
+    const newList = this.genData()
+    // console.log('recycle data is', newList)
+    // API的调用方式
+    console.log('len', newList.length)
+    const st = Date.now()
+    // ctx.splice(0, 0, newList, function() {
+    //   // 新增加的数据渲染完毕之后, 触发的回调
+    //   console.log('【render】use time', Date.now() - st)
+    // })
+    ctx.splice(newList, () => {
+      // 新增加的数据渲染完毕之后, 触发的回调
+      console.log('【render】deleteList use time', Date.now() - st)
+      // this.setData({
+      //   scrollTop: 1000
+      // })
+    })
+    console.log('transformRpx', ctx.transformRpx(123.5))
+  },
+  itemSizeFunc: function (item, idx) {
+    return {
+      width: 162,
+      height: 182
+    }
+  },
+  onPageScroll: function() {}, // 一定要留一个空的onPageScroll函数
+  scrollToLower: function(e) {
+    // 延迟1s，模拟网络请求
+    if (this.isScrollToLower) return
+    // console.log('【【【【trigger scrollToLower')
+    this.isScrollToLower = true
+    setTimeout(() => {
+      // console.log('【【【【exec scrollToLower')
+      const newList = this.genData()
+      this.ctx.append(newList, () => {
+        this.isScrollToLower = false
+      })
+    }, 1000)
+  },
+  scrollTo2000: function (e) {
+    this.setData({
+      scrollTop: 5000
+    })
+  },
+  scrollTo0: function () {
+    this.setData({
+      scrollTop: 0
+    })
+  },
+  newEmptyPage: function() {
+    wx.navigateTo({
+      url: './empty/empty'
+    })
+  },
+  scrollToid: function() {
+    this.setData({
+      index: 100
+    })
+  },
+  getScrollTop: function() {
+    console.log('getScrollTop', this.ctx.getScrollTop())
+  },
+  showRecycleview1: function() {
+    this.setData({
+      showRecycleview: true
+    }, () => {
+      this.showView();
+    })
+  },
+  hideRecycleview: function() {
+    this.setData({
+      showRecycleview: false
+    })
+  }
 })

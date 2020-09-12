@@ -1,0 +1,7 @@
+<rich-text
+class="onekit-rich-text {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+nodes="{{nodes}}"
+>
+</rich-text>

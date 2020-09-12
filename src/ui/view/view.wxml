@@ -1,0 +1,16 @@
+<view
+id="{{onekitId}}"
+class="onekit-view {{onekitClass}}"
+style="{{onekitStyle}}"
+hover-class="{{hoverClass}}"
+hover-start-time="{{hoverStarTime}}"
+hover-stay-time="{{hoverStayTime}}"
+hover-stop-propagation="{{hoverStopPropagation}}"
+hidden="{{hidden}}"
+disable-scroll="{{disableScroll}}"
+bindanimation="{{animation}}"
+
+bindtap="view_Tap"
+>
+<slot></slot>
+</view>

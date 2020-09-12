@@ -6,7 +6,7 @@ const colors = require('colors')
 const through = require('through2')
 
 /**
- * 异步函数封装
+ * async function wrapper
  */
 function wrap(func, scope) {
   return function (...args) {
@@ -36,14 +36,14 @@ const readFileSync = wrap(fs.readFile)
 const writeFileSync = wrap(fs.writeFile)
 
 /**
- * 调整路径分隔符
+ * transform path segment separator
  */
 function transformPath(filePath, sep = '/') {
   return filePath.replace(/[\\/]/g, sep)
 }
 
 /**
- * 检查文件是否存在
+ * check file exists
  */
 async function checkFileExists(filePath) {
   try {
@@ -55,14 +55,14 @@ async function checkFileExists(filePath) {
 }
 
 /**
- * 递归创建目录
+ * create folder
  */
 async function recursiveMkdir(dirPath) {
   const prevDirPath = path.dirname(dirPath)
   try {
     await accessSync(prevDirPath)
   } catch (err) {
-    // 上一级目录不存在
+    // prevDirPath is not exist
     await recursiveMkdir(prevDirPath)
   }
 
@@ -71,18 +71,18 @@ async function recursiveMkdir(dirPath) {
 
     const stat = await statSync(dirPath)
     if (stat && !stat.isDirectory()) {
-      // 目标路径存在，但不是目录
-      await renameSync(dirPath, `${dirPath}.bak`) // 将此文件重命名为 .bak 后缀
+      // dirPath already exists but is not a directory
+      await renameSync(dirPath, `${dirPath}.bak`) // rename to a file with the suffix ending in '.bak'
       await mkdirSync(dirPath)
     }
   } catch (err) {
-    // 目标路径不存在
+    // dirPath is not exist
     await mkdirSync(dirPath)
   }
 }
 
 /**
- * 读取 json
+ * read json
  */
 function readJson(filePath) {
   try {
@@ -96,7 +96,7 @@ function readJson(filePath) {
 }
 
 /**
- * 读取文件
+ * read file
  */
 async function readFile(filePath) {
   try {
@@ -108,7 +108,7 @@ async function readFile(filePath) {
 }
 
 /**
- * 写文件
+ * write file
  */
 async function writeFile(filePath, data) {
   try {
@@ -121,7 +121,7 @@ async function writeFile(filePath, data) {
 }
 
 /**
- * 时间格式化
+ * time format
  */
 function format(time, reg) {
   const date = typeof time === 'string' ? new Date(time) : time
@@ -143,7 +143,7 @@ function format(time, reg) {
 }
 
 /**
- * 日志插件
+ * logger plugin
  */
 function logger(action = 'copy') {
   return through.obj(function (file, enc, cb) {
@@ -158,7 +158,7 @@ function logger(action = 'copy') {
 }
 
 /**
- * 比较数组是否相等
+ * compare arrays
  */
 function compareArray(arr1, arr2) {
   if (!Array.isArray(arr1) || !Array.isArray(arr2)) return false
@@ -172,7 +172,7 @@ function compareArray(arr1, arr2) {
 }
 
 /**
- * 合并两个对象
+ * merge two object
  */
 function merge(obj1, obj2) {
   Object.keys(obj2).forEach(key => {
@@ -189,7 +189,7 @@ function merge(obj1, obj2) {
 }
 
 /**
- * 获取 id
+ * get random id
  */
 let seed = +new Date()
 function getId() {

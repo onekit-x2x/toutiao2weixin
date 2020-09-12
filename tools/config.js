@@ -12,23 +12,19 @@ const dev = path.join(demoDist, 'components')
 const dist = path.resolve(__dirname, '../miniprogram_dist')
 
 module.exports = {
-  entry: ['index'],
+  entry: ['index', 'recycle-item', 'recycle-view'],
 
   isDev,
   isWatch,
-  srcPath: src, // 源目录
-  distPath: isDev ? dev : dist, // 目标目录
+  srcPath: src,
+  distPath: isDev ? dev : dist,
 
-  demoSrc, // demo 源目录
-  demoDist, // demo 目标目录
+  demoSrc,
+  demoDist,
 
   wxss: {
-    less: false, // 使用 less 来编写 wxss
-    sourcemap: false, // 生成 less sourcemap
-  },
-
-  js: {
-    webpack: true, // 使用 webpack 来构建 js
+    less: false, // compile wxss with less
+    sourcemap: false, // source map for less
   },
 
   webpack: {
@@ -38,13 +34,13 @@ module.exports = {
       libraryTarget: 'commonjs2',
     },
     target: 'node',
-    externals: [nodeExternals()], // 忽略 node_modules
+    externals: [nodeExternals()], // ignore node_modules
     module: {
       rules: [{
         test: /\.js$/i,
         use: [
           'babel-loader',
-          // 'eslint-loader'
+          'eslint-loader'
         ],
         exclude: /node_modules/
       }],
@@ -60,12 +56,11 @@ module.exports = {
     optimization: {
       minimize: false,
     },
-    // devtool: 'nosources-source-map', // 生成 js sourcemap
+    // devtool: 'nosources-source-map', // source map for js
     performance: {
       hints: 'warning',
       assetFilter: assetFilename => assetFilename.endsWith('.js')
     }
   },
-
-  copy: ['./utils.js'], // 将会复制到目标目录
+  copy: ['./wxml', './wxss', './wxs', './images', './index.d.ts'],
 }

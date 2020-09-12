@@ -6,7 +6,7 @@ const config = require('./config')
 const srcPath = config.srcPath
 
 /**
- * 获取 json 路径相关信息
+ * get json path's info
  */
 function getJsonPathInfo(jsonPath) {
   const dirPath = path.dirname(jsonPath)
@@ -20,17 +20,14 @@ function getJsonPathInfo(jsonPath) {
 }
 
 /**
- * 检测是否包含其他自定义组件
+ * check included components
  */
 const checkProps = ['usingComponents', 'componentGenerics']
-const hasCheckMap = {}
 async function checkIncludedComponents(jsonPath, componentListMap) {
   const json = _.readJson(jsonPath)
   if (!json) throw new Error(`json is not valid: "${jsonPath}"`)
 
   const {dirPath, fileName, fileBase} = getJsonPathInfo(jsonPath)
-  if (hasCheckMap[fileBase]) return
-  hasCheckMap[fileBase] = true
 
   for (let i = 0, len = checkProps.length; i < len; i++) {
     const checkProp = checkProps[i]
@@ -44,16 +41,18 @@ async function checkIncludedComponents(jsonPath, componentListMap) {
 
       value = _.transformPath(value, path.sep)
 
-      // 检查相对路径
+      // check relative path
       const componentPath = `${path.join(dirPath, value)}.json`
+      // eslint-disable-next-line no-await-in-loop
       const isExists = await _.checkFileExists(componentPath)
       if (isExists) {
+        // eslint-disable-next-line no-await-in-loop
         await checkIncludedComponents(componentPath, componentListMap)
       }
     }
   }
 
-  // 进入存储
+  // checked
   componentListMap.wxmlFileList.push(`${fileBase}.wxml`)
   componentListMap.wxssFileList.push(`${fileBase}.wxss`)
   componentListMap.jsonFileList.push(`${fileBase}.json`)
@@ -69,7 +68,7 @@ module.exports = async function (entry) {
     jsonFileList: [],
     jsFileList: [],
 
-    jsFileMap: {}, // 为 webpack entry 所用
+    jsFileMap: {}, // for webpack entry
   }
 
   const isExists = await _.checkFileExists(entry)

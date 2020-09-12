@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "barrage": "../../components/index"
+    "recycle-view": "../../components/recycle-view",
+    "recycle-item": "../../components/recycle-item"
   }
 }
