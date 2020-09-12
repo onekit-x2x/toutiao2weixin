@@ -63,5 +63,5 @@
     "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --bail",
     "watch": "gulp watch --develop --watch"
   },
-  "version": "1.0.18"
+  "version": "1.0.19"
 }
