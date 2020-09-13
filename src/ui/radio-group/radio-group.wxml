@@ -1,0 +1,11 @@
+<view
+id="{{onekitId}}"
+class="onekit-radio-group {{onekitClass}}"
+style="{{onekitStyle}}"
+bindchange="radio_groupBindchange"
+
+bindclick="radio_click"
+>
+
+<slot></slot>
+</view>

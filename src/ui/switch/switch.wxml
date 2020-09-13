@@ -1,0 +1,12 @@
+<switch
+id="{{onekitId}}"
+class="onekit-switch {{onekitClass}}"
+style="{{onekitStyle}}"
+checked="{{checked}}"
+disabled="{{disabled}}"
+type="{{type}}"
+color="{{color}}"
+bindchange="switch_change"
+>
+<slot></slot>
+</switch>
