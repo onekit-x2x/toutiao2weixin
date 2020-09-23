@@ -1,0 +1,15 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="page-body">
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="page-body-info">
+        <onekit-view onekit-class="page-body-title">网络状态</onekit-view>
+        <block wx:if="{{isConnected === false}}">
+          <onekit-text onekit-class="page-body-text">没有网络连接</onekit-text>
+        </block>
+        <block wx:if="{{isConnected === true}}">
+          <onekit-text onekit-class="page-body-text-network-type">{{networkType}}</onekit-text>
+        </block>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

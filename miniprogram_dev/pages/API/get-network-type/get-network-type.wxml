@@ -1,0 +1,19 @@
+
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">网络状态</onekit-view>
+        <block wx:if="{{hasNetworkType === false}}">
+          <onekit-text onekit-class="page-body-text text-space">未获取</onekit-text>
+          <onekit-text onekit-class="page-body-text text-space">点击红色按钮可获取网络状态</onekit-text>
+        </block>
+        <block wx:if="{{hasNetworkType === true}}">
+          <onekit-text onekit-class="page-body-text-network-type text-space">{{networkType}}</onekit-text>
+        </block>
+        <onekit-view onekit-class="btn-area">
+          <onekit-button type="primary" bindtap="getNetworkType">获取手机网络状态</onekit-button>
+          <onekit-button bindtap="clear">清空</onekit-button>
+        </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

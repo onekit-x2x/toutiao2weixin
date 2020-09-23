@@ -1,0 +1,14 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="page-body">
+    <onekit-view onekit-class="page-body-info">
+      <onekit-view onekit-class="page-body-title">当前屏幕亮度</onekit-view>
+      <onekit-text onekit-class="page-body-text-screen-brightness">{{screenBrightness}}</onekit-text>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">设置屏幕亮度</onekit-view>
+      <onekit-view onekit-class="body-view">
+        <onekit-slider bindchange="changeBrightness" value="{{screenBrightness}}" min="0" max="1" step="0.1"></onekit-slider>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

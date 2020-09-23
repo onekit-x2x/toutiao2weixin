@@ -1,0 +1,39 @@
+
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="ttui-cells">
+        <onekit-view onekit-class="ttui-cell">
+          <onekit-view onekit-class="ttui-cell__hd">
+            <onekit-view onekit-class="ttui-label">x</onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell__bd">
+            <onekit-input onekit-class="ttui-input" type="text" disabled="{{true}}" placeholder="未获取" value="{{acc.x}}"></onekit-input>
+          </onekit-view>
+        </onekit-view>
+        <onekit-view onekit-class="ttui-cell">
+          <onekit-view onekit-class="ttui-cell__hd">
+            <onekit-view onekit-class="ttui-label">y</onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell__bd">
+            <onekit-input onekit-class="ttui-input" type="text" disabled="{{true}}" placeholder="未获取" value="{{acc.y}}"></onekit-input>
+          </onekit-view>
+        </onekit-view>
+        <onekit-view onekit-class="ttui-cell">
+          <onekit-view onekit-class="ttui-cell__hd">
+            <onekit-view onekit-class="ttui-label">z</onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell__bd">
+            <onekit-input onekit-class="ttui-input" type="text" disabled="{{true}}" placeholder="未获取" value="{{acc.z}}"></onekit-input>
+          </onekit-view>
+        </onekit-view>
+      </onekit-view>
+			<onekit-view>{{txt}}</onekit-view>
+      <onekit-view onekit-class="btn-area">
+          <onekit-button type="primary" bindtap="start" disabled="{{!stop}}">开始监听加速度变化</onekit-button>
+          <onekit-button type="primary" bindtap="stop" disabled="{{stop}}">停止监听加速度变化</onekit-button>
+          <onekit-button bindtap="clear">清空</onekit-button>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

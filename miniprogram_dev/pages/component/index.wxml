@@ -1,0 +1,30 @@
+<onekit-view onekit-class="container">
+    <onekit-view onekit-class="header header-center">
+        <onekit-image onekit-class="index-logo" src="../../image/category/logo.png"></onekit-image>
+        <onekit-view onekit-class="index-desc">以下将展示小程序官方组件能力，组件样式仅供参考，开发者可根据自身需求自定义组件样式，具体属性参数详见文档。</onekit-view>
+    </onekit-view>
+
+    <onekit-view onekit-class="body body-space">
+        <onekit-view onekit-class="category-list">
+            <onekit-view wx:for="{{list}}" onekit-class="category-list__item {{item.open ? 'category-list__item--open': ''}}">
+                <onekit-view onekit-class="ttui-flex item-title" data-index="{{index}}" bindtap="toggleSwitch">
+                    <onekit-view onekit-class="ttui-flex__item">{{item.name}}</onekit-view>
+                    <onekit-image onekit-class="item-list__img" src="../../image/category/arrow.png"></onekit-image>
+                </onekit-view>
+                <onekit-view onekit-class="item-list">
+                    <onekit-view wx:for="{{item.pages}}" wx:for-item='page' onekit-class="item-list__page">
+                        <onekit-navigator url="{{page.path}}" onekit-class="item-navigator">
+                            <onekit-view onekit-class="ttui-flex navigator-wraper">
+                                <onekit-view onekit-class="ttui-flex__item">{{page.name}}</onekit-view>
+                                <onekit-image onekit-class="item-list__img" src="../../image/category/setting_arrow.png"></onekit-image>
+                            </onekit-view>
+                        </onekit-navigator>
+                    </onekit-view>
+                </onekit-view>
+            </onekit-view>
+        </onekit-view>
+    </onekit-view>
+
+    <onekit-view onekit-class="footer">
+    </onekit-view>
+</onekit-view>

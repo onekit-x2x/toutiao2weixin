@@ -1,0 +1,92 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body body-space">
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">本地图片</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image" src="../../../image/demo/logo.png"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">网络图片</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 保持比例长边显示</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image aspect-fit" mode="aspectFit" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 保持比例短边显示</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image aspect-fit" mode="aspectFill" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+  
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 宽度设置高度自动变</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image width-fix" mode="widthFix" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 宽度设置裁切显示上部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image width-fix" mode="top" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 宽度设置裁切显示下部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image width-fix" mode="bottom" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 宽度设置裁切显示中间部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image width-fix" mode="center" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 高度设置裁切显示左侧部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image left-fix" mode="left" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 高度设置裁切显示右侧部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image left-fix" mode="right" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 高度设置裁切显示左上部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image two-direction-fix" mode="top left" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 高度设置裁切显示右上部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image two-direction-fix" mode="top right" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 高度设置裁切显示左下部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image two-direction-fix" mode="bottom left" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">自定义缩放 -- 高度设置裁切显示右下部分</onekit-view>
+      <onekit-view onekit-class="page-section-ctn">
+        <onekit-image onekit-class="image two-direction-fix" mode="bottom right" src="{{url}}"></onekit-image>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

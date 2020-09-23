@@ -1,0 +1,12 @@
+<custom chineseName="实时视频播放器" engName="live-player"></custom>
+<onekit-view onekit-class="live-play">
+    <onekit-live-player onekit-class="my-live" onekit-id="myLive" src="{{src}}" autoplay="{{autoplay}}" muted="{{muted}}" orientation="vertical" object-fit="{{objectFit}}" background-mute="{{backgroundMute}}" min-cache="{{minCache}}" max-cache="{{maxCache}}" bind:statechange="statechange" bind:netstatus="netstatus" bindfullscreenchange="">
+    </onekit-live-player>
+    <div class="section">
+        <onekit-button type="primary" bind:tap="livePlay">开始播放 play</onekit-button>
+        <onekit-button type="primary" bind:tap="liveStop">停止播放 stop</onekit-button>
+        <onekit-button type="primary" bind:tap="liveMute">{{muted? '': '不'}}静音</onekit-button>
+        <onekit-button type="primary" bind:tap="backgroundMute">进入后台静音</onekit-button>
+        <onekit-button type="primary" bind:tap="objectFit">object-fit改变为{{objectFit}}</onekit-button>
+    </div>
+</onekit-view>

@@ -1,0 +1,63 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section">
+			<onekit-view onekit-class="ttui-cells">
+				<onekit-view onekit-class="ttui-cell">
+					<onekit-view onekit-class="ttui-cell__hd">
+						<onekit-view onekit-class="ttui-label">key</onekit-view>
+					</onekit-view>
+					<onekit-view onekit-class="weui-cell__bd">
+							<onekit-input onekit-class="ttui-input" value="{{key}}" bindinput="keyChange" auto-focus placeholder="请输入key"></onekit-input>
+					</onekit-view>
+				</onekit-view>
+				<onekit-view onekit-class="ttui-cell">
+						<onekit-view onekit-class="ttui-cell__hd">
+							<onekit-view onekit-class="ttui-label">value</onekit-view>
+						</onekit-view>
+						<onekit-view onekit-class="weui-cell__bd">
+								<onekit-input onekit-class="ttui-input" value="{{value}}" bindinput="valueChange" placeholder="请输入value"></onekit-input>
+						</onekit-view>
+					</onekit-view>
+			</onekit-view>
+			<onekit-view onekit-class="btn-area">
+					<onekit-button type="primary" bindtap="setStorage">保存数据</onekit-button>
+					<onekit-button bindtap="getStorage">读取数据</onekit-button>
+					<onekit-button bindtap="clearStorage">清空数据</onekit-button>
+			</onekit-view>
+      <onekit-view onekit-class="container">
+
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="ttui-cells">
+          <onekit-view onekit-class="ttui-cell">
+            <onekit-view onekit-class="ttui-cell__hd">
+              <onekit-view onekit-class="ttui-label">key列表</onekit-view>
+            </onekit-view>
+            <onekit-view onekit-class="weui-cell__bd">
+                <onekit-input onekit-class="ttui-input" disabled="{{true}}" value="{{storageKeys}}" bindinput="keyChange" placeholder="key列表"></onekit-input>
+            </onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell">
+              <onekit-view onekit-class="ttui-cell__hd">
+                <onekit-view onekit-class="ttui-label">已用空间</onekit-view>
+              </onekit-view>
+              <onekit-view onekit-class="weui-cell__bd">
+                  <onekit-input onekit-class="ttui-input" value="{{limitSize}}" bindinput="valueChange" placeholder="已用空间"></onekit-input>
+              </onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell">
+              <onekit-view onekit-class="ttui-cell__hd">
+                <onekit-view onekit-class="ttui-label">总体容量</onekit-view>
+              </onekit-view>
+              <onekit-view onekit-class="weui-cell__bd">
+                  <onekit-input onekit-class="ttui-input" value="{{currentSize}}" bindinput="valueChange" placeholder="总体容量"></onekit-input>
+              </onekit-view>
+          </onekit-view>
+        </onekit-view>
+        <onekit-view onekit-class="btn-area">
+            <onekit-button type="primary" bindtap="updateStorageInfo">更新本地存储信息</onekit-button>
+        </onekit-view>
+      </onekit-view>
+    </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

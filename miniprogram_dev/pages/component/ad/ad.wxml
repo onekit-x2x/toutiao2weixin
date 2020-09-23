@@ -1,0 +1,6 @@
+<onekit-view onekit-class="body-space">
+  <onekit-view onekit-class="page-section-title page-section-title-space">
+    <onekit-text>广告示例</onekit-text>
+  </onekit-view>
+  <onekit-ad unit-id="b754ef8rp9f1bdd61a" bindload="adloadhandler" binderror="aderrorhandler" bindclose="adclosehandler"></onekit-ad>
+</onekit-view>

@@ -1,0 +1,13 @@
+
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-text onekit-class="text-space">剩余录音时间 {{ cd }}ms</onekit-text>
+    <onekit-view onekit-class="btn-area">
+        <onekit-button bindtap="start" wx:if="{{ !isRecording && !isPaused }}">start</onekit-button>
+        <onekit-button bindtap="pauseorresume" wx:if="{{ isRecording || isPaused }}">{{ isPaused ? 'resume' : 'pause' }}</onekit-button>
+        <onekit-button bindtap="stop" wx:if="{{ isRecording || isPaused }}">stop</onekit-button>
+        <onekit-button bindtap="play" wx:if="{{recordFilePath}}">play</onekit-button>
+    </onekit-view>
+  </onekit-view>
+
+</onekit-view>

@@ -1,0 +1,34 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section page-section-space">
+      <onekit-view onekit-class="page-section-title">表单组件在label内</onekit-view>
+      <onekit-checkbox-group onekit-class="group" bindchange="checkboxChange">
+        <onekit-view wx:for="{{checkboxItems}}" onekit-class="label-1">
+          <onekit-label>
+            <onekit-checkbox value="{{item.name}}" checked="{{item.checked}}"></onekit-checkbox>
+            <onekit-text onekit-class="label-1-text">{{item.value}}</onekit-text>
+          </onekit-label>
+        </onekit-view>
+      </onekit-checkbox-group>
+    </onekit-view>
+  
+    <onekit-view onekit-class="page-section page-section-space">
+      <onekit-view onekit-class="page-section-title">label用for标识表单组件</onekit-view>
+      <onekit-radio-group onekit-class="group" bindchange="radioChange">
+        <onekit-view wx:for="{{radioItems}}" onekit-class="label-2">
+          <onekit-radio onekit-id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></onekit-radio>
+          <onekit-label onekit-class="label-2-text" for="{{item.name}}"><onekit-text>{{item.name}}</onekit-text></onekit-label>
+        </onekit-view>
+      </onekit-radio-group>
+    </onekit-view>
+  
+    <onekit-view onekit-class="page-section page-section-space">
+      <onekit-view onekit-class="page-section-title">label内有多个时选中第一个</onekit-view>
+      <onekit-label onekit-class="label-3">
+        <onekit-checkbox onekit-class="checkbox-3">选项一</onekit-checkbox>
+        <onekit-checkbox onekit-class="checkbox-3">选项二</onekit-checkbox>
+        <onekit-view onekit-class="label-3-text">点击该label下的文字默认选中第一个checkbox</onekit-view>
+      </onekit-label>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

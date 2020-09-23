@@ -1,0 +1,30 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body body-space">
+
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="page-section-title">通过HTML String渲染</onekit-view>
+      <onekit-view onekit-class="page-content">
+        <onekit-view onekit-class="show-code">
+          <onekit-text>{{htmlSnip}}</onekit-text>
+        </onekit-view>
+        <onekit-button type="primary" bindtap="renderHtml">渲染HTML</onekit-button>
+        <block wx:if="{{renderedByHtml}}">
+          <onekit-rich-text nodes="{{htmlSnip}}"></onekit-rich-text>
+        </block>
+      </onekit-view>
+    </onekit-view>
+
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="page-section-title">通过节点渲染</onekit-view>
+      <onekit-view onekit-class="page-content">
+        <onekit-view onekit-class="show-code">{{nodeSnip}}</onekit-view>
+        <onekit-button type="primary" bindtap="renderNode">渲染Node</onekit-button>
+        <block wx:if="{{renderedByNode}}">
+          <onekit-rich-text nodes="{{nodes}}"></onekit-rich-text>
+        </block>
+      </onekit-view>
+    </onekit-view>
+
+  </onekit-view>
+</onekit-view>
+

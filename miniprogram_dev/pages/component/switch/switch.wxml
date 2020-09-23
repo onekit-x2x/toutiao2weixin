@@ -1,0 +1,29 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section page-section-space">
+      <onekit-view onekit-class="page-section-title">默认样式</onekit-view>
+      <onekit-view onekit-class="body-view">
+        <onekit-switch checked bindchange="switch1Change" onekit-class="switch-space"></onekit-switch>
+        <onekit-switch bindchange="switch2Change"></onekit-switch>
+      </onekit-view>
+    </onekit-view>
+
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="page-section-title page-section-title-space">推荐展示样式</onekit-view>
+      <onekit-view onekit-class="ttui-cells">
+        <onekit-view onekit-class="ttui-cell ttui-cell-switch">
+          <onekit-view onekit-class="ttui-cell__bd">开启中</onekit-view>
+          <onekit-view onekit-class="ttui-cell__ft">
+            <onekit-switch checked></onekit-switch>
+          </onekit-view>
+        </onekit-view>
+        <onekit-view onekit-class="ttui-cell ttui-cell-switch">
+          <onekit-view onekit-class="ttui-cell__bd">关闭</onekit-view>
+          <onekit-view onekit-class="ttui-cell__ft">
+            <onekit-switch></onekit-switch>
+          </onekit-view>
+        </onekit-view>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

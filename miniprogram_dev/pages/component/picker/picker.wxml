@@ -1,0 +1,73 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">普通选择器</onekit-view>
+        <onekit-picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <onekit-view onekit-class="picker">
+            当前选择：{{array[index]}}
+          </onekit-view>
+        </onekit-picker>
+      </onekit-view>
+      
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">普通Object选择器</onekit-view>
+        <onekit-picker bindchange="bindObjectPickerChange" value="{{objectIndex}}" range="{{objectArray}}" range-key="en">
+          <onekit-view onekit-class="picker">
+            当前选择：{{objectArray[objectIndex]['en']}}
+          </onekit-view>
+        </onekit-picker>
+      </onekit-view>
+      
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">多列选择器</onekit-view>
+        <onekit-picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <onekit-view onekit-class="picker">
+            当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+          </onekit-view>
+        </onekit-picker>
+      </onekit-view>
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">时间选择器</onekit-view>
+        <onekit-picker mode="time" value="{{time}}" start="{{timeStart}}" end="{{timeEnd}}" bindchange="bindTimeChange">
+          <onekit-view onekit-class="picker">
+            当前选择: {{time}}
+          </onekit-view>
+        </onekit-picker>
+      </onekit-view>
+  
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">日期选择器</onekit-view>
+        <onekit-picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" fields="year">
+          <onekit-view onekit-class="picker">
+            当前选择: {{date}}
+          </onekit-view>
+        </onekit-picker>
+      </onekit-view>
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">日期选择器</onekit-view>
+        <onekit-picker mode="date" value="{{date1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange1" fields="month">
+          <onekit-view onekit-class="picker">
+            当前选择: {{date1}}
+          </onekit-view>
+        </onekit-picker>
+      </onekit-view>
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">日期选择器</onekit-view>
+        <onekit-picker mode="date" value="{{date2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange2" fields="day">
+          <onekit-view onekit-class="picker">
+            当前选择: {{date2}}
+          </onekit-view>
+        </onekit-picker>
+      </onekit-view>
+      <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title page-section-title-space">省市区选择器</onekit-view>
+        <onekit-picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+          <onekit-view onekit-class="picker">
+            当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+          </onekit-view>
+        </onekit-picker>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

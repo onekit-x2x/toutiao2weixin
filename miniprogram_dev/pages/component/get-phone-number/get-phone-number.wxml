@@ -1,0 +1,13 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="page-body">
+    <onekit-view onekit-class="page-body-wrapper">
+      <onekit-text onekit-class="page-body-title">
+        点击获取用户手机号
+      </onekit-text>
+      <onekit-view onekit-class="page-body-line">
+        <onekit-button wx:if="{{sLog}}" open-type="getPhoneNumber" size="default" bindgetphonenumber="gotPhoneNumber"> 获取手机号 </onekit-button>
+        <onekit-button wx:else size="default" bindgetphonenumber="login"> 请先登录才可以获取 </onekit-button>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

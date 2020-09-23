@@ -1,0 +1,27 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section page-section-space">
+      <onekit-view onekit-class="page-section-title">默认样式</onekit-view>
+      <onekit-label onekit-class="radio">
+        <onekit-radio value="cb" checked="true"></onekit-radio>选中
+      </onekit-label>
+      <onekit-label onekit-class="radio">
+        <onekit-radio value="cb"></onekit-radio>未选中
+      </onekit-label>
+    </onekit-view>
+
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="page-section-title page-section-title-space">推荐展示样式</onekit-view>
+      <onekit-view onekit-class="ttui-cells">
+        <onekit-radio-group bindchange="checkboxChange">
+          <onekit-label wx:for="{{items}}" wx:key='value' onekit-class="ttui-cell">
+            <onekit-view onekit-class="ttui-cell__hd">
+              <onekit-radio value="{{item.value}}" checked="{{item.checked}}"></onekit-radio>
+            </onekit-view>
+            <onekit-view onekit-class="ttui-cell__bd">{{item.name}}</onekit-view>
+          </onekit-label>
+        </onekit-radio-group>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

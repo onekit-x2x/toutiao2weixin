@@ -1,0 +1,12 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="btn-area">
+      <onekit-view>当前页面标识{{ now }}</onekit-view>
+      <onekit-button bindtap="navigateTo">navigateTo（可以多次跳到相同页面但生命周期不同）</onekit-button>
+      <onekit-button bindtap="navigateBack">navigateBack</onekit-button>
+      <onekit-button bindtap="redirectTo">redirectTo</onekit-button>
+      <onekit-button bindtap="reLaunch">reLaunch</onekit-button>
+      <onekit-button bindtap="switchTab">switchTab</onekit-button>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

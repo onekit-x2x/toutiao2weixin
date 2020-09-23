@@ -1,0 +1,13 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="page-body">
+    <onekit-view onekit-class="page-section">
+      <onekit-canvas onekit-class="canvas-element" canvas-id="canvas"></onekit-canvas>
+      <onekit-scroll-view onekit-class="canvas-buttons" scroll-y="true">
+        <block wx:for="{{methods}}" wx:for-item='method'>
+          <onekit-button onekit-class="canvas-button" bindtap="{{method}}">{{method}}</onekit-button>
+        </block>
+        <onekit-button onekit-class="canvas-button" bindtap="toTempFilePath" type="primary">toTempFilePath</onekit-button>
+      </onekit-scroll-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

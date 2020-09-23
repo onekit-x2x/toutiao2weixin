@@ -1,0 +1,12 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body body-space">
+    <onekit-view onekit-class="page-section page-section-spacing">
+      <onekit-view onekit-class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <onekit-text>{{text}}</onekit-text>
+      </onekit-view>
+      <onekit-button disabled="{{!canAdd}}" bindtap="add">添加一行文字</onekit-button>
+      <onekit-button disabled="{{!canRemove}}" bindtap="remove">删除一行文字</onekit-button>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>
+

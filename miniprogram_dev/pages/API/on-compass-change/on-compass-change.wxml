@@ -1,0 +1,20 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="page-body">
+    <onekit-view onekit-class="page-section page-section_center">
+      <onekit-text onekit-class="page-body-text">旋转手机即可获取方位信息</onekit-text>
+      <onekit-view onekit-class="direction">
+        <onekit-view onekit-class="bg-compass-line"></onekit-view>
+        <onekit-image onekit-class="bg-compass" src="./compass.png" onekit-style="transform: rotate({{direction}}deg)"></onekit-image>
+        <onekit-view onekit-class="direction-value">
+          <onekit-text>{{direction}}</onekit-text>
+          <onekit-text onekit-class="direction-degree">o</onekit-text>
+        </onekit-view>
+      </onekit-view>
+      <onekit-view onekit-class="controls">
+        <onekit-button bindtap="startCompass" disabled="{{enabled}}">开始监听</onekit-button>
+        <onekit-button bindtap="stopCompass" disabled="{{!enabled}}">停止监听</onekit-button>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+
+</onekit-view>

@@ -1,0 +1,22 @@
+
+<onekit-view onekit-class="container">
+
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="page-body-info">
+        <block wx:if="{{localImagePath}}">
+          <onekit-image src="{{localImagePath}}" onekit-class="image" mode="aspectFit"></onekit-image>
+        </block>
+
+        <block wx:else>
+          <onekit-view onekit-class="image-plus image-plus-nb" bindtap="chooseImage">
+            <onekit-view onekit-class="image-plus-horizontal"></onekit-view>
+            <onekit-view onekit-class="image-plus-vertical"></onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="image-plus-text">选择图片</onekit-view>
+        </block>
+
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

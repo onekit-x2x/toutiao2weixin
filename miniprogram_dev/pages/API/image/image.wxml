@@ -1,0 +1,61 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="page-section-title page-section-title-space">测试 chooseImage 和 previewImage</onekit-view>
+  <onekit-view onekit-class="body">
+    <form>
+      <onekit-view onekit-class="page-section">
+
+        <onekit-view onekit-class="ttui-cells">
+          <onekit-view onekit-class="ttui-cell">
+            <onekit-view onekit-class="ttui-cell__hd">
+              <onekit-view onekit-class="ttui-label">图片来源</onekit-view>
+            </onekit-view>
+            <onekit-view onekit-class="ttui-cell__bd">
+              <onekit-picker range="{{sourceType}}" bindchange="sourceTypeChange" value="{{sourceTypeIndex}}" mode="selector">
+                <onekit-view onekit-class="ttui-input">{{sourceType[sourceTypeIndex]}}</onekit-view>
+              </onekit-picker>
+            </onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell">
+            <onekit-view onekit-class="ttui-cell__hd">
+              <onekit-view onekit-class="ttui-label">数量限制</onekit-view>
+            </onekit-view>
+            <onekit-view onekit-class="ttui-cell__bd">
+              <onekit-picker range="{{count}}" bindchange="countChange" value="{{countIndex}}" mode="selector">
+                <onekit-view onekit-class="ttui-input">{{count[countIndex]}}</onekit-view>
+              </onekit-picker>
+            </onekit-view>
+          </onekit-view>
+        </onekit-view>
+        <onekit-view wx:if="{{sourceTypeIndex != 1}}">
+          此时数量限制不生效
+        </onekit-view>
+        <onekit-view onekit-class="ttui-cells choose-image">
+          <onekit-view onekit-class="ttui-cell ttui-cell-image">
+            <onekit-view onekit-class="ttui-cell__bd">
+              <onekit-view onekit-class="ttui-uploader">
+                <onekit-view onekit-class="ttui-uploader__hd">
+                  <onekit-view onekit-class="ttui-uploader__title">点击可预览选好的图片</onekit-view>
+                  <onekit-view onekit-class="ttui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</onekit-view>
+                </onekit-view>
+                <onekit-view onekit-class="ttui-uploader__bd">
+                  <onekit-view onekit-class="ttui-uploader__files">
+                    <block wx:for="{{imageList}}" wx:for-item='image'>
+                      <onekit-view onekit-class="ttui-uploader__file">
+                        <onekit-image onekit-class="ttui-uploader__img" src="{{image}}" data-src="{{image}}" mode="aspectFill" bindtap="previewImage"></onekit-image>
+                      </onekit-view>
+                    </block>
+                  </onekit-view>
+                  <onekit-view onekit-class="ttui-uploader__input-box">
+                    <onekit-view onekit-class="ttui-uploader__input" bindtap="chooseImage"></onekit-view>
+                  </onekit-view>
+                </onekit-view>
+              </onekit-view>
+            </onekit-view>
+          </onekit-view>
+        </onekit-view>
+      </onekit-view>
+    </form>
+    <onekit-button type="default" size="default" onekit-class="image-action" bindtap="getImageInfo"> 获取待上传的图片信息 </onekit-button>
+    <onekit-button type="default" size="default" onekit-class="image-action" bindtap="saveImageToAlbum"> 保存图片到相册 </onekit-button>
+  </onekit-view>
+</onekit-view>

@@ -1,0 +1,12 @@
+
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body body-space">
+  
+    <onekit-view onekit-class="page-section">
+        <onekit-view onekit-class="page-section-title">新建的页面</onekit-view>
+      </onekit-view>
+    </onekit-view>
+
+  </onekit-view>
+
+

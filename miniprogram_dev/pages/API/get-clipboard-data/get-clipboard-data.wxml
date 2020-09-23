@@ -1,0 +1,26 @@
+<onekit-view onekit-class="container">
+  <block class="page-body">
+    <onekit-view onekit-class="ttui-cells">
+      <onekit-view onekit-class="ttui-cell">
+        <onekit-view onekit-class="ttui-cell__hd">
+          <onekit-view onekit-class="ttui-label">复制</onekit-view>
+        </onekit-view>
+        <onekit-view onekit-class="ttui-cell__bd">
+          <onekit-input onekit-class="ttui-input" type="text" placeholder="请输入想要复制的内容" bindinput="input"></onekit-input>
+        </onekit-view>
+      </onekit-view>
+      <onekit-view onekit-class="ttui-cell">
+        <onekit-view onekit-class="ttui-cell__hd">
+          <onekit-view onekit-class="ttui-label">粘贴</onekit-view>
+        </onekit-view>
+        <onekit-view onekit-class="ttui-cell__bd">
+          <onekit-text onekit-class="ttui-input">{{pasted}}</onekit-text>
+        </onekit-view>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="btn-area">
+      <onekit-button type="primary" bindtap="copy">复制已输入内容</onekit-button>
+      <onekit-button type="primary" bindtap="paste">粘贴</onekit-button>
+    </onekit-view>
+  </block>
+</onekit-view>

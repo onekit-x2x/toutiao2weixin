@@ -1,0 +1,28 @@
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body body-space-l">
+    <onekit-view onekit-class="page-section page-section-scroll-view">
+      <onekit-view onekit-class="page-section-title page-section-title-space">
+        <onekit-text>Vertical Scroll\n纵向滚动</onekit-text>
+      </onekit-view>
+      <onekit-view onekit-class="scroll-view-space">
+        <onekit-scroll-view scroll-y="true" onekit-style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <onekit-view onekit-id="demo1" onekit-class="scroll-view-item demo-text-1"></onekit-view>
+          <onekit-view onekit-id="demo2" onekit-class="scroll-view-item demo-text-2"></onekit-view>
+          <onekit-view onekit-id="demo3" onekit-class="scroll-view-item demo-text-3"></onekit-view>
+        </onekit-scroll-view>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="page-section-title page-section-title-space">
+        <onekit-text>Horizontal Scroll\n横向滚动</onekit-text>
+      </onekit-view>
+      <onekit-view onekit-class="scroll-view-space">
+        <onekit-scroll-view onekit-class="scroll-view_H" scroll-x="true" bindscroll="scroll" onekit-style="width: 100%">
+          <onekit-view onekit-id="demo1" onekit-class="scroll-view-item_H demo-text-1"></onekit-view>
+          <onekit-view onekit-id="demo2" onekit-class="scroll-view-item_H demo-text-2"></onekit-view>
+          <onekit-view onekit-id="demo3" onekit-class="scroll-view-item_H demo-text-3"></onekit-view>
+        </onekit-scroll-view>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

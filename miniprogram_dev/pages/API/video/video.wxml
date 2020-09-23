@@ -1,0 +1,53 @@
+
+<onekit-view onekit-class="container">
+  <onekit-view onekit-class="body">
+    <onekit-view onekit-class="page-section">
+      <onekit-view onekit-class="ttui-cells">
+        <onekit-view onekit-class="ttui-cell">
+          <onekit-view onekit-class="ttui-cell__hd">
+            <onekit-view onekit-class="ttui-label">视频来源</onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell__bd">
+            <onekit-picker range="{{sourceType}}" bindchange="sourceTypeChange" value="{{sourceTypeIndex}}">
+              <onekit-view onekit-class="ttui-input">{{sourceType[sourceTypeIndex]}}</onekit-view>
+            </onekit-picker>
+          </onekit-view>
+        </onekit-view>
+        <onekit-view onekit-class="ttui-cell">
+          <onekit-view onekit-class="ttui-cell__hd">
+            <onekit-view onekit-class="ttui-label">摄像头</onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell__bd">
+            <onekit-picker range="{{camera}}" bindchange="cameraChange" value="{{cameraIndex}}">
+              <onekit-view onekit-class="ttui-input">{{camera[cameraIndex]}}</onekit-view>
+            </onekit-picker>
+          </onekit-view>
+        </onekit-view>
+        <onekit-view onekit-class="ttui-cell">
+          <onekit-view onekit-class="ttui-cell__hd">
+            <onekit-view onekit-class="ttui-label">拍摄长度</onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="ttui-cell__bd">
+            <onekit-picker range="{{duration}}" bindchange="durationChange" value="{{durationIndex}}">
+              <onekit-view onekit-class="ttui-input">{{duration[durationIndex]}}</onekit-view>
+            </onekit-picker>
+          </onekit-view>
+        </onekit-view>
+      </onekit-view>
+
+      <onekit-view onekit-class="page-body-info">
+        <block wx:if="{{src === ''}}">
+          <onekit-view onekit-class="image-plus image-plus-nb" bindtap="chooseVideo">
+            <onekit-view onekit-class="image-plus-horizontal"></onekit-view>
+            <onekit-view onekit-class="image-plus-vertical"></onekit-view>
+          </onekit-view>
+          <onekit-view onekit-class="image-plus-text">添加视频</onekit-view>
+        </block>
+        <block wx:if="{{src != ''}}">
+          <onekit-video src="{{src}}" onekit-class="video"></onekit-video>
+        </block>
+      </onekit-view>
+    </onekit-view>
+    <onekit-button type="default" size="default" bindtap="saveVideoToAlbum"> 保存临时视频到相册 </onekit-button>
+  </onekit-view>
+</onekit-view>
