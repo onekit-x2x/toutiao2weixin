@@ -1,8 +1,9 @@
-export default function OnekitPage(object) {
-  const weixin_object = object;
-  weixin_object.animate = function () {
+/* eslint-disable camelcase */
+export default function OnekitPage(tt_object) {
+  const wx_object = tt_object
+  wx_object.animate = function () {
 
-  };
-  
-  return Page(weixin_object);
+  }
+
+  return Page(wx_object)
 }

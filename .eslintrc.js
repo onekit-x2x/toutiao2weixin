@@ -23,7 +23,6 @@ module.exports = {
     'promise'
   ],
   'rules': {
-    'max-len': ['error', {code : 10000}], 
     'arrow-parens': 'off',
     'comma-dangle': [
       'error',

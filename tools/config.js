@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path')
 
 const webpack = require('webpack')
@@ -8,11 +9,42 @@ const isWatch = process.argv.indexOf('--watch') >= 0
 const demoSrc = path.resolve(__dirname, './demo')
 const demoDist = path.resolve(__dirname, '../miniprogram_dev')
 const src = path.resolve(__dirname, '../src')
-const dev = path.join(demoDist, 'components')
+const dev = path.join(demoDist, 'toutiao2weixin')
 const dist = path.resolve(__dirname, '../miniprogram_dist')
 
 module.exports = {
-  entry: ['index', 'lib'],
+  entry: [
+    'ui/ad/ad',
+    'ui/button/button',
+    'ui/canvas/canvas',
+    'ui/checkbox/checkbox',
+    'ui/checkbox-group/checkbox-group',
+    'ui/icon/icon',
+    'ui/image/image',
+    'ui/input/input',
+    'ui/label/label',
+    'ui/live-player/live-player',
+    'ui/map/map',
+    'ui/navigator/navigator',
+    'ui/picker/picker',
+    'ui/picker-view/picker-view',
+    'ui/picker-view-column/picker-view-column',
+    'ui/progress/progress',
+    'ui/radio/radio',
+    'ui/radio-group/radio-group',
+    'ui/rich-text/rich-text',
+    'ui/scroll-view/scroll-view',
+    'ui/slider/slider',
+    'ui/slider/slider',
+    'ui/swiper/swiper',
+    'ui/swiper-item/swiper-item',
+    'ui/switch/switch',
+    'ui/text/text',
+    'ui/textarea/textarea',
+    'ui/video/video',
+    'ui/view/view',
+    'ui/web-view/web-view'
+  ],
 
   isDev,
   isWatch,
@@ -92,5 +124,5 @@ module.exports = {
     }
   },
 
-  copy: ['./assets', './utils.js'], // 将会复制到目标目录
+  copy: ['onekit.wxss', 'api', 'OnekitApp.js', 'OnekitBehavior.js', 'OnekitComponent.js', 'OnekitPage.js', 'tt.js'], // 将会复制到目标目录
 }

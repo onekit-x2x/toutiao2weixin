@@ -7,17 +7,17 @@ Component({
     virtualHost: true
   },
   properties: {
-    onekitClass:{type:String,value:""},
-    onekitStyle:{type:String,value:""},
-    onekitId:{type:String,value:""},
-    
+    onekitClass: {type: String, value: ''},
+    onekitStyle: {type: String, value: ''},
+    onekitId: {type: String, value: ''},
+
   },
   lifetimes: {
-    attached: function() {
+    attached() {
       // 在组件实例进入页面节点树时执行
       // this.selectComponent('radio')
-     // let child = this.selectComponent(".radio-child");
-     // console.log("child",child);
+      // let child = this.selectComponent(".radio-child");
+      // console.log("child",child);
     },
   },
   /**
@@ -26,7 +26,7 @@ Component({
   data: {
 
   },
-  observers:{
+  observers: {
 
   },
   /**
@@ -34,16 +34,17 @@ Component({
    */
   methods: {
 
-    radio_click(e){
-      //console.log(e)
-      this.createSelectorQuery().in(this).selectAll('.radio-group').boundingClientRect(function(e){
-        console.log("createSelectorQuery",e);
-      }).exec();
+    radio_click() {
+      // console.log(e)
+      this.createSelectorQuery().in(this).selectAll('.radio-group').boundingClientRect(function () {
+        // console.log('createSelectorQuery', e)
+      })
+        .exec()
     //  console.log("radios",radios);
-     // this.triggerEvent("Change",{})
+      // this.triggerEvent("Change",{})
     },
-    radio_groupBindchange(e){
-      this.triggerEvent("change",{})
+    radio_groupBindchange() {
+      this.triggerEvent('change', {})
     }
 
   }

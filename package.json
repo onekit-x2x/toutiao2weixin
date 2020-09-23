@@ -1,8 +1,8 @@
 {
   "name": "toutiao2weixin",
-  "version": "1.1.5",
+  "version": "1.1.10",
   "description": "",
-  "main": "miniprogram_dist/tt.js",
+  "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
     "watch": "gulp watch --develop --watch",

@@ -3,6 +3,8 @@
     "pages/index/index"
   ],
   "window":{
+  "usingComponents": {
+  },
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",

@@ -9,19 +9,19 @@ Component({
   properties: {
     onekitClass: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitStyle: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitId: {
       type: String,
-      value: ""
+      value: ''
     },
     nodes: {
-      type: "",
-      value: ""
+      type: '',
+      value: ''
     }
 
   },

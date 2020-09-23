@@ -9,15 +9,15 @@ Component({
   properties: {
     onekitClass: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitStyle: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitId: {
       type: String,
-      value: ""
+      value: ''
     },
     indicatorDots: {
       type: Boolean,
@@ -25,7 +25,7 @@ Component({
     },
     indicatorColor: {
       type: String,
-      value: "Rgba(0, 0, 0, .3)",
+      value: 'Rgba(0, 0, 0, .3)',
     },
     indicatorActiveColor: {
       type: String,
@@ -66,12 +66,7 @@ Component({
     displayMultipleItems: {
       type: Number,
       value: '1',
-    },
-    nextMargin: {
-      type: String,
-      value: '0px',
-    },
-
+    }
   },
 
   /**
@@ -85,14 +80,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    swiper_Change(e){
-      this.triggerEvent('change',e)
+    swiper_Change(e) {
+      this.triggerEvent('change', e)
     },
-  swiper_AnimationEnd(e){
-      this.triggerEvent('animationfinish',e)
+    swiper_AnimationEnd(e) {
+      this.triggerEvent('animationfinish', e)
     },
-  swiper_transition(e){
-      this.triggerEvent('transition',e)
+    swiper_transition(e) {
+      this.triggerEvent('transition', e)
     }
   }
 })

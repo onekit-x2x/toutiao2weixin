@@ -9,24 +9,18 @@ Component({
   properties: {
     onekitClass: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitStyle: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitId: {
       type: String,
-      value: ""
+      value: ''
     },
     percent: {
       type: Number,
-      observer: function (newVal, oldVal, changedPath) {
-        var that = this;
-        setTimeout(() => {
-          that.triggerEvent("activeend");
-        }, 1000);
-      }
     },
     showInfo: {
       type: Boolean,
@@ -42,15 +36,15 @@ Component({
     },
     color: {
       type: String,
-      value: "#09BB07"
+      value: '#09BB07'
     },
     activeColor: {
       type: String,
-      value: "#09BB07"
+      value: '#09BB07'
     },
     backgroundColor: {
       type: String,
-      value: "#EBEBEB"
+      value: '#EBEBEB'
     },
     active: {
       type: Boolean,
@@ -58,10 +52,10 @@ Component({
     },
     activeMode: {
       type: String,
-      value: "backwards"
+      value: 'backwards'
     },
-    "bindactiveend": {
-      type: "Eventhandle"
+    bindactiveend: {
+      type: 'Eventhandle'
     },
     fontSize: {
       type: String,
@@ -76,21 +70,21 @@ Component({
   data: {
 
   },
- // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
- attached: function () {
-  var borderRadius = this.properties.borderRadius;
-  borderRadius = this._num2str(borderRadius);
-  //
-  var strokeWidth = this.properties.strokeWidth;
-  strokeWidth =this._str2num(strokeWidth);
-  //
-  var fontSize = this.properties.fontSize;
-  fontSize = this._num2str(fontSize);
-  //
-  this.setData({ borderRadius, strokeWidth, fontSize })
+  // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+  attached() {
+    let borderRadius = this.properties.borderRadius
+    borderRadius = this._num2str(borderRadius)
+    //
+    let strokeWidth = this.properties.strokeWidth
+    strokeWidth = this._str2num(strokeWidth)
+    //
+    let fontSize = this.properties.fontSize
+    fontSize = this._num2str(fontSize)
+    //
+    this.setData({borderRadius, strokeWidth, fontSize})
 
   // console.log(borderRadius)
-},
+  },
   /**
    * 组件的方法列表
    */

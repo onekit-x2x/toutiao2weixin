@@ -1,5 +1,5 @@
 <button
-class="onekit_button Class {{onekitClass}}"
+class="onekit-button {{onekitClass}}"
 style="{{onekitStyle}}"
 id="{{onekitId}}"
   size="{{size}}"

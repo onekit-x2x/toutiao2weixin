@@ -8,13 +8,13 @@ Component({
     virtualHost: true
   },
   properties: {
-    onekitClass:{type:String,value:""},
-    onekitStyle:{type:String,value:""},
-    onekitId:{type:String,value:""},
-    checked:{type:Boolean,value:false},
-    disabled:{type:Boolean,value:false},
-    color:{type:String},
-    type:{type:String,value:"switch"}
+    onekitClass: {type: String, value: ''},
+    onekitStyle: {type: String, value: ''},
+    onekitId: {type: String, value: ''},
+    checked: {type: Boolean, value: false},
+    disabled: {type: Boolean, value: false},
+    color: {type: String},
+    type: {type: String, value: 'switch'}
 
   },
 
@@ -29,8 +29,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    switch_change(e) {
-      this.triggerEvent("Change", {})
+    switch_change() {
+      this.triggerEvent('Change', {})
     }
   }
 })

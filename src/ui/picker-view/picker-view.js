@@ -7,12 +7,12 @@ Component({
     virtualHost: true
   },
   properties: {
-    onekitClass:{type:String,value:""},
-    onekitStyle:{type:String,value:""},
-    onekitId:{type:String,value:""},
-    value:{type:Array},
-    indicatorStyle:{type:String},
-    maskStyle:{type:String},
+    onekitClass: {type: String, value: ''},
+    onekitStyle: {type: String, value: ''},
+    onekitId: {type: String, value: ''},
+    value: {type: Array},
+    indicatorStyle: {type: String},
+    maskStyle: {type: String},
   },
 
   /**
@@ -26,8 +26,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    pickerView_change(e){
-      this.triggerEvent("Change",{})
+    pickerView_change() {
+      this.triggerEvent('Change', {})
     }
   }
 })

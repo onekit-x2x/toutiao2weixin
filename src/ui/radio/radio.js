@@ -7,13 +7,13 @@ Component({
     virtualHost: true
   },
   properties: {
-    onekitClass:{type:String,value:""},
-    onekitStyle:{type:String,value:""},
-    onekitId:{type:String,value:""},
-    value:{type:String},
-    checked:{type:Boolean,value:false},
-    disabled:{type:Boolean,value:false},
-    colors:{type:String},
+    onekitClass: {type: String, value: ''},
+    onekitStyle: {type: String, value: ''},
+    onekitId: {type: String, value: ''},
+    value: {type: String},
+    checked: {type: Boolean, value: false},
+    disabled: {type: Boolean, value: false},
+    colors: {type: String},
   },
 
   /**
@@ -27,14 +27,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    item_tap(e){
-      
+    item_tap(e) {
       // if(this.properties.checked){
       //   return;
       // }
       // this.properties.checked = !this.properties.checked;
       // console.log("xxxx",this.properties.checked)
-      this.triggerEvent("click",{radio:e},{bubbles: true,composed: true});
+      this.triggerEvent('click', {radio: e}, {bubbles: true, composed: true})
     }
   }
 })

@@ -1,8 +1,8 @@
+/* eslint-disable max-len */
 /* eslint-disable no-console */
 import CanvasContext from './api/CanvasContext'
 import LivePlayerContext from './api/LivePlayerContext'
 import VideoContext from './api/VideoContext'
-import Context from './api/Context'
 
 export default class tt {
   // ///////////////// animation //////////////////////////
@@ -77,10 +77,6 @@ export default class tt {
 
   static getLogManager(object) {
     return wx.getLogManager(object)
-  }
-
-  static createContext() {
-    return new Context()
   }
 
   static createCanvasContext(canvasId) {

@@ -3,70 +3,65 @@ Component({
   mixins: [],
   data: {},
   props: {
-    longitude: function(longitude) {
-this.setData({longitude:longitude});
+    longitude(longitude) {
+      this.setData({longitude})
     },
-    latitude: function(latitude) {
-this.setData({latitude:latitude});
+    latitude(latitude) {
+      this.setData({latitude})
     },
-    scale: function(scale) {
-this.setData({scale:scale});
+    scale(scale) {
+      this.setData({scale})
     },
-    markers: function(markers) {
-this.setData({markers:markers});
+    markers(markers) {
+      this.setData({markers})
     },
-    covers: function(covers) {
-this.setData({markers:covers});
+    covers(covers) {
+      this.setData({markers: covers})
     },
-    polyline: function(polyline) {
-this.setData({polyline:polyline});
+    polyline(polyline) {
+      this.setData({polyline})
     },
-    polygons: function(polygons) {
-this.setData({polygon:polygon});
+    polygons(polygons) {
+      this.setData({polygons})
     },
-    circles: function(circles) {
-this.setData({circles:circles});
+    circles(circles) {
+      this.setData({circles})
     },
-    controls: function(controls) {
-this.setData({controls:controls});
+    controls(controls) {
+      this.setData({controls})
     },
-    "include-points": function(includePoints) {
-this.setData({"include-points":includePoints});
+    'include-points': function (includePoints) {
+      this.setData({'include-points': includePoints})
     },
-    "show-location": function(showLocation) {
-this.setData({"show-location":showLocation});
+    'show-location': function (showLocation) {
+      this.setData({'show-location': showLocation})
     },
-    subkey: function(subkey) {
-this.setData({"subkey":subkey});
+    subkey(subkey) {
+      this.setData({subkey})
     },
-    "enable-3D": function(enable3D) {
-console.log("[onekit]enable-3D");
+    'enable-3D': function () {
     },
-    "show-compass": function(showCompass) {
-this.mapCtx.showsCompass({isShowCompass:showCompass});
+    'show-compass': function (showCompass) {
+      this.mapCtx.showsCompass({isShowCompass: showCompass})
     },
-    "enable-overlooking": function(enableOverlooking) {
-this.mapCtx.gestureEnable({isGestureEnable:enableOverlooking});
+    'enable-overlooking': function (enableOverlooking) {
+      this.mapCtx.gestureEnable({isGestureEnable: enableOverlooking})
     },
-    "enable-zoom": function(enableZoom) {
-this.mapCtx.showsScale({isShowsScale:enableZoom});
+    'enable-zoom': function (enableZoom) {
+      this.mapCtx.showsScale({isShowsScale: enableZoom})
     },
-    "enable-scroll": function(enableScroll) {
-console.log("[onekit]enable-scroll");
+    'enable-scroll': function () {
     },
-    "enable-rotate": function(enableRotate) {
-this.mapCtx.gestureEnable({isGestureEnable:enableRotate});
+    'enable-rotate': function (enableRotate) {
+      this.mapCtx.gestureEnable({isGestureEnable: enableRotate})
     }
   },
   didMount() {
-    this.mapCtx = my.createMapContext("map");
-   },
+    // this.mapCtx = my.createMapContext('map')
+  },
   didUpdate() { },
   didUnmount() { },
   methods: {
-    onMarkertap() {
-
-    },
     onMarkertap() {
 
     },
@@ -89,4 +84,4 @@ this.mapCtx.gestureEnable({isGestureEnable:enableRotate});
 
     }
   },
-});
+})

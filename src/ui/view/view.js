@@ -1,4 +1,3 @@
-// onekit/ui/view/view.js
 Component({
 
   /**
@@ -10,27 +9,27 @@ Component({
   properties: {
     onekitClass: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitStyle: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitId: {
       type: String,
-      value: ""
+      value: ''
     },
     hoverClass: {
       type: String,
-      value: ""
+      value: ''
     },
     hoverStarTime: {
       type: Number,
-      value: ""
+      value: ''
     },
     hoverStayTime: {
       type: Number,
-      value: ""
+      value: ''
     },
     hoverStopPropagation: {
       type: Boolean,
@@ -43,11 +42,7 @@ Component({
     hidden: {
       type: Boolean,
       value: false
-    },
-    disableScroll: {
-      type: Object,
-      value: {}
-    },
+    }
   },
 
   /**
@@ -62,7 +57,7 @@ Component({
    */
   methods: {
     view_Tap(e) {
-      this.triggerEvent("Tap", e)
+      this.triggerEvent('Tap', e)
     }
   }
 })

@@ -8,13 +8,13 @@ Component({
     virtualHost: true
   },
   properties: {
-    onekitClass:{type:String,value:""},
-    onekitStyle:{type:String,value:""},
-    onekitId:{type:String,value:""},
-    value:{type:String},
-    checked:{type:Boolean,value:false},
-    disabled:{type:Boolean,value:false},
-    color:{type:String}
+    onekitClass: {type: String, value: ''},
+    onekitStyle: {type: String, value: ''},
+    onekitId: {type: String, value: ''},
+    value: {type: String},
+    checked: {type: Boolean, value: false},
+    disabled: {type: Boolean, value: false},
+    color: {type: String}
   },
 
   /**

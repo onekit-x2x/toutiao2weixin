@@ -8,9 +8,9 @@ Component({
     virtualHost: true
   },
   properties: {
-    onekitClass:{type:String,value:""},
-    onekitStyle:{type:String,value:""},
-    onekitId:{type:String,value:""},
+    onekitClass: {type: String, value: ''},
+    onekitStyle: {type: String, value: ''},
+    onekitId: {type: String, value: ''},
   },
 
   /**
@@ -24,8 +24,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    checkboxGroup_change(e){
-      this.triggerEvent("Change",{})
+    checkboxGroup_change() {
+      this.triggerEvent('Change', {})
     }
   }
 })

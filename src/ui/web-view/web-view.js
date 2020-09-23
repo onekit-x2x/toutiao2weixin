@@ -1,4 +1,3 @@
-// onekit/ui/web-view/web-view.js
 Component({
   /**
    * 组件的属性列表
@@ -7,9 +6,9 @@ Component({
     virtualHost: true
   },
   properties: {
-    onekitClass:{type:String,value:""},
-    onekitStyle:{type:String,value:""},
-    onekitId:{type:String,value:""},
+    onekitClass: {type: String, value: ''},
+    onekitStyle: {type: String, value: ''},
+    onekitId: {type: String, value: ''},
 
   },
 

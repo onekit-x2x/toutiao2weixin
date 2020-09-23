@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 // onekit/ui/scroll-view/scroll-view.js
 Component({
   /**
@@ -9,15 +10,15 @@ Component({
   properties: {
     onekitClass: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitStyle: {
       type: String,
-      value: ""
+      value: ''
     },
     onekitId: {
       type: String,
-      value: ""
+      value: ''
     },
     scrollX: {
       type: Boolean,
@@ -37,15 +38,15 @@ Component({
     },
     scrollTop: {
       type: Number | String,
-      value: "",
+      value: '',
     },
     scrollLeft: {
       type: Number | String,
-      value: "",
+      value: '',
     },
     scrollIntoView: {
       type: String,
-      value: "",
+      value: '',
     },
     scrollWithAnimation: {
       type: Boolean,
@@ -68,13 +69,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    on_toupper(e) {
+    on_toupper() {
       this.triggerEvent('scrolltoupper', {})
     },
-    on_tolower(e) {
+    on_tolower() {
       this.triggerEvent('scrolltolower', {})
     },
-    on_scroll(e) {
+    on_scroll() {
       this.triggerEvent('scroll', {})
     }
   }
