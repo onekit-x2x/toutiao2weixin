@@ -124,5 +124,5 @@ module.exports = {
     }
   },
 
-  copy: ['onekit.wxss', 'api', 'OnekitApp.js', 'OnekitBehavior.js', 'OnekitComponent.js', 'OnekitPage.js', 'tt.js'], // 将会复制到目标目录
+  copy: ['onekit.wxss', 'api', 'js', 'OnekitApp.js', 'OnekitBehavior.js', 'OnekitComponent.js', 'OnekitPage.js', 'tt.js'], // 将会复制到目标目录
 }

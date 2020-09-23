@@ -1,3 +1,7 @@
+/* eslint-disable camelcase */
+import TheKit from '../../js/TheKit'
+import OneKit from '../../js/OneKit'
+
 Component({
   options: {
     virtualHost: true
@@ -22,6 +26,16 @@ Component({
       type: Boolean,
       value: false,
     },
+  },
+  lifetimes: {
+    attached() {
+      let weixin_src = this.properties.src
+      if (weixin_src.indexOf('://') < 0) {
+        const currentUrl = OneKit.currentUrl()
+        weixin_src = '/' + TheKit.fixurl(currentUrl, weixin_src)
+      }
+      this.setData({weixin_src})
+    }
   },
   methods: {
     image_error(e) {
