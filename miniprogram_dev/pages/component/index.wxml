@@ -6,13 +6,17 @@
 
     <onekit-view onekit-class="body body-space">
         <onekit-view onekit-class="category-list">
-            <onekit-view wx:for="{{list}}" onekit-class="category-list__item {{item.open ? 'category-list__item--open': ''}}">
+            <onekit-view wx:for="{{list}}" 
+            wx:key="name" 
+            onekit-class="category-list__item {{item.open ? 'category-list__item--open': ''}}">
                 <onekit-view onekit-class="ttui-flex item-title" data-index="{{index}}" bindtap="toggleSwitch">
                     <onekit-view onekit-class="ttui-flex__item">{{item.name}}</onekit-view>
                     <onekit-image onekit-class="item-list__img" src="../../image/category/arrow.png"></onekit-image>
                 </onekit-view>
                 <onekit-view onekit-class="item-list">
-                    <onekit-view wx:for="{{item.pages}}" wx:for-item='page' onekit-class="item-list__page">
+                    <onekit-view wx:for="{{item.pages}}" 
+                    wx:key="name" 
+                    wx:for-item='page' onekit-class="item-list__page">
                         <onekit-navigator url="{{page.path}}" onekit-class="item-navigator">
                             <onekit-view onekit-class="ttui-flex navigator-wraper">
                                 <onekit-view onekit-class="ttui-flex__item">{{page.name}}</onekit-view>
