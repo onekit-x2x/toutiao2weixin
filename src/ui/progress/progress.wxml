@@ -10,8 +10,22 @@
    backgroundColor="{{backgroundColor}}"
    active="{{active}}"
    active-mode="{{activeMode}}"
-   bindactiveend="{{bindactiveend}}"
+   catchactiveend="bindactiveend"
    font-size="{{fontSize}}"
+
+   
+catchtap="ui_tap"
+catchtouchstart="ui_touchstart"
+catchtouchmove="ui_touchmove"
+catchtouchcancel="ui_touchcancel"
+catchtouchend="ui_touchend"
+catchlongpress="ui_longpress"
+catchlongtap="ui_longtap"
+catchtransitionend="ui_transitionend"
+catchanimationstart="ui_animationstart"
+catchanimationiteration="ui_animationiteration"
+catchanimationend="ui_animationend"
+catchtouchforcechange="ui_touchforcechange"
    />
 
 <text wx:if="{{showInfo}}" style="font-size:{{fontSize}}rpx">{{percent}}%</text>

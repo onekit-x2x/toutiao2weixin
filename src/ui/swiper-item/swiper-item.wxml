@@ -3,6 +3,21 @@ item-id="{{itemId}}"
 id="{{onekitId}}"
 class="onekit-swiper-item {{onekitClass}}"
 style="{{onekitStyle}}"
+
+
+
+catchtap="ui_tap"
+catchtouchstart="ui_touchstart"
+catchtouchmove="ui_touchmove"
+catchtouchcancel="ui_touchcancel"
+catchtouchend="ui_touchend"
+catchlongpress="ui_longpress"
+catchlongtap="ui_longtap"
+catchtransitionend="ui_transitionend"
+catchanimationstart="ui_animationstart"
+catchanimationiteration="ui_animationiteration"
+catchanimationend="ui_animationend"
+catchtouchforcechange="ui_touchforcechange"
 >
 <slot></slot>
 </swiper-item>
