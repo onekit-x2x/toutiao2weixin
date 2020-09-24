@@ -11,6 +11,14 @@ Component({
     virtualHost: true
   },
   properties: {
+    src: {
+      type: String,
+      value: 'N/A'
+    },
+    progressbarColor: {
+      type: String,
+      value: '#51a0d8'
+    },
 
   },
 

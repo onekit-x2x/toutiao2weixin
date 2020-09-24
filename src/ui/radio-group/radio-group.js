@@ -46,7 +46,7 @@ Component({
       // this.triggerEvent("Change",{})
     },
     radio_groupBindchange() {
-      this.triggerEvent('change', {})
+      this.triggerEvent('Change', {})
     }
 
   }

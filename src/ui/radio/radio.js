@@ -35,7 +35,7 @@ Component({
       // }
       // this.properties.checked = !this.properties.checked;
       // console.log("xxxx",this.properties.checked)
-      this.triggerEvent('click', {radio: e}, {bubbles: true, composed: true})
+      this.triggerEvent('Click', {radio: e}, {bubbles: true, composed: true})
     }
   }
 })

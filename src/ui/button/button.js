@@ -42,7 +42,7 @@ Component({
         }
       }
 
-      this.triggerEvent('tap', {})
+      this.triggerEvent('Tap', {})
     },
 
   },

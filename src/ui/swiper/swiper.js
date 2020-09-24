@@ -80,13 +80,13 @@ Component({
    */
   methods: {
     swiper_Change(e) {
-      this.triggerEvent('change')
+      this.triggerEvent('Change')
     },
     swiper_AnimationEnd(e) {
-      this.triggerEvent('animationfinish')
+      this.triggerEvent('Animationfinish')
     },
     swiper_transition(e) {
-      this.triggerEvent('transition')
+      this.triggerEvent('Transition')
     }
   }
 })

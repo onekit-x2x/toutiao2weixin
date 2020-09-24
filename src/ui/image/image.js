@@ -37,10 +37,10 @@ Component({
   },
   methods: {
     image_error(e) {
-      this.triggerEvent('error', e.details)
+      this.triggerEvent('Error', e.details)
     },
     image_load(e) {
-      this.triggerEvent('load', e.details)
+      this.triggerEvent('Load', e.details)
     },
   }
 })

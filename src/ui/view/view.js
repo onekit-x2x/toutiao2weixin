@@ -16,28 +16,20 @@ Component({
 
     hoverClass: {
       type: String,
-      value: ''
+      value: 'none'
     },
     hoverStarTime: {
       type: Number,
-      value: ''
+      value: 50
     },
     hoverStayTime: {
       type: Number,
-      value: ''
+      value: 400
     },
     hoverStopPropagation: {
       type: Boolean,
       value: false
     },
-    disableScroll: {
-      type: Boolean,
-      value: false
-    },
-    hidden: {
-      type: Boolean,
-      value: false
-    }
   },
 
   /**

@@ -39,16 +39,16 @@ Component({
    */
   methods: {
     input_bindinput() {
-      this.triggerEvent('input', {})
+      this.triggerEvent('Input', {})
     },
     input_bindfocus() {
-      this.triggerEvent('focus', {})
+      this.triggerEvent('Focus', {})
     },
     input_bindblur() {
-      this.triggerEvent('blur', {})
+      this.triggerEvent('Blur', {})
     },
     input_bindconfirm() {
-      this.triggerEvent('confirm', {})
+      this.triggerEvent('Confirm', {})
     },
   }
 })

@@ -58,13 +58,13 @@ Component({
    */
   methods: {
     on_toupper() {
-      this.triggerEvent('scrolltoupper', {})
+      this.triggerEvent('Scrolltoupper', {})
     },
     on_tolower() {
-      this.triggerEvent('scrolltolower', {})
+      this.triggerEvent('Scrolltolower', {})
     },
     on_scroll() {
-      this.triggerEvent('scroll', {})
+      this.triggerEvent('Scroll', {})
     }
   }
 })

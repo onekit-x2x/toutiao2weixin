@@ -13,13 +13,11 @@ Component({
     virtualHost: true
   },
   properties: {
-    value: {type: String},
-    name: {type: String},
+    value: {type: String, value: ''},
     placeholder: {type: String, value: ''},
     placeholderStyle: {type: String, value: ''},
-    placeholderClass: {type: String, value: ''},
     disabled: {type: Boolean, value: false},
-    maxlength: {type: Number, value: '140'},
+    maxlength: {type: Number, value: 140},
     focus: {type: Boolean, value: false},
     autoHeight: {type: Boolean, value: false},
     fixed: {type: Boolean, value: false},
@@ -42,16 +40,16 @@ Component({
    */
   methods: {
     textarea_bindinput() {
-      this.triggerEvent('input', {})
+      this.triggerEvent('Input', {})
     },
     textarea_bindfocus() {
-      this.triggerEvent('focus', {})
+      this.triggerEvent('Focus', {})
     },
     textarea_bindblur() {
-      this.triggerEvent('blur', {})
+      this.triggerEvent('Blur', {})
     },
     textarea_bindconfirm() {
-      this.triggerEvent('confirm', {})
+      this.triggerEvent('Confirm', {})
     },
   }
 })
