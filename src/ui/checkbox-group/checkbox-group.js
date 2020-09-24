@@ -1,13 +1,14 @@
 /* eslint-disable camelcase */
 
 import onekit_behavior from '../../behavior/onekit_behavior'
+import toutiao_behavior from '../../behavior/toutiao_behavior'
 
 Component({
 
   /**
    * 组件的属性列表
    */
-  behaviors: [onekit_behavior, 'wx://form-field-group'],
+  behaviors: [onekit_behavior, toutiao_behavior, 'wx://form-field-group'],
   options: {
     virtualHost: true
   },

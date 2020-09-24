@@ -2,9 +2,10 @@
 /* eslint-disable indent */
 // onekit/ui/text/text.js
 import onekit_behavior from '../../behavior/onekit_behavior'
+import toutiao_behavior from '../../behavior/toutiao_behavior'
 
 Component({
-  behaviors: [onekit_behavior],
+  behaviors: [onekit_behavior, toutiao_behavior],
   /**
    * 组件的属性列表
    */
