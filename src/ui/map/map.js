@@ -1,5 +1,7 @@
 
+import onekit_behavior from "../onekit_behavior"
 Component({
+  behaviors: [onekit_behavior],
   mixins: [],
   data: {},
   props: {

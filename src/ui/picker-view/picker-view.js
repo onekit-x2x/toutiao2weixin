@@ -1,15 +1,14 @@
 // onekit/ui/picker-view/picker-view.js
+import onekit_behavior from "../onekit_behavior"
 Component({
+  behaviors: [onekit_behavior],
   /**
    * 组件的属性列表
    */
   options: {
     virtualHost: true
   },
-  properties: {
-    onekitClass: {type: String, value: ''},
-    onekitStyle: {type: String, value: ''},
-    onekitId: {type: String, value: ''},
+properties: {
     value: {type: Array},
     indicatorStyle: {type: String},
     maskStyle: {type: String},

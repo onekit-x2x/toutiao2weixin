@@ -1,5 +1,7 @@
 // onekit/ui/slider/slider.js
+import onekit_behavior from "../onekit_behavior"
 Component({
+  behaviors: [onekit_behavior],
   /**
    * 组件的属性列表
    */
@@ -7,10 +9,7 @@ Component({
   options: {
     virtualHost: true
   },
-  properties: {
-    onekitClass: {type: String, value: ''},
-    onekitStyle: {type: String, value: ''},
-    onekitId: {type: String, value: ''},
+properties: {
     min: {type: String, value: 0},
     max: {type: Number, value: 100},
     step: {type: Number, value: 1},

@@ -1,6 +1,8 @@
 // onekit/ui/canvas/canvas.js
+import onekit_behavior from "../onekit_behavior"
 Component({
-  behaviors: ['wx://form-field'],
+
+  behaviors: [onekit_behavior,'wx://form-field'],
   options: {
     virtualHost: true
   },
@@ -8,10 +10,7 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {
-    onekitClass: {type: String, value: ''},
-    onekitStyle: {type: String, value: ''},
-    onekitId: {type: String, value: ''},
+properties: {
     canvasId: {
       type: String,
       value: ''

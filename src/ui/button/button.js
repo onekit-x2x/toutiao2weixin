@@ -1,5 +1,6 @@
+import onekit_behavior from "../onekit_behavior"
 Component({
-  behaviors: ['wx://form-field-button'],
+  behaviors: [onekit_behavior,'wx://form-field-button'],
   options: {
     virtualHost: true
   },
@@ -13,10 +14,7 @@ Component({
     // this.setData({openType,scope});
   },
   detached() { },
-  properties: {
-    onekitClass: {type: String, value: ''},
-    onekitStyle: {type: String, value: ''},
-    onekitId: {type: String, value: ''},
+properties: {
     size: {type: String, value: 'default'},
     type: {type: String, value: 'default'},
     plain: {type: Boolean, value: false},

@@ -2,14 +2,13 @@
 import TheKit from '../../js/TheKit'
 import OneKit from '../../js/OneKit'
 
+import onekit_behavior from "../onekit_behavior"
 Component({
+  behaviors: [onekit_behavior],
   options: {
     virtualHost: true
   },
-  properties: {
-    onekitClass: {type: String, value: ''},
-    onekitStyle: {type: String, value: ''},
-    onekitId: {type: String, value: ''},
+properties: {
     src: {
       type: String,
       value: '',

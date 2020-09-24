@@ -1,16 +1,15 @@
 // onekit/ui/input/input.js
+import onekit_behavior from "../onekit_behavior"
 Component({
+
   /**
    * 组件的属性列表
    */
-  behaviors: ['wx://form-field'],
+  behaviors: [onekit_behavior,'wx://form-field'],
   options: {
     virtualHost: true
   },
-  properties: {
-    onekitClass: {type: String, value: ''},
-    onekitStyle: {type: String, value: ''},
-    onekitId: {type: String, value: ''},
+properties: {
     value: {type: String},
     checked: {type: Boolean, value: false},
     disabled: {type: Boolean, value: false},

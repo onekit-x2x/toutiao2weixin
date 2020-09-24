@@ -1,16 +1,15 @@
 // onekit/ui/switch/switch.js
+import onekit_behavior from "../onekit_behavior"
 Component({
+
   /**
    * 组件的属性列表
    */
-  behaviors: ['wx://form-field-group'],
+  behaviors: [onekit_behavior,'wx://form-field-group'],
   options: {
     virtualHost: true
   },
-  properties: {
-    onekitClass: {type: String, value: ''},
-    onekitStyle: {type: String, value: ''},
-    onekitId: {type: String, value: ''},
+properties: {
     checked: {type: Boolean, value: false},
     disabled: {type: Boolean, value: false},
     color: {type: String},
