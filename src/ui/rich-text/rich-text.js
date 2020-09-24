@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 /* eslint-disable camelcase */
 // onekit/ui/rich-text/rich-text.js
 import onekit_behavior from '../../behavior/onekit_behavior'
@@ -14,8 +15,8 @@ Component({
   properties: {
 
     nodes: {
-      type: '',
-      value: ''
+      type: Array | String,
+      value: '[]'
     }
 
   },

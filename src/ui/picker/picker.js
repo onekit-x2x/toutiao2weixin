@@ -12,15 +12,8 @@ Component({
     virtualHost: true
   },
   properties: {
-    range: {type: Array},
-    rangeKey: {type: String},
-    value: {type: Number, value: 0},
-    disabled: {type: Boolean, value: Boolean},
-    start: {type: String},
-    end: {type: String},
-    fields: {type: String},
+    disabled: {type: Boolean, value: false},
     mode: {type: String, value: 'selector'},
-    customItem: {type: String}
   },
 
   /**

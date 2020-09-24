@@ -24,7 +24,7 @@ Component({
     },
     indicatorActiveColor: {
       type: String,
-      value: '#000000',
+      value: 'rgba(0, 0, 0, 0)',
     },
     autoplay: {
       type: Boolean,
@@ -32,15 +32,31 @@ Component({
     },
     current: {
       type: Number,
-      value: '0',
+      value: 0,
+    },
+    currentItemId: {
+      type: String,
+      value: '',
     },
     interval: {
       type: Number,
-      value: '5000',
+      value: 5000,
+    },
+    previousMargin: {
+      type: String,
+      value: '',
+    },
+    nextMargin: {
+      type: String,
+      value: '',
+    },
+    displayMultipleItems: {
+      type: Number,
+      value: 1,
     },
     duration: {
       type: Number,
-      value: '5000',
+      value: 5000,
     },
     circular: {
       type: Boolean,
@@ -50,18 +66,6 @@ Component({
       type: Boolean,
       value: false,
     },
-    previousMargin: {
-      type: String,
-      value: '0px',
-    },
-    nextMargin: {
-      type: String,
-      value: '0px',
-    },
-    displayMultipleItems: {
-      type: Number,
-      value: '1',
-    }
   },
 
   /**

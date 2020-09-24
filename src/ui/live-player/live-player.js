@@ -12,6 +12,11 @@ Component({
     virtualHost: true
   },
   properties: {
+    src: {type: String, value: ''},
+    autoplay: {type: Boolean, value: false},
+    muted: {type: String, value: false},
+    orientation: {type: String, value: 'vertical'},
+    objectFit: {type: String, value: 'contain'},
 
   },
 

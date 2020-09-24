@@ -12,49 +12,13 @@ Component({
     virtualHost: true
   },
   properties: {
-
-    percent: {
-      type: Number,
-    },
-    showInfo: {
-      type: Boolean,
-      value: false
-    },
-    borderRadius: {
-      type: String,
-      value: 0
-    },
-    strokeWidth: {
-      type: String,
-      value: 6
-    },
-    color: {
-      type: String,
-      value: '#09BB07'
-    },
-    activeColor: {
-      type: String,
-      value: '#09BB07'
-    },
-    backgroundColor: {
-      type: String,
-      value: '#EBEBEB'
-    },
-    active: {
-      type: Boolean,
-      value: false
-    },
-    activeMode: {
-      type: String,
-      value: 'backwards'
-    },
-    bindactiveend: {
-      type: 'Eventhandle'
-    },
-    fontSize: {
-      type: String,
-      value: 16
-    }
+    percent: {type: Number, value: 0},
+    strokeWidth: {type: Number, value: 0},
+    color: {type: String, value: '#F85959'},
+    activeColor: {type: String, value: '#F85959'},
+    backgroundColor: {type: String, value: '#EBEBEB'},
+    active: {type: Boolean, value: false},
+    activeMode: {type: String, value: 'backwards'},
 
   },
 

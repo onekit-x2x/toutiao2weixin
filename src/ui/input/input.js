@@ -13,7 +13,7 @@ Component({
     virtualHost: true
   },
   properties: {
-    value: {type: String},
+    value: {type: String, value: ''},
     type: {type: String, value: 'text'},
     password: {type: Boolean, value: false},
     placeholder: {type: String, value: ''},
@@ -21,7 +21,8 @@ Component({
     disabled: {type: Boolean, value: false},
     maxlength: {type: Number, value: '140'},
     focus: {type: Boolean, value: false},
-    cursor: {type: Number},
+    cursorSpacing: {type: Number, value: 0},
+    cursor: {type: Number, value: -1},
     selectionStart: {type: Number, value: -1},
     selectionEnd: {type: Number, value: -1},
   },

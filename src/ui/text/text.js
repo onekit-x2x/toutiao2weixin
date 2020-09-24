@@ -13,6 +13,9 @@ Component({
     virtualHost: true
   },
 properties: {
+  selectable: {type: Boolean, value: false},
+  space: {type: String, value: 'false'},
+  decode: {type: String, value: '#F85959'},
 
   },
 

@@ -12,9 +12,9 @@ Component({
     virtualHost: true
   },
   properties: {
-    value: {type: Array},
-    indicatorStyle: {type: String},
-    maskStyle: {type: String},
+    value: {type: Array, value: '[]'},
+    indicatorStyle: {type: String, value: ''},
+    maskStyle: {type: String, value: ''},
   },
 
   /**
