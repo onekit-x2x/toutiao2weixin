@@ -72,7 +72,7 @@
   content:"\EA11";
 }
 [class^="onekit-icon_"]:before{color: rebeccapurple;}
-[class*=" onekit-icon_"]:before{
+[class^="onekit-icon_"]:before{
   margin:0;
 }
 .onekit-icon-success{
