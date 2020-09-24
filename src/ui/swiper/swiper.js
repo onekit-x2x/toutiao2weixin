@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 // onekit/ui/swiper/swiper.js
 import onekit_behavior from '../../behavior/onekit_behavior'
@@ -74,13 +75,13 @@ Component({
    */
   methods: {
     swiper_Change(e) {
-      this.triggerEvent('change', e)
+      this.triggerEvent('change')
     },
     swiper_AnimationEnd(e) {
-      this.triggerEvent('animationfinish', e)
+      this.triggerEvent('animationfinish')
     },
     swiper_transition(e) {
-      this.triggerEvent('transition', e)
+      this.triggerEvent('transition')
     }
   }
 })

@@ -19,7 +19,6 @@ Component({
   properties: {
     size: {type: String, value: 'default'},
     type: {type: String, value: 'default'},
-    plain: {type: Boolean, value: false},
     disabled: {type: Boolean, value: false},
     loading: {type: Boolean, value: false},
     hoverClass: {type: String, value: 'button-hover'},

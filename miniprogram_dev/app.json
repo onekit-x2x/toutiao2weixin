@@ -1,5 +1,6 @@
 {
     "pages": [
+        "gong/gong",
         "pages/component/index",
         "pages/component/scroll-view/scroll-view",
         "pages/component/video/video",

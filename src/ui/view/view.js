@@ -1,8 +1,10 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import onekit_behavior from '../../behavior/onekit_behavior'
+import toutiao_behavior from '../../behavior/toutiao_behavior'
 
 Component({
-  behaviors: [onekit_behavior],
+  behaviors: [onekit_behavior, toutiao_behavior],
 
   /**
    * 组件的属性列表
@@ -49,8 +51,5 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    view_Tap(e) {
-      this.triggerEvent('Tap', e)
-    }
   }
 })
