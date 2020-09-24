@@ -20,10 +20,6 @@ Component({
       type: String,
       value: 'scaleToFill',
     },
-    webp: {
-      type: Boolean,
-      value: false,
-    },
     lazyLoad: {
       type: Boolean,
       value: false,
