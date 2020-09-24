@@ -9,7 +9,7 @@
         </block>
 
         <block wx:else>
-          <onekit-view onekit-class="image-plus image-plus-nb" bindtap="chooseImage">
+          <onekit-view onekit-class="image-plus image-plus-nb" bindTap="chooseImage">
             <onekit-view onekit-class="image-plus-horizontal"></onekit-view>
             <onekit-view onekit-class="image-plus-vertical"></onekit-view>
           </onekit-view>

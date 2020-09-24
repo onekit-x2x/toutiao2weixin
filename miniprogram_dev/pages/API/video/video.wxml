@@ -37,7 +37,7 @@
 
       <onekit-view onekit-class="page-body-info">
         <block wx:if="{{src === ''}}">
-          <onekit-view onekit-class="image-plus image-plus-nb" bindtap="chooseVideo">
+          <onekit-view onekit-class="image-plus image-plus-nb" bindTap="chooseVideo">
             <onekit-view onekit-class="image-plus-horizontal"></onekit-view>
             <onekit-view onekit-class="image-plus-vertical"></onekit-view>
           </onekit-view>
@@ -48,6 +48,6 @@
         </block>
       </onekit-view>
     </onekit-view>
-    <onekit-button type="default" size="default" bindtap="saveVideoToAlbum"> 保存临时视频到相册 </onekit-button>
+    <onekit-button type="default" size="default" bindTap="saveVideoToAlbum"> 保存临时视频到相册 </onekit-button>
   </onekit-view>
 </onekit-view>

@@ -41,12 +41,12 @@
                   <onekit-view onekit-class="ttui-uploader__files">
                     <block wx:for="{{imageList}}" wx:for-item='image'>
                       <onekit-view onekit-class="ttui-uploader__file">
-                        <onekit-image onekit-class="ttui-uploader__img" src="{{image}}" data-src="{{image}}" mode="aspectFill" bindtap="previewImage"></onekit-image>
+                        <onekit-image onekit-class="ttui-uploader__img" src="{{image}}" data-src="{{image}}" mode="aspectFill" bindTap="previewImage"></onekit-image>
                       </onekit-view>
                     </block>
                   </onekit-view>
                   <onekit-view onekit-class="ttui-uploader__input-box">
-                    <onekit-view onekit-class="ttui-uploader__input" bindtap="chooseImage"></onekit-view>
+                    <onekit-view onekit-class="ttui-uploader__input" bindTap="chooseImage"></onekit-view>
                   </onekit-view>
                 </onekit-view>
               </onekit-view>
@@ -55,7 +55,7 @@
         </onekit-view>
       </onekit-view>
     </form>
-    <onekit-button type="default" size="default" onekit-class="image-action" bindtap="getImageInfo"> 获取待上传的图片信息 </onekit-button>
-    <onekit-button type="default" size="default" onekit-class="image-action" bindtap="saveImageToAlbum"> 保存图片到相册 </onekit-button>
+    <onekit-button type="default" size="default" onekit-class="image-action" bindTap="getImageInfo"> 获取待上传的图片信息 </onekit-button>
+    <onekit-button type="default" size="default" onekit-class="image-action" bindTap="saveImageToAlbum"> 保存图片到相册 </onekit-button>
   </onekit-view>
 </onekit-view>

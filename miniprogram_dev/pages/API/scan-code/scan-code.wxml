@@ -8,7 +8,7 @@
       </onekit-view>
     </onekit-view>
     <onekit-view onekit-class="btn-area">
-      <onekit-button type="primary" bindtap="scanCode">扫一扫</onekit-button>
+      <onekit-button type="primary" bindTap="scanCode">扫一扫</onekit-button>
     </onekit-view>
   </onekit-view>
 

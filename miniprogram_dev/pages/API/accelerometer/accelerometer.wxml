@@ -30,9 +30,9 @@
       </onekit-view>
 			<onekit-view>{{txt}}</onekit-view>
       <onekit-view onekit-class="btn-area">
-          <onekit-button type="primary" bindtap="start" disabled="{{!stop}}">开始监听加速度变化</onekit-button>
-          <onekit-button type="primary" bindtap="stop" disabled="{{stop}}">停止监听加速度变化</onekit-button>
-          <onekit-button bindtap="clear">清空</onekit-button>
+          <onekit-button type="primary" bindTap="start" disabled="{{!stop}}">开始监听加速度变化</onekit-button>
+          <onekit-button type="primary" bindTap="stop" disabled="{{stop}}">停止监听加速度变化</onekit-button>
+          <onekit-button bindTap="clear">清空</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

@@ -2,11 +2,11 @@
   <onekit-view onekit-class="page-body">
     <onekit-view onekit-class="page-section">
       <onekit-view onekit-class="btn-area">
-        <onekit-button type="primary" bindtap="scrollToBottom">滚动到页面底部</onekit-button>
+        <onekit-button type="primary" bindTap="scrollToBottom">滚动到页面底部</onekit-button>
       </onekit-view>
       <onekit-view onekit-class="filling-area"></onekit-view>
       <onekit-view onekit-class="btn-area">
-        <onekit-button type="primary" bindtap="scrollToTop">返回顶部</onekit-button>
+        <onekit-button type="primary" bindTap="scrollToTop">返回顶部</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

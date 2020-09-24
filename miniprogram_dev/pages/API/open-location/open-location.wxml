@@ -47,7 +47,7 @@
         </onekit-view>
         <onekit-view onekit-class="btn-area">
           <onekit-button type="primary" formType="submit">查看表格指定位置</onekit-button>
-          <onekit-button type="primary" bindtap="getLocation">查看当前位置</onekit-button>
+          <onekit-button type="primary" bindTap="getLocation">查看当前位置</onekit-button>
         </onekit-view>
       </form>
     </onekit-view>

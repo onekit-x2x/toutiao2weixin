@@ -4,7 +4,7 @@
       <onekit-view onekit-class="desc">请在下方输入电话号码</onekit-view>
       <onekit-input onekit-class="input" type="number" name="input" bindinput="bindInput" auto-focus="true"></onekit-input>
       <onekit-view onekit-class="btn-area">
-        <onekit-button type="primary" bindtap="makePhoneCall" disabled="{{disabled}}">拨打</onekit-button>
+        <onekit-button type="primary" bindTap="makePhoneCall" disabled="{{disabled}}">拨打</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

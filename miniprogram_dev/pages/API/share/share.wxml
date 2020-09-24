@@ -23,6 +23,6 @@
   </onekit-view>
   <onekit-view onekit-class="btn-area page-section-space">
       <onekit-button open-type="share">点击按钮分享</onekit-button>
-      <onekit-button bindtap="backindex">回首页</onekit-button>
+      <onekit-button bindTap="backindex">回首页</onekit-button>
   </onekit-view>
 </onekit-view>

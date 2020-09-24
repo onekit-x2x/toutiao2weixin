@@ -4,16 +4,16 @@
   <onekit-view onekit-class="body">
     <onekit-view onekit-class="btn-area">
       <onekit-view onekit-class="body-view">
-        <onekit-button type="default" bindtap="toast1Tap">点击弹出默认 Toast</onekit-button>
+        <onekit-button type="default" bindTap="toast1Tap">点击弹出默认 Toast</onekit-button>
       </onekit-view>
       <onekit-view onekit-class="body-view">
-        <onekit-button type="default" bindtap="toast2Tap">点击弹出带 duration Toast</onekit-button>
+        <onekit-button type="default" bindTap="toast2Tap">点击弹出带 duration Toast</onekit-button>
       </onekit-view>
       <onekit-view onekit-class="body-view">
-        <onekit-button type="default" bindtap="toast3Tap">点击弹出带 icon Toast</onekit-button>
+        <onekit-button type="default" bindTap="toast3Tap">点击弹出带 icon Toast</onekit-button>
       </onekit-view>
       <onekit-view onekit-class="body-view">
-        <onekit-button type="default" bindtap="hideToast">点击隐藏toast</onekit-button>
+        <onekit-button type="default" bindTap="hideToast">点击隐藏toast</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>
@@ -21,10 +21,10 @@
 	<onekit-view onekit-class="body">
     <onekit-view onekit-class="btn-area">
       <onekit-view onekit-class="body-view">
-        <onekit-button type="default" bindtap="showLoadingTap">showLoading</onekit-button>
+        <onekit-button type="default" bindTap="showLoadingTap">showLoading</onekit-button>
       </onekit-view>
       <onekit-view onekit-class="body-view">
-        <onekit-button type="default" bindtap="hideLoadingTap">hideLoading</onekit-button>
+        <onekit-button type="default" bindTap="hideLoadingTap">hideLoading</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

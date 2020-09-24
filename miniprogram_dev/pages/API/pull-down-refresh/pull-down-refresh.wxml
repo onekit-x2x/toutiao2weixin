@@ -6,8 +6,8 @@
         <onekit-text onekit-class="page-body-text">下滑页面即可刷新，刷新时展示loading，默认10秒结束刷新</onekit-text>
       </onekit-view>
       <onekit-view onekit-class="btn-area">
-        <onekit-button bindtap="startPullDownRefresh">开始刷新</onekit-button>
-        <onekit-button bindtap="stopPullDownRefresh">停止刷新</onekit-button>
+        <onekit-button bindTap="startPullDownRefresh">开始刷新</onekit-button>
+        <onekit-button bindTap="stopPullDownRefresh">停止刷新</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

@@ -19,8 +19,8 @@
     
     <onekit-view onekit-class="page-section">
       <onekit-view onekit-class="btn-area page-section-space">
-        <onekit-button type="primary" bindtap="getUserInfo">获取用户信息</onekit-button>
-        <onekit-button bindtap="clear">清空</onekit-button>
+        <onekit-button type="primary" bindTap="getUserInfo">获取用户信息</onekit-button>
+        <onekit-button bindTap="clear">清空</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

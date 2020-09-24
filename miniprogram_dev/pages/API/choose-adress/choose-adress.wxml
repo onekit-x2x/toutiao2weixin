@@ -3,7 +3,7 @@
 	<onekit-view onekit-class="body">
     <onekit-view onekit-class="btn-area">
       <onekit-view onekit-class="body-view page-section">
-        <onekit-button type="primary" bindtap="chooseAdress">选择收货地址</onekit-button>
+        <onekit-button type="primary" bindTap="chooseAdress">选择收货地址</onekit-button>
       </onekit-view>
       <onekit-view>{{result}}</onekit-view>
     </onekit-view>

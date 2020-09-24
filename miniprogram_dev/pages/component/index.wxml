@@ -9,7 +9,7 @@
             <onekit-view wx:for="{{list}}" 
             wx:key="name" 
             onekit-class="category-list__item {{item.open ? 'category-list__item--open': ''}}">
-                <onekit-view onekit-class="ttui-flex item-title" data-index="{{index}}" bindtap="toggleSwitch">
+                <onekit-view id="view1" onekit-class="ttui-flex item-title" data-index="{{index}}" bindTap="toggleSwitch">
                     <onekit-view onekit-class="ttui-flex__item">{{item.name}}</onekit-view>
                     <onekit-image onekit-class="item-list__img" src="../../image/category/arrow.png"></onekit-image>
                 </onekit-view>

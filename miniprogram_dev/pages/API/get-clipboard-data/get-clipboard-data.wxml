@@ -19,8 +19,8 @@
       </onekit-view>
     </onekit-view>
     <onekit-view onekit-class="btn-area">
-      <onekit-button type="primary" bindtap="copy">复制已输入内容</onekit-button>
-      <onekit-button type="primary" bindtap="paste">粘贴</onekit-button>
+      <onekit-button type="primary" bindTap="copy">复制已输入内容</onekit-button>
+      <onekit-button type="primary" bindTap="paste">粘贴</onekit-button>
     </onekit-view>
   </block>
 </onekit-view>

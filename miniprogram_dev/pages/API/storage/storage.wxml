@@ -20,9 +20,9 @@
 					</onekit-view>
 			</onekit-view>
 			<onekit-view onekit-class="btn-area">
-					<onekit-button type="primary" bindtap="setStorage">保存数据</onekit-button>
-					<onekit-button bindtap="getStorage">读取数据</onekit-button>
-					<onekit-button bindtap="clearStorage">清空数据</onekit-button>
+					<onekit-button type="primary" bindTap="setStorage">保存数据</onekit-button>
+					<onekit-button bindTap="getStorage">读取数据</onekit-button>
+					<onekit-button bindTap="clearStorage">清空数据</onekit-button>
 			</onekit-view>
       <onekit-view onekit-class="container">
 
@@ -54,7 +54,7 @@
           </onekit-view>
         </onekit-view>
         <onekit-view onekit-class="btn-area">
-            <onekit-button type="primary" bindtap="updateStorageInfo">更新本地存储信息</onekit-button>
+            <onekit-button type="primary" bindTap="updateStorageInfo">更新本地存储信息</onekit-button>
         </onekit-view>
       </onekit-view>
     </onekit-view>

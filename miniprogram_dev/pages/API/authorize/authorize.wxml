@@ -12,9 +12,9 @@
                 <onekit-text wx:else>未获取</onekit-text>
               </onekit-view>
             </onekit-view>
-            <onekit-button type="default" data-auth="{{authName}}" bindtap="authAction">{{setting.btnTxt}}</onekit-button>
+            <onekit-button type="default" data-auth="{{authName}}" bindTap="authAction">{{setting.btnTxt}}</onekit-button>
           </onekit-view>
-          <onekit-button type="primary" bindtap="openSetting">打开设置页面</onekit-button>
+          <onekit-button type="primary" bindTap="openSetting">打开设置页面</onekit-button>
 			</onekit-view>
     </onekit-view>
   </onekit-view>

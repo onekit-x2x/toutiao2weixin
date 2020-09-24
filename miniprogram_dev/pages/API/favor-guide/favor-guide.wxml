@@ -2,15 +2,15 @@
   <onekit-view onekit-class="show-guide">
     <onekit-view onekit-class="bar-guide {{guideShow}}">
       <onekit-view onekit-class="bar-guide-container">
-        <onekit-image src="/image/demo/favorite.png" onekit-class="bar-guide-close" mode bindtap="closeGuide"></onekit-image>
+        <onekit-image src="/image/demo/favorite.png" onekit-class="bar-guide-close" mode bindTap="closeGuide"></onekit-image>
         <onekit-view onekit-class="content">
           <onekit-image src="/image/demo/app-icon.png" onekit-class="guide-app-avatar" mode></onekit-image>
           <onekit-text onekit-class="content-text">一键添加到我的小程序</onekit-text>
         </onekit-view>
-        <onekit-view onekit-class="guide-add-btn" bindtap="addToFavor">添加</onekit-view>
+        <onekit-view onekit-class="guide-add-btn" bindTap="addToFavor">添加</onekit-view>
       </onekit-view>
     </onekit-view>
-    <onekit-view onekit-class="bar-guide-tips {{guideTipsShow}}" bindtap="closeTipsGuide">
+    <onekit-view onekit-class="bar-guide-tips {{guideTipsShow}}" bindTap="closeTipsGuide">
       <onekit-view onekit-class="bar-guide-tips-container">
         <onekit-text onekit-class="content-text">一键添加到我的小程序</onekit-text>
         <onekit-image src="/image/demo/favorite.png" onekit-class="bar-guide-close" mode></onekit-image>
@@ -19,11 +19,11 @@
     </onekit-view>
   </onekit-view>
   <onekit-view onekit-class="btn-sets">
-    <onekit-button type="primary" size="mini" bindtap="switchGuideImage" data-image="{{barLayerGuideImage}}">
+    <onekit-button type="primary" size="mini" bindTap="switchGuideImage" data-image="{{barLayerGuideImage}}">
       展示bar浮层引导
     </onekit-button>
 
-    <onekit-button type="primary" size="mini" bindtap="switchGuideTips" data-image="{{tipsLayerGuideImage}}">
+    <onekit-button type="primary" size="mini" bindTap="switchGuideTips" data-image="{{tipsLayerGuideImage}}">
       展示tips气泡引导
     </onekit-button>
 

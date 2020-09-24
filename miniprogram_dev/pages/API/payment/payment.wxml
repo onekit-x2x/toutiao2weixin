@@ -5,7 +5,7 @@
       <onekit-view onekit-class="price">0.01</onekit-view>
       <onekit-view onekit-class="desc">实际接口应用中可自定义金额</onekit-view>
       <onekit-view onekit-class="btn-area">
-        <onekit-button type="primary" bindtap="requestPayment" loading="{{loading}}">支付</onekit-button>
+        <onekit-button type="primary" bindTap="requestPayment" loading="{{loading}}">支付</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

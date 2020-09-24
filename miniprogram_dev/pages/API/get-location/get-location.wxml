@@ -16,8 +16,8 @@
         </block>
       </onekit-view>
       <onekit-view onekit-class="btn-area">
-        <onekit-button type="primary" bindtap="getLocation_wgs84">获取位置</onekit-button>
-        <onekit-button bindtap="clear">清空</onekit-button>
+        <onekit-button type="primary" bindTap="getLocation_wgs84">获取位置</onekit-button>
+        <onekit-button bindTap="clear">清空</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

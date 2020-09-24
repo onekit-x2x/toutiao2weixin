@@ -11,8 +11,8 @@
       </onekit-view>
     </onekit-view>
     <onekit-view onekit-class="btn-area">
-      <onekit-button type="primary" size="40" bindtap="sendMessage" disabled="{{socketStatus != 'connected'}}">点我发送字符串</onekit-button>
-			<onekit-button type="primary" size="40" bindtap="sendMessageAB" disabled="{{socketStatus != 'connected'}}">点我发送ArrayBuffer</onekit-button>
+      <onekit-button type="primary" size="40" bindTap="sendMessage" disabled="{{socketStatus != 'connected'}}">点我发送字符串</onekit-button>
+			<onekit-button type="primary" size="40" bindTap="sendMessageAB" disabled="{{socketStatus != 'connected'}}">点我发送ArrayBuffer</onekit-button>
     </onekit-view>
 		<onekit-view onekit-class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
         <onekit-text>{{text}}</onekit-text>

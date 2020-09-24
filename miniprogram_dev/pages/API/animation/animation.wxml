@@ -7,15 +7,15 @@
         <onekit-view onekit-class="animation-element" animation="{{animation}}"></onekit-view>
       </onekit-view>
       <onekit-view onekit-class="animation-buttons">
-        <onekit-button onekit-class="animation-button" bindtap="rotate">旋转</onekit-button>
-        <onekit-button onekit-class="animation-button" bindtap="scale">缩放</onekit-button>
-        <onekit-button onekit-class="animation-button" bindtap="translate">移动</onekit-button>
-        <onekit-button onekit-class="animation-button" bindtap="skew">倾斜</onekit-button>
-        <onekit-button onekit-class="animation-button" bindtap="rotateAndScale">旋转并缩放</onekit-button>
-        <onekit-button onekit-class="animation-button" bindtap="rotateThenScale">旋转后缩放</onekit-button>
-        <onekit-button onekit-class="animation-button" bindtap="all">同时展示全部</onekit-button>
-        <onekit-button onekit-class="animation-button" bindtap="allInQueue">顺序展示全部</onekit-button>
-        <onekit-button onekit-class="animation-button animation-button-reset" bindtap="reset">还原</onekit-button>
+        <onekit-button onekit-class="animation-button" bindTap="rotate">旋转</onekit-button>
+        <onekit-button onekit-class="animation-button" bindTap="scale">缩放</onekit-button>
+        <onekit-button onekit-class="animation-button" bindTap="translate">移动</onekit-button>
+        <onekit-button onekit-class="animation-button" bindTap="skew">倾斜</onekit-button>
+        <onekit-button onekit-class="animation-button" bindTap="rotateAndScale">旋转并缩放</onekit-button>
+        <onekit-button onekit-class="animation-button" bindTap="rotateThenScale">旋转后缩放</onekit-button>
+        <onekit-button onekit-class="animation-button" bindTap="all">同时展示全部</onekit-button>
+        <onekit-button onekit-class="animation-button" bindTap="allInQueue">顺序展示全部</onekit-button>
+        <onekit-button onekit-class="animation-button animation-button-reset" bindTap="reset">还原</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>

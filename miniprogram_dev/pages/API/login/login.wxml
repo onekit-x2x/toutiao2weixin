@@ -9,7 +9,7 @@
                 </block>
                 <block wx:if="{{hasLogin === false}}">
                     <onekit-text onekit-class="page-body-text">未登录 或 当前 session 已经失效，需要重新登录</onekit-text>
-                    <onekit-button onekit-class="page-body-button" type="primary" bindtap="login">登录</onekit-button>
+                    <onekit-button onekit-class="page-body-button" type="primary" bindTap="login">登录</onekit-button>
                 </block>
             </onekit-view>
     </onekit-view>

@@ -11,8 +11,8 @@
         </onekit-view>
       </onekit-view>
       <onekit-view onekit-class="controls">
-        <onekit-button bindtap="startCompass" disabled="{{enabled}}">开始监听</onekit-button>
-        <onekit-button bindtap="stopCompass" disabled="{{!enabled}}">停止监听</onekit-button>
+        <onekit-button bindTap="startCompass" disabled="{{enabled}}">开始监听</onekit-button>
+        <onekit-button bindTap="stopCompass" disabled="{{!enabled}}">停止监听</onekit-button>
       </onekit-view>
     </onekit-view>
   </onekit-view>
