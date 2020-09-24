@@ -1,5 +1,8 @@
-// onekit/ui/slider/slider.js
+/* eslint-disable no-dupe-keys */
+/* eslint-disable camelcase */
+
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   /**
@@ -9,7 +12,7 @@ Component({
   options: {
     virtualHost: true
   },
-properties: {
+  properties: {
     min: {type: String, value: 0},
     max: {type: Number, value: 100},
     step: {type: Number, value: 1},

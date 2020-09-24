@@ -1,15 +1,17 @@
-// onekit/ui/input/input.js
+/* eslint-disable camelcase */
+
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
 
   /**
    * 组件的属性列表
    */
-  behaviors: [onekit_behavior,'wx://form-field'],
+  behaviors: [onekit_behavior, 'wx://form-field'],
   options: {
     virtualHost: true
   },
-properties: {
+  properties: {
     value: {type: String},
     checked: {type: Boolean, value: false},
     disabled: {type: Boolean, value: false},

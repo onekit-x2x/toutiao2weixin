@@ -1,15 +1,17 @@
+/* eslint-disable camelcase */
 // onekit/ui/textarea/textarea.js
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
 
   /**
    * 组件的属性列表
    */
-  behaviors: [onekit_behavior,'wx://form-field'],
+  behaviors: [onekit_behavior, 'wx://form-field'],
   options: {
     virtualHost: true
   },
-properties: {
+  properties: {
     value: {type: String},
     name: {type: String},
     placeholder: {type: String, value: ''},

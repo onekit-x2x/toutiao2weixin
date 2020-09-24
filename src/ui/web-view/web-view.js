@@ -1,4 +1,6 @@
+/* eslint-disable camelcase */
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   /**
@@ -7,7 +9,7 @@ Component({
   options: {
     virtualHost: true
   },
-properties: {
+  properties: {
 
   },
 

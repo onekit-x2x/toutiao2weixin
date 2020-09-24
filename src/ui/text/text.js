@@ -1,5 +1,8 @@
+/* eslint-disable camelcase */
+/* eslint-disable indent */
 // onekit/ui/text/text.js
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   /**

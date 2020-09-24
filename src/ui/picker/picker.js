@@ -1,5 +1,7 @@
+/* eslint-disable camelcase */
 // onekit/ui/picker/picker.js
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   /**
@@ -8,7 +10,7 @@ Component({
   options: {
     virtualHost: true
   },
-properties: {
+  properties: {
     range: {type: Array},
     rangeKey: {type: String},
     value: {type: Number, value: 0},

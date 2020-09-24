@@ -1,8 +1,9 @@
 /* eslint-disable camelcase */
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
 
-  behaviors: [onekit_behavior,'wx://form-field'],
+  behaviors: [onekit_behavior, 'wx://form-field'],
   options: {
     virtualHost: true
   },
@@ -10,7 +11,7 @@ Component({
   /**
    * 组件的属性列表
    */
-properties: {
+  properties: {
     canvasId: {
       type: String,
       value: ''

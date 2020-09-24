@@ -1,14 +1,16 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable camelcase */
 import TheKit from '../../js/TheKit'
 import OneKit from '../../js/OneKit'
 
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   options: {
     virtualHost: true
   },
-properties: {
+  properties: {
     src: {
       type: String,
       value: '',

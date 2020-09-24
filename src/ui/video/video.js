@@ -1,11 +1,13 @@
+/* eslint-disable camelcase */
 /* eslint-disable no-console */
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   options: {
     virtualHost: true
   },
-properties: {
+  properties: {
     src: {
       type: String,
       value: '',

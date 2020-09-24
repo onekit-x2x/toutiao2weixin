@@ -1,4 +1,6 @@
+/* eslint-disable camelcase */
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
 
@@ -9,7 +11,7 @@ Component({
     virtualHost: true
   },
   properties: {
-    
+
     hoverClass: {
       type: String,
       value: ''

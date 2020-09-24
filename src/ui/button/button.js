@@ -1,6 +1,8 @@
-import onekit_behavior from "../../behavior/onekit_behavior"
+/* eslint-disable camelcase */
+import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
-  behaviors: [onekit_behavior,'wx://form-field-button'],
+  behaviors: [onekit_behavior, 'wx://form-field-button'],
   options: {
     virtualHost: true
   },
@@ -14,7 +16,7 @@ Component({
     // this.setData({openType,scope});
   },
   detached() { },
-properties: {
+  properties: {
     size: {type: String, value: 'default'},
     type: {type: String, value: 'default'},
     plain: {type: Boolean, value: false},

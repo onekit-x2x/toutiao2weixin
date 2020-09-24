@@ -1,5 +1,7 @@
+/* eslint-disable camelcase */
 // onekit/ui/rich-text/rich-text.js
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   /**
@@ -9,7 +11,7 @@ Component({
     virtualHost: true
   },
   properties: {
-    
+
     nodes: {
       type: '',
       value: ''

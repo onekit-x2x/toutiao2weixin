@@ -1,5 +1,7 @@
-// onekit/ui/progress/progress.js
+/* eslint-disable camelcase */
+
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   /**
@@ -9,7 +11,7 @@ Component({
     virtualHost: true
   },
   properties: {
-    
+
     percent: {
       type: Number,
     },

@@ -1,5 +1,7 @@
+/* eslint-disable camelcase */
 // onekit/ui/swiper-item/swiper-item.js
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   /**
@@ -8,7 +10,7 @@ Component({
   options: {
     virtualHost: true
   },
-properties: {
+  properties: {
     itemId: {type: String, value: ''},
 
   },

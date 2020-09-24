@@ -1,5 +1,7 @@
+/* eslint-disable camelcase */
 // onekit/ui/navigator/navigator.js
 import onekit_behavior from '../../behavior/onekit_behavior'
+
 Component({
   behaviors: [onekit_behavior],
   options: {
@@ -9,7 +11,7 @@ Component({
   /**
    * 组件的属性列表
    */
-properties: {
+  properties: {
     url: {
       type: String,
       value: ''
