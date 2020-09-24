@@ -13,7 +13,21 @@ id="{{onekitId}}"
   hover-stop-propagation="{{hoverStopPropagation}}"
   hover-start-time="{{hoverStartTime}}"
   hover-stay-time="{{hoverStayTime}}"
-  bindgetphonenumber="bindgetphonenumber"
+  catchgetphonenumber="bindgetphonenumber"
+
+  
+catchtap="ui_tap"
+catchtouchstart="ui_touchstart"
+catchtouchmove="ui_touchmove"
+catchtouchcancel="ui_touchcancel"
+catchtouchend="ui_touchend"
+catchlongpress="ui_longpress"
+catchlongtap="ui_longtap"
+catchtransitionend="ui_transitionend"
+catchanimationstart="ui_animationstart"
+catchanimationiteration="ui_animationiteration"
+catchanimationend="ui_animationend"
+catchtouchforcechange="ui_touchforcechange"
   >
  <slot/>
 </button> 

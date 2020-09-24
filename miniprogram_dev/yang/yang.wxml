@@ -1,0 +1,2 @@
+<onekit-textarea onekit-id="text1" bindinput="text1_input" onekit-style="background:gray;"/>
+<onekit-textarea onekit-id="text1" bindblur="text1_blur" onekit-style="background:red;"/>

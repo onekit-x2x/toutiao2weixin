@@ -2,7 +2,21 @@
 class="onekit-checkbox-group {{onekitClass}}"
 style="{{onekitStyle}}"
 id="{{onekitId}}"
-bindchange="checkboxGroup_change"
+catchchange="checkboxGroup_change"
+
+
+catchtap="ui_tap"
+catchtouchstart="ui_touchstart"
+catchtouchmove="ui_touchmove"
+catchtouchcancel="ui_touchcancel"
+catchtouchend="ui_touchend"
+catchlongpress="ui_longpress"
+catchlongtap="ui_longtap"
+catchtransitionend="ui_transitionend"
+catchanimationstart="ui_animationstart"
+catchanimationiteration="ui_animationiteration"
+catchanimationend="ui_animationend"
+catchtouchforcechange="ui_touchforcechange"
 >
 <slot></slot>
 </checkbox-group>

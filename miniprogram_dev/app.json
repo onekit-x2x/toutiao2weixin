@@ -1,6 +1,6 @@
 {
     "pages": [
-        "gong/gong",
+        
         "pages/component/index",
         "pages/component/scroll-view/scroll-view",
         "pages/component/video/video",
@@ -75,7 +75,8 @@
         "pages/API/authorize/authorize",
         "pages/API/payment/payment",
         "pages/API/filesystem/filesystem",
-        "pages/API/on-memory-warning/on-memory-warning"
+        "pages/API/on-memory-warning/on-memory-warning",
+        "gong/gong"
     ],
     "tabBar": {
         "backgroundColor": "#ffffff",
