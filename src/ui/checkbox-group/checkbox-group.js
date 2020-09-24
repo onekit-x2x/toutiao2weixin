@@ -1,5 +1,5 @@
 // onekit/ui/checkbox-group/checkbox-group.js
-import onekit_behavior from "../onekit_behavior"
+import onekit_behavior from '../../behavior/onekit_behavior'
 Component({
 
   /**

@@ -1,4 +1,5 @@
-import onekit_behavior from "../onekit_behavior"
+/* eslint-disable camelcase */
+import onekit_behavior from '../../behavior/onekit_behavior'
 
 Component({
   behaviors: [onekit_behavior],

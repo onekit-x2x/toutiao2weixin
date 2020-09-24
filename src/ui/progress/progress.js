@@ -1,5 +1,5 @@
 // onekit/ui/progress/progress.js
-import onekit_behavior from "../onekit_behavior"
+import onekit_behavior from '../../behavior/onekit_behavior'
 Component({
   behaviors: [onekit_behavior],
   /**
