@@ -15,7 +15,7 @@ Component({
   properties: {
     checked: {type: Boolean, value: false},
     disabled: {type: Boolean, value: false},
-    color: {type: String},
+    color: {type: String, value: '#F85959'},
     type: {type: String, value: 'switch'}
 
   },

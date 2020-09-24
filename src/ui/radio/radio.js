@@ -12,10 +12,10 @@ Component({
     virtualHost: true
   },
   properties: {
-    value: {type: String},
+    value: {type: String, value: ''},
     checked: {type: Boolean, value: false},
     disabled: {type: Boolean, value: false},
-    colors: {type: String},
+    colors: {type: String, value: '#F85959'},
   },
 
   /**

@@ -22,33 +22,27 @@ Component({
       type: Boolean,
       value: false,
     },
-    upperThreshold: {
-      type: Number | String,
-      value: '50',
-    },
-    lowerThreshold: {
-      type: Number | String,
-      value: '50',
-    },
-    scrollTop: {
-      type: Number | String,
-      value: '',
-    },
-    scrollLeft: {
-      type: Number | String,
-      value: '',
-    },
-    scrollIntoView: {
-      type: String,
-      value: '',
-    },
     scrollWithAnimation: {
       type: Boolean,
       value: false,
     },
-    enableBackToTop: {
-      type: Boolean,
-      value: false,
+    upperThreshold: {
+      type: Number,
+      value: 50,
+    },
+    lowerThreshold: {
+      type: Number,
+      value: 50,
+    },
+    scrollTop: {
+      type: Number,
+    },
+    scrollLeft: {
+      type: Number
+    },
+    scrollIntoView: {
+      type: String,
+      value: '',
     },
   },
 
