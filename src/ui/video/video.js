@@ -1,9 +1,10 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-console */
 import onekit_behavior from '../../behavior/onekit_behavior'
+import toutiao_behavior from '../../behavior/toutiao_behavior'
 
 Component({
-  behaviors: [onekit_behavior],
+  behaviors: [onekit_behavior, toutiao_behavior],
   options: {
     virtualHost: true
   },
