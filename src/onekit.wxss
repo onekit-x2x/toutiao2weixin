@@ -1,4 +1,5 @@
 
+@import "fix.wxss";
 page {
     display: block;
     margin: 8px;
@@ -177,6 +178,13 @@ page {
 .onekit-switch{
     -webkit-tap-highlight-color: transparent;
     display: inline-block;
+}
+/*text*/
+.onekit-text{
+    
+    display: block;
+    white-space: normal;
+
 }
 /* textarea */
 .onekit-textarea{

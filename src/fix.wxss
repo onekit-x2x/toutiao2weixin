@@ -1,0 +1,3 @@
+[style*="flex-direction:column"]>view{
+  flex: auto !important;
+}
