@@ -14,10 +14,11 @@ cursor="{{cursor}}"
 cursor-spacing="cursorSpacing"
 selection-start="{{selectionStart}}"
 selection-end="{{selectionEnd}}"
-bindinput="input_bindinput"
-bindfocus="input_bindfocus"
-bindblur="input_bindblur"
-bindconfirm="input_bindconfirm"
+
+bindinput="input_input"
+bindfocus="input_focus"
+bindblur="input_blur"
+bindconfirm="input_confirm"
 
 
 bindtap="ui_tap"

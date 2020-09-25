@@ -10,8 +10,8 @@
    backgroundColor="{{backgroundColor}}"
    active="{{active}}"
    active-mode="{{activeMode}}"
-   bindactiveend="bindactiveend"
-   font-size="{{fontSize}}"
+
+
 
    
 bindtap="ui_tap"

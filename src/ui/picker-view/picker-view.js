@@ -28,8 +28,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    pickerView_change() {
-      this.triggerEvent('Change', {})
+    pickerView_change(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Change', tt_e)
     }
   }
 })

@@ -39,17 +39,33 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    textarea_bindinput() {
-      this.triggerEvent('Input', {})
+    textarea_input(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Input', tt_e)
     },
-    textarea_bindfocus() {
-      this.triggerEvent('Focus', {})
+    textarea_focus(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Focus', tt_e)
     },
-    textarea_bindblur() {
-      this.triggerEvent('Blur', {})
+    textarea_blur(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Blur', tt_e)
     },
-    textarea_bindconfirm() {
-      this.triggerEvent('Confirm', {})
+    textarea_confirm(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Confirm', tt_e)
     },
   }
 })

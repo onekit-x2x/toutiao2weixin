@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable camelcase */
 import TheKit from '../../js/TheKit'
@@ -36,11 +38,19 @@ Component({
     }
   },
   methods: {
-    image_error(e) {
-      this.triggerEvent('Error', e.details)
+    image_error(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Error', tt_e)
     },
-    image_load(e) {
-      this.triggerEvent('Load', e.details)
+    image_load(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Load', tt_e)
     },
   }
 })

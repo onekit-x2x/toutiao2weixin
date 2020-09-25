@@ -2,9 +2,9 @@
 id="{{onekitId}}"
 class="onekit-radio-group {{onekitClass}}"
 style="{{onekitStyle}}"
-bindchange="radio_groupBindchange"
 
-bindclick="radio_click"
+bindchange="radioGroup_change"
+
 
 
 bindtap="ui_tap"

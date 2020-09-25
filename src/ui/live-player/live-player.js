@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 // onekit/ui/live-player/live-player.js
 import onekit_behavior from '../../behavior/onekit_behavior'
@@ -31,6 +32,27 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    livePlayer_statechange(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Statechange', tt_e)
+    },
+    livePlayer_fullscreenchange(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Fullscreenchange', tt_e)
+    },
+    livePlayer_error(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Error', tt_e)
+    },
 
   }
 })

@@ -11,9 +11,10 @@ scroll-left="{{scrollLeft}}"
 scroll-into-view="{{scrollIntoView}}"
 scroll-with-animation="{{scrollWithAnimation}}"
 enable-back-to-top="{{enableBackToTop}}"
-bindscrolltoupper="on_toupper"
-bindscrolltolower="on_tolower"
-bindscroll="on_scroll"
+
+bindscrolltoupper="scrollView_scrolltoupper"
+bindscrolltolower="scrollView_scrolltolower"
+bindscroll="scrollView_scroll"
 
 
 bindtap="ui_tap"

@@ -14,8 +14,9 @@ vertical="{{vertical}}"
 previous-margin="{{previousMargin}}"
 next-margin="{{nextMargin}}"
 display-multiple-items="{{displayMultipleItems}}"
-bindchange="swiper_Change"
-bindanimationfinish="swiper_AnimationEnd"
+
+bindchange="swiper_change"
+bindanimationfinish="swiper_animationEnd"
 bindtransition="swiper_transition"
 
 

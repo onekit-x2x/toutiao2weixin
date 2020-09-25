@@ -5,6 +5,7 @@ id="{{onekitId}}"
 mode="{{mode}}" 
 src="{{weixin_src}}"
 lazy-load="{{lazyLoad}}"
+
 binderror="image_error"
 bindload="image_load"
 

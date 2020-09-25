@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 import onekit_behavior from '../../behavior/onekit_behavior'
 import toutiao_behavior from '../../behavior/toutiao_behavior'
@@ -30,19 +32,12 @@ Component({
     openType: {type: String, value: ''},
   },
   methods: {
-
-    button_bindtap() {
-      if (this.properties.openType) {
-        switch (this.properties.openType) {
-          case 'getPhoneNumber':
-            break
-
-          default:
-            throw new Error(this.properties.openType)
-        }
-      }
-
-      this.triggerEvent('Tap', {})
+    button_getphonenumber(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Getphonenumber', tt_e)
     },
 
   },
