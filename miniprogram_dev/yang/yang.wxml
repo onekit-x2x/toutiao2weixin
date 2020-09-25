@@ -1,2 +1,3 @@
-<onekit-textarea onekit-id="text1" bindinput="text1_input" onekit-style="background:gray;"/>
-<onekit-textarea onekit-id="text1" bindblur="text1_blur" onekit-style="background:red;"/>
+<onekit-textarea onekit-id="text1" bindinput="text1_input" onekit-class="a" onekit-style="background:gray;"/>
+<onekit-textarea onekit-id="text1" bindblur="text1_blur"  onekit-class="b"  onekit-style="background:red;"/>
+<onekit-button type="primary" onekit-class="dd">页面主操作 Normal</onekit-button>
