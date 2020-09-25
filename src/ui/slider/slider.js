@@ -21,7 +21,7 @@ Component({
     value: {type: Number, value: 0},
     color: {type: String, value: '#e9e9e9'},
     showValue: {type: Boolean, value: false},
-    activeColor: {type: String, value: '#108ee9'},
+    activeColor: {type: String, value: '#f85959'},
     backgroundColor: {type: String, value: '#ddd'},
     blockSize: {type: Number, value: 22},
     blockColor: {type: String, value: '#fff'},
