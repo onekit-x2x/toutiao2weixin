@@ -40,32 +40,24 @@ Component({
    */
   methods: {
     textarea_input(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Input', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Input', tt_detail)
     },
     textarea_focus(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Focus', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Focus', tt_detail)
     },
     textarea_blur(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Blur', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Blur', tt_detail)
     },
     textarea_confirm(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Confirm', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Confirm', tt_detail)
     },
   }
 })

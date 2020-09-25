@@ -43,12 +43,5 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    view_animation(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Animation', tt_e)
-    },
   }
 })

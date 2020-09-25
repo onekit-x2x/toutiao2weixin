@@ -29,13 +29,5 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    item_tap(e) {
-      // if(this.properties.checked){
-      //   return;
-      // }
-      // this.properties.checked = !this.properties.checked;
-      // console.log("xxxx",this.properties.checked)
-      this.triggerEvent('Click', {radio: e}, {bubbles: true, composed: true})
-    }
   }
 })

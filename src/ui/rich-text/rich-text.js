@@ -16,7 +16,7 @@ Component({
 
     nodes: {
       type: Array | String,
-      value: '[]'
+      value: []
     }
 
   },

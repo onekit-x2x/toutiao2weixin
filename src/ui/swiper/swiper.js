@@ -80,25 +80,19 @@ Component({
    */
   methods: {
     swiper_change(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Change', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Change', tt_detail)
     },
     swiper_animationEnd(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('AnimationEnd', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('AnimationEnd', tt_detail)
     },
     swiper_transition(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Transition', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Transition', tt_detail)
     }
   }
 })

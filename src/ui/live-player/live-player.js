@@ -33,25 +33,17 @@ Component({
    */
   methods: {
     livePlayer_statechange(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Statechange', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Statechange', tt_detail)
     },
     livePlayer_fullscreenchange(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Fullscreenchange', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Fullscreenchange', tt_detail)
     },
-    livePlayer_error(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Error', tt_e)
+    livePlayer_error() {
+      this.triggerEvent('Error')
     },
 
   }

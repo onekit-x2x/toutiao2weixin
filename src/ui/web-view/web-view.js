@@ -35,26 +35,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    webView_message(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Message', tt_e)
+    webView_message() {
+      this.triggerEvent('Message')
     },
-    webView_load(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Load', tt_e)
+    webView_load() {
+      this.triggerEvent('Load')
     },
-    webView_error(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Error', tt_e)
+    webView_error() {
+      this.triggerEvent('Error')
     },
 
   }

@@ -6,41 +6,41 @@ module.exports = Behavior({
 
   },
   methods: {
-    ui_tap(tt_e) {
-      this.triggerEvent('Tap', tt_e)
+    ui_tap() {
+      this.triggerEvent('Tap',)
     },
-    ui_touchstart(tt_e) {
-      this.triggerEvent('Touchstart', tt_e)
+    ui_touchstart() {
+      this.triggerEvent('Touchstart')
     },
-    ui_touchmove(tt_e) {
-      this.triggerEvent('Touchmove', tt_e)
+    ui_touchmove() {
+      this.triggerEvent('Touchmove')
     },
-    ui_touchcancel(tt_e) {
-      this.triggerEvent('Touchcancel', tt_e)
+    ui_touchcancel() {
+      this.triggerEvent('Touchcancel')
     },
-    ui_touchend(tt_e) {
-      this.triggerEvent('Touchend', tt_e)
+    ui_touchend() {
+      this.triggerEvent('Touchend')
     },
-    ui_longpress(tt_e) {
-      this.triggerEvent('Longpress', tt_e)
+    ui_longpress() {
+      this.triggerEvent('Longpress')
     },
-    ui_longtap(tt_e) {
-      this.triggerEvent('Longtap', tt_e)
+    ui_longtap() {
+      this.triggerEvent('Longtap')
     },
-    ui_transitionend(tt_e) {
-      this.triggerEvent('Transitionend', tt_e)
+    ui_transitionend() {
+      this.triggerEvent('Transitionend')
     },
-    ui_animationstart(tt_e) {
-      this.triggerEvent('Animationstart', tt_e)
+    ui_animationstart() {
+      this.triggerEvent('Animationstart')
     },
-    ui_animationiteration(tt_e) {
-      this.triggerEvent('Animationiteration', tt_e)
+    ui_animationiteration() {
+      this.triggerEvent('Animationiteration')
     },
-    ui_animationend(tt_e) {
-      this.triggerEvent('Animationend', tt_e)
+    ui_animationend() {
+      this.triggerEvent('Animationend')
     },
-    ui_touchforcechange(tt_e) {
-      this.triggerEvent('Touchforcechange', tt_e)
+    ui_touchforcechange() {
+      this.triggerEvent('Touchforcechange')
     },
   },
 })

@@ -21,7 +21,7 @@ Component({
     placeholder: {type: String, value: ''},
     placeholderStyle: {type: String, value: ''},
     disabled: {type: Boolean, value: false},
-    maxlength: {type: Number, value: '140'},
+    maxlength: {type: Number, value: 140},
     focus: {type: Boolean, value: false},
     cursorSpacing: {type: Number, value: 0},
     cursor: {type: Number, value: -1},
@@ -40,33 +40,17 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    input_input(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Input', tt_e)
+    input_input() {
+      this.triggerEvent('Input')
     },
-    input_focus(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Focus', tt_e)
+    input_focus() {
+      this.triggerEvent('Focus')
     },
-    input_blur(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Blur', tt_e)
+    input_blur() {
+      this.triggerEvent('Blur')
     },
-    input_confirm(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Confirm', tt_e)
+    input_confirm() {
+      this.triggerEvent('Confirm')
     },
   }
 })
