@@ -1,5 +1,4 @@
 
-@import "fix.wxss";
 page {
     display: block;
     margin: 8px;
@@ -253,3 +252,5 @@ page {
     width: 100%;
 }
 /*  */
+
+@import "fix.wxss";
