@@ -4,6 +4,7 @@ style="{{onekitStyle}}"
 id="{{onekitId}}"
 selectable="{{selectable}}"
 space="{{space}}"
+decode="{{decode}}"
 
 
 bindtap="ui_tap"

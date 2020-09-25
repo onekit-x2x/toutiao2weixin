@@ -21,39 +21,73 @@ Component({
       type: String,
       value: '',
     },
+    loop: {
+      type: Boolean,
+      value: false,
+    },
+    showFullscreenBtn: {
+      type: Boolean,
+      value: false,
+    },
+    showPlayBtn: {
+      type: Boolean,
+      value: false,
+    },
+    controls: {
+      type: Boolean,
+      value: true,
+    },
+    objectFit: {
+      type: String,
+      value: 'contain',
+    },
+    playBtnPosition: {
+      type: String,
+      value: 'center',
+    },
   },
   methods: {
-    video_play(e) {
-      console.log('video_play', e)
-      this.triggerEvent('Play', e.details)
+    video_play(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Play', tt_e)
     },
-    video_pause(e) {
-      console.log('video_pause', e)
-      this.triggerEvent('Pause', e.details)
+    video_pause(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Pause', tt_e)
     },
-    video_ended(e) {
-      console.log('video_ended', e)
-      this.triggerEvent('Ended', e.details)
+    video_ended(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Ended', tt_e)
     },
-    video_timeupdate(e) {
-      console.log('video_timeupdate', e)
-      this.triggerEvent('Timeupdate', e.details)
+    video_error(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Error', tt_e)
     },
-    video_fullscreenchang(e) {
-      console.log('video_fullscreenchang', e)
-      this.triggerEvent('Fullscreenchang', e.details)
+    video_timeupdate(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Timeupdate', tt_e)
     },
-    video_waiting(e) {
-      console.log('video_waiting', e)
-      this.triggerEvent('Waiting', e.details)
-    },
-    video_error(e) {
-      console.log('video_error', e)
-      this.triggerEvent('Error', e.details)
-    },
-    video_loadedmetadata(e) {
-      console.log('video_loadedmetadata', e)
-      this.triggerEvent('Loadedmetadata', e.details)
+    video_fullscreenchange(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Fullscreenchange', tt_e)
     },
   }
 

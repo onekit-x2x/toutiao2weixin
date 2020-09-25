@@ -27,8 +27,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    piker_change() {
-      this.triggerEvent('Change', {})
+    picker_cancel(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Cancel', tt_e)
     }
   }
 })

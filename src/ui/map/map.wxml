@@ -8,6 +8,10 @@
   include-points="{{include-points}}"
   show-location="{{show-location}}"
 
+  bindtap="map_tap"
+  bindmarkertap="map_markertap"
+  bindcallouttap="map_callouttap"
+
   
 bindtap="ui_tap"
 bindtouchstart="ui_touchstart"

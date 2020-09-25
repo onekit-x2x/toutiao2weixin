@@ -7,7 +7,6 @@ checked="{{checked}}"
 disabled="{{disabled}}"
 color="{{colors}}"
 
-bindtap="item_tap"
 
 
 bindtap="ui_tap"

@@ -39,11 +39,19 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    slider_change() {
-      this.triggerEvent('Change', {})
+    slider_change(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Change', tt_e)
     },
-    slider_changing() {
-      this.triggerEvent('Changing', {})
+    slider_changing(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Changing', tt_e)
     }
   }
 })

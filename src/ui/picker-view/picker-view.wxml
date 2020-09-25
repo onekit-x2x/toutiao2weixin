@@ -5,6 +5,7 @@ id="{{onekitId}}"
 value="{{value}}"
 indicator-style="{{indicatorStyle}}"
 mask-style="{{maskStyle}}"
+
 bindchange="pickerView_change"
 
 

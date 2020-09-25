@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 /* eslint-disable camelcase */
 // onekit/ui/input/input.js
 import onekit_behavior from '../../behavior/onekit_behavior'
@@ -38,17 +40,33 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    input_bindinput() {
-      this.triggerEvent('Input', {})
+    input_input(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Input', tt_e)
     },
-    input_bindfocus() {
-      this.triggerEvent('Focus', {})
+    input_focus(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Focus', tt_e)
     },
-    input_bindblur() {
-      this.triggerEvent('Blur', {})
+    input_blur(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Blur', tt_e)
     },
-    input_bindconfirm() {
-      this.triggerEvent('Confirm', {})
+    input_confirm(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Confirm', tt_e)
     },
   }
 })

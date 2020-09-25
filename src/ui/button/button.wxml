@@ -1,7 +1,7 @@
 <button
-class="onekit-button {{onekitClass}}"
-style="{{onekitStyle}}"
-id="{{onekitId}}"
+  class="onekit-button {{onekitClass}}"
+  style="{{onekitStyle}}"
+  id="{{onekitId}}"
   size="{{size}}"
   type="{{type}}"
   disabled="{{disabled}}"
@@ -12,6 +12,8 @@ id="{{onekitId}}"
   hover-stop-propagation="{{hoverStopPropagation}}"
   hover-start-time="{{hoverStartTime}}"
   hover-stay-time="{{hoverStayTime}}"
+
+  bindgetphonenumber="button_getphonenumber"
 
   
 bindtap="ui_tap"

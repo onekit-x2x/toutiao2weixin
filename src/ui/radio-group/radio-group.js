@@ -35,18 +35,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
-    radio_click() {
-      // console.log(e)
-      this.createSelectorQuery().in(this).selectAll('.radio-group').boundingClientRect(function () {
-        // console.log('createSelectorQuery', e)
-      })
-        .exec()
-    //  console.log("radios",radios);
-      // this.triggerEvent("Change",{})
-    },
-    radio_groupBindchange() {
-      this.triggerEvent('Change', {})
+    radioGroup_change(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Change', tt_e)
     }
 
   }

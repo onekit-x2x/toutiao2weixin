@@ -8,6 +8,10 @@ muted="{{muted}}"
 orientation="{{orientation}}"
 object-fit="{{objectFit}}"
 
+bindstatechange="livePlayer_statechange"
+bindfullscreenchange="livePlayer_fullscreenchange"
+binderror="livePlayer_error"
+
 
 bindtap="ui_tap"
 bindtouchstart="ui_touchstart"

@@ -79,14 +79,26 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    swiper_Change(e) {
-      this.triggerEvent('Change')
+    swiper_change(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Change', tt_e)
     },
-    swiper_AnimationEnd(e) {
-      this.triggerEvent('Animationfinish')
+    swiper_animationEnd(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('AnimationEnd', tt_e)
     },
-    swiper_transition(e) {
-      this.triggerEvent('Transition')
+    swiper_transition(wx_e) {
+      const wx_detail = wx_e.detail
+      const tt_e = {}// wx_e;
+      const tt_detail = wx_detail// {};
+      tt_e.detail = tt_detail
+      this.triggerEvent('Transition', tt_e)
     }
   }
 })

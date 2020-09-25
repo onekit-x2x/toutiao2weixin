@@ -5,6 +5,10 @@ id="{{onekitId}}"
 unit-id="{{unitId}}"
 ad-intervals="{{adIntervals}}"
 
+bindload="ad_load"
+binderror="ad_error"
+bindclose="ad_close"
+
 
 bindtap="ui_tap"
 bindtouchstart="ui_touchstart"

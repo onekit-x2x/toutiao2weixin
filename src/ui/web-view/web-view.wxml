@@ -2,6 +2,12 @@
 class="onekit-web-view {{onekitClass}}"
 style="{{onekitStyle}}"
 id="{{onekitId}}"
+src="{{src}}"
+progressbar-color="{{progressbarColor}}"
+
+bindmessage="webView_message"
+bindload="webView_load"
+binderror="webView_error"
 
 bindtap="ui_tap"
 bindtouchstart="ui_touchstart"
