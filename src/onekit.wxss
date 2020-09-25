@@ -1,4 +1,5 @@
 
+@import "fix.wxss";
 page {
     display: block;
     margin: 8px;
@@ -38,6 +39,9 @@ page {
     display: inline-block;
     font-size: 0;
 }
+
+
+
 /* scroll-view */
 .onekit-scroll-view{
     display: block;
@@ -149,6 +153,7 @@ page {
 .onekit-picker-view{
     display: block;
 }
+
 /* picker-view-column */
 .onekit-picker-view-column{
     -webkit-flex: 1;
@@ -177,6 +182,13 @@ page {
 .onekit-switch{
     -webkit-tap-highlight-color: transparent;
     display: inline-block;
+}
+/*text*/
+.onekit-text{
+    
+    display: block;
+    white-space: normal;
+
 }
 /* textarea */
 .onekit-textarea{
