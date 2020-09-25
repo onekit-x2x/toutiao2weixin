@@ -9,38 +9,32 @@ Component({
     virtualHost: true
   },
   properties: {
-    longitude: {type: Number},
-    latitude: {type: Number},
+    longitude: {type: Number, value: 0},
+    latitude: {type: Number, value: 0},
     scale: {type: Number, value: 16},
-    markers: {type: Array, value: '[]'},
-    circles: {type: Array, value: '[]'},
+    markers: {type: Array, value: []},
+    circles: {type: Array, value: []},
     showLocation: {type: Boolean, value: false},
-    polyline: {type: Array, value: '[]'},
-    includePoints: {type: Array, value: '[]'},
+    polyline: {type: Array, value: []},
+    includePoints: {type: Array, value: []},
 
 
   },
   methods: {
     map_tap(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Tap', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Tap', tt_detail)
     },
     map_markertap(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Markertap', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Markertap', tt_detail)
     },
     map_callouttap(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Callouttap', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Callouttap', tt_detail)
     },
 
   }

@@ -57,26 +57,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    scrollView_scrolltoupper(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Scrolltoupper', tt_e)
+    scrollView_scrolltoupper() {
+      this.triggerEvent('Scrolltoupper')
     },
-    scrollView_scrolltolower(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Scrolltolower', tt_e)
+    scrollView_scrolltolower() {
+      this.triggerEvent('Scrolltolower')
     },
-    scrollView_scroll(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Scroll', tt_e)
+    scrollView_scroll() {
+      this.triggerEvent('Scroll')
     }
   }
 })

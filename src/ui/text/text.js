@@ -15,7 +15,7 @@ Component({
 properties: {
   selectable: {type: Boolean, value: false},
   space: {type: String, value: 'false'},
-  decode: {type: String, value: '#F85959'},
+  decode: {type: Boolean, value: false},
 
   },
 

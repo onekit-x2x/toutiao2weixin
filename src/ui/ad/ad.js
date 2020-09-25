@@ -15,28 +15,17 @@ Component({
   properties: {
     unitId: {type: String, value: ''},
     adIntervals: {type: Number, value: 0},
+    type: {type: String, value: 'banner'},
   },
   methods: {
-    ad_load(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Load', tt_e)
+    ad_load() {
+      this.triggerEvent('Load')
     },
-    ad_error(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Error', tt_e)
+    ad_error() {
+      this.triggerEvent('Error')
     },
-    ad_close(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Close', tt_e)
+    ad_close() {
+      this.triggerEvent('Close')
     },
 
   }

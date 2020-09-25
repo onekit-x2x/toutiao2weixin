@@ -9,9 +9,6 @@ hover-stop-propagation="{{hoverStopPropagation}}"
 
 
 
-bindanimation="view_animation"
-
-
 bindtap="ui_tap"
 bindtouchstart="ui_touchstart"
 bindtouchmove="ui_touchmove"

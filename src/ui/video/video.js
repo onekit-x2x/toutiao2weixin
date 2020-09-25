@@ -45,49 +45,31 @@ Component({
       type: String,
       value: 'center',
     },
+    preRollUnitId: {
+      type: String,
+      value: '',
+    },
   },
   methods: {
-    video_play(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Play', tt_e)
+    video_play() {
+      this.triggerEvent('Play')
     },
-    video_pause(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Pause', tt_e)
+    video_pause() {
+      this.triggerEvent('Pause')
     },
-    video_ended(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Ended', tt_e)
+    video_ended() {
+      this.triggerEvent('Ended')
     },
-    video_error(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Error', tt_e)
+    video_error() {
+      this.triggerEvent('Error')
     },
     video_timeupdate(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Timeupdate', tt_e)
+      const wx_detail = wx_e.wx_detail
+      const tt_detail = wx_detail
+      this.triggerEvent('Timeupdate', tt_detail)
     },
-    video_fullscreenchange(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Fullscreenchange', tt_e)
+    video_fullscreenchange() {
+      this.triggerEvent('Fullscreenchange')
     },
   }
 
