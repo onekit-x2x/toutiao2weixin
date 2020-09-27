@@ -1,8 +1,0 @@
-<onekit-view onekit-class="container">
-  <onekit-view onekit-class="page-body">
-    <onekit-view onekit-class="page-body-info">
-      <onekit-view onekit-class="page-body-title">请进行屏幕截屏</onekit-view>
-      <onekit-text onekit-class="page-body-text">截屏事件{{ captured ? "已" : "未" }}触发</onekit-text>
-    </onekit-view>
-  </onekit-view>
-</onekit-view>

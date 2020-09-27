@@ -1,5 +1,0 @@
-<onekit-view onekit-class="container">
-  <onekit-view onekit-class="body canvas-space">
-    <onekit-canvas canvas-id="canvas" onekit-class="canvas"></onekit-canvas>
-  </onekit-view>
-</onekit-view>

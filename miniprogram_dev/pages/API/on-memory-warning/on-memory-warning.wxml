@@ -1,8 +1,0 @@
-<onekit-view onekit-class="body body-space">
-    <onekit-view onekit-class="card-area">
-        <onekit-view onekit-class="display-area">
-            <onekit-view onekit-class="tip-week">当前设备内存信息监听中</onekit-view>
-            <onekit-view onekit-class="result-area-default">{{data}}</onekit-view>
-        </onekit-view>
-    </onekit-view>
-</onekit-view>

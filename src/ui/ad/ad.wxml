@@ -2,8 +2,9 @@
 class="onekit-ad {{onekitClass}}"
 style="{{onekitStyle}}"
 id="{{onekitId}}"
-unit-id="{{unitId}}"
+unit-id="{{preRollUnitId}}"
 ad-intervals="{{adIntervals}}"
+ad-type="{{type}}"
 
 bindload="ad_load"
 binderror="ad_error"

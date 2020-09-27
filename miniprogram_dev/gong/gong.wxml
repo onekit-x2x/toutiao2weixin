@@ -1,2 +1,0 @@
-<!--gong/gong.wxml-->
-<onekit-view onekit-id="view1" bindtap="view1_tap">hhhhhh</onekit-view>

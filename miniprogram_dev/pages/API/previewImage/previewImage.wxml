@@ -1,6 +1,0 @@
-
-<onekit-view onekit-class="container">
-    <onekit-view onekit-class="body body-space">
-            <onekit-button bindTap="previewPureNetworkImage">Preview纯网络图片</onekit-button>
-    </onekit-view>
-</onekit-view>

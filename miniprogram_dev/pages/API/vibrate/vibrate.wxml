@@ -1,8 +1,0 @@
-<onekit-view onekit-class="container">
-  <onekit-view onekit-class="body">
-    <onekit-view onekit-class="btn-area">
-      <onekit-button type="default" bindTap="short">短</onekit-button>
-      <onekit-button type="default" bindTap="long">长</onekit-button>
-    </onekit-view>
-  </onekit-view>
-</onekit-view>

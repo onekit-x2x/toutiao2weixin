@@ -13,7 +13,7 @@ Component({
 
   data: {},
   properties: {
-    unitId: {type: String, value: ''},
+    preRollUnitId: {type: String, value: ''},
     adIntervals: {type: Number, value: 0},
     type: {type: String, value: 'banner'},
   },

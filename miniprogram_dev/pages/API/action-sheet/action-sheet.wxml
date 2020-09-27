@@ -1,7 +1,0 @@
-<onekit-view onekit-class="container">
-  <onekit-view onekit-class="body">
-    <onekit-view onekit-class="btn-area">
-      <onekit-button bindTap="actionSheetTap">弹出action sheet</onekit-button>
-    </onekit-view>
-  </onekit-view>
-</onekit-view>
