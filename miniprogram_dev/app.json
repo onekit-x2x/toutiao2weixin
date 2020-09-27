@@ -1,10 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
-    "yang/yang",
-    "wang/wang",
-    "li/li",
-    "gong/gong"
+    "wang/wang"
   ],
   "window": {
     "usingComponents": {},
