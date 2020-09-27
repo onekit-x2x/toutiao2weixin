@@ -1,34 +1,11 @@
-/* yang/yang.wxss */
+button{
+  margin-bottom: 30rpx;
+}
 
-.icon-block{
-  background: #fff;
-  padding: 10px 15px;
-}
-.page-default .tt-icon {
-  margin-right: 10px;
-}
-.icon-line {
-  margin-bottom: 20px;
-}
-.icon-line:last-child {
-  margin-bottom: 0;
-}
-.page-size .ttui-flex {
-  align-items: flex-end;
-  justify-content: flex-start;
+.mini-buttons {
   text-align: center;
 }
-.page-size .icon-size {
-  width: 100%;
-}
-.page-size .icon-wrapper{
-  text-align: center;
-}
-.icon-wrapper {
-  display: inline-block;
-  vertical-align: bottom;
-  margin-right: 5%;
-}
-.icon-single-wrapper {
-  white-space: nowrap;
+
+.mini-buttons .mini-btn:first-child{
+  margin-right: 20px;
 }
