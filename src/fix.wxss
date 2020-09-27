@@ -157,3 +157,19 @@ display:flex;
 .onekit-icon_msg-primary.onekit-icon-warn{
   color:#FFBE00;
 }
+.wx-icon-success:before{
+  color:#F85959;
+  }
+  .wx-icon-success_no_circle:before{
+  color:#F85959;
+  }
+  .wx-icon-info:before{
+    color:#CACACA;
+  }
+ .wx-icon-warn:before{
+    color:#f5a623;
+  }
+  .wx-icon-clear:before{
+    color:#f95959;
+  }
+  
