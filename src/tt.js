@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable max-len */
 /* eslint-disable no-console */
 import CanvasContext from './api/CanvasContext'
@@ -1011,6 +1012,31 @@ export default class tt {
   // /////////////////////////////////
   static createARCameraContext() {
     throw new Error('createARCameraContext�ݲ�֧��!!')
+  }
+
+  static exitMiniProgram(tt_object) {
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    //
+    wx.showToast({
+
+      title: '请点击屏幕右上角圆形退出',
+      success() {
+        const wx_res = {
+          errMsg: 'exitMiniProgram:ok'
+        }
+        if (tt_success) { tt_success(wx_res) }
+        if (tt_complete) { tt_complete(wx_res) }
+      },
+      fail() {
+        const wx_res = {
+          errMsg: 'exitMiniProgram:fail'
+        }
+        if (tt_fail) { tt_fail(wx_res) }
+        if (tt_complete) { tt_complete(wx_res) }
+      }
+    })
   }
 }
 /*

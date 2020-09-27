@@ -1,4 +1,4 @@
-// wang/wang.js
+import tt from '../toutiao2weixin/tt'
 Page({
 
   /**
@@ -11,9 +11,13 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
+  onLoad: function (options) {  
+    tt.exitMiniProgram({
+      fail: (res) => console.log("接口调用失败",res),
+      success:(res) => console.log("接口调用成功",res),
+      complete:(res) => console.log("接口调用结束的回调函数",res)
+    }); 
+  }, 
 
   /**
    * 生命周期函数--监听页面初次渲染完成
