@@ -1,3 +1,17 @@
+/* eslint-disable semi-spacing */
+/* eslint-disable keyword-spacing */
+/* eslint-disable semi */
+/* eslint-disable consistent-return */
+/* eslint-disable no-var */
+/* eslint-disable default-case */
+/* eslint-disable no-unreachable */
+/* eslint-disable quotes */
+/* eslint-disable indent */
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-unused-vars */
+/* eslint-disable space-before-blocks */
+/* eslint-disable padded-blocks */
 /* eslint-disable camelcase */
 /* eslint-disable max-len */
 /* eslint-disable no-console */
@@ -1037,6 +1051,11 @@ export default class tt {
         if (tt_complete) { tt_complete(wx_res) }
       }
     })
+  }
+
+ 
+  static canIPutStuffOverComponent(componentName){
+    return ['map', 'viedo', 'canvas', 'camera', 'live-player', 'live-pusher'].indexOf(componentName) < 0
   }
 }
 /*

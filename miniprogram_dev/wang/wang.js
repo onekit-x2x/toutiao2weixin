@@ -17,6 +17,8 @@ Page({
       success:(res) => console.log("接口调用成功",res),
       complete:(res) => console.log("接口调用结束的回调函数",res)
     }); 
+    const bool = tt.canIPutStuffOverComponent('view')
+    console.log(bool)
   }, 
 
   /**
