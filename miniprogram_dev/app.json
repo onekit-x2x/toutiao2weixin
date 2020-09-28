@@ -1,5 +1,6 @@
 {
   "pages": [
+    "yang/yang",
     "wang/wang"
   ],
   "window": {
@@ -11,7 +12,7 @@
   },
   "usingComponents": {
     "onekit-ad":"/toutiao2weixin/ui/ad/ad",
-    "onekit-button":"/toutiao2weixin/ui/button/button",
+    "onekit-progress":"/toutiao2weixin/ui/progress/progress",
     "onekit-icon":"/toutiao2weixin/ui/icon/icon",
     "onekit-view":"/toutiao2weixin/ui/view/view",
     "onekit-video":"/toutiao2weixin/ui/video/video"

@@ -15,8 +15,8 @@ const dist = path.resolve(__dirname, '../miniprogram_dist')
 module.exports = {
   entry: [
     'ui/ad/ad',
-    'ui/button/button',
     'ui/icon/icon',
+    'ui/progress/progress',
     'ui/video/video',
     'ui/view/view'
   ],
