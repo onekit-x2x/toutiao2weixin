@@ -1,11 +1,11 @@
-button{
-  margin-bottom: 30rpx;
+progress{
+  width: 100%;
 }
-
-.mini-buttons {
-  text-align: center;
+.progress-box{
+  display: flex;
+  height: 50rpx;
+  margin-bottom: 60rpx;
 }
-
-.mini-buttons .mini-btn:first-child{
-  margin-right: 20px;
+.progress-cancel{
+  margin-left: 40rpx;
 }
