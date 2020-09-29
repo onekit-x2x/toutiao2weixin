@@ -17,6 +17,7 @@ module.exports = {
     'ui/ad/ad',
     'ui/icon/icon',
     'ui/progress/progress',
+    'ui/slider/slider',
     'ui/video/video',
     'ui/view/view'
   ],

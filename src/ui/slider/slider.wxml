@@ -1,12 +1,22 @@
-<view
+<slider
 id="{{onekitId}}"
-class="onekit-view {{onekitClass}}"
+class="onekit-slider {{onekitClass}}"
 style="{{onekitStyle}}"
-hover-class="{{hoverClass}}"
-hover-start-time="{{hoverStarTime}}"
-hover-stay-time="{{hoverStayTime}}"
-hover-stop-propagation="{{hoverStopPropagation}}"
-animation="{{animation}}"
+min="{{min}}"
+max="{{max}}"
+step="{{step}}"
+disabled="{{disabled}}"
+value="{{value}}"
+color="{{color}}"
+selected-color="{{selectedColor}}"
+activeColor="{{activeColor}}"
+backgroundColor="{{backgroundColor}}"
+block-size="{{blockSize}}"
+block-color="{{blockColor}}"
+show-value="{{showValue}}"
+
+bindchange="slider_change"
+bindchanging="slider_changing"
 
 
 bindtap="ui_tap"
@@ -21,7 +31,6 @@ bindanimationstart="ui_animationstart"
 bindanimationiteration="ui_animationiteration"
 bindanimationend="ui_animationend"
 bindtouchforcechange="ui_touchforcechange"
-
 >
 <slot></slot>
-</view>
+</slider>
