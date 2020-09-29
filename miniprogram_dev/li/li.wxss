@@ -1,29 +1,30 @@
-.flex-wrp{
-  margin-top: 48rpx;
-  display:flex;
+.animation-element-wrapper {
+  display: flex;
+  width: 100%;
+  padding-top: 150rpx;
+  padding-bottom: 150rpx;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
 }
-.flex-item{
-  flex: 1;
-  height: 300rpx;
-  font-size: 26rpx;
-}
-.flex-item-V{
-  margin: 0 auto;
-  width: 300rpx;
+.animation-element {
+  width: 200rpx;
   height: 200rpx;
+  background-color:rgba(248,89,89,1);
 }
-.page-section-title {
-  text-align: center;
+.animation-buttons {
+  padding: 30rpx 50rpx 10rpx;
+  width: 100%;
+  height: 360rpx;
+  box-sizing: border-box;
 }
-.page-section {
-  margin-bottom: 96rpx;
+.animation-button {
+  float: left;
+  line-height: 2;
+  width: 300rpx;
+  margin: 15rpx 12rpx;
 }
-.black{
-  background-color: black;
-}
-.gray{
-  background-color: gray;
-}
-.yellow{
-  background-color: yellowgreen
+
+.animation-button-reset {
+  width: 620rpx;
 }

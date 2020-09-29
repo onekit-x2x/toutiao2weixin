@@ -30,6 +30,10 @@ Component({
       type: Boolean,
       value: false
     },
+    animation:
+    {
+      type: Object
+    },
   },
 
   /**
@@ -38,10 +42,10 @@ Component({
   data: {
 
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
-  }
+  },
+  lifetimes: {
+    attached() {
+    }
+  },
 })
