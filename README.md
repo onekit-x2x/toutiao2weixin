@@ -1,7 +1,11 @@
-# 微信小程序版头条小程序SDK
+# 微信小程序版字节跳动小程序SDK
 
 ## 项目介绍  
-此项目是为了使原有的头条小程序能在微信小程序开发平台上进行二次开发，或者让头条小程序能在微信小程序上正常使用。
+此项目是为了广大开发者快速地在微信小程序使用字节跳动小程序的组件和API。
+## 项目优势
+**·** 体积小  
+**·** 功能全
+**·** 样式全  
 ### 具体参考以下步骤：
 #### 开发者  
 请参考：[https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/trdparty.html](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/trdparty.html)
