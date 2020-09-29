@@ -1,28 +1,41 @@
-<onekit-view onekit-class="container">
-  <onekit-view onekit-class="body body-space">
 
-    <onekit-view onekit-class="page-section page-section-gap">
-      <onekit-view onekit-class="page-section-title" active-color="#f85959">设置step</onekit-view>
-      <onekit-view onekit-class="body-view">
-        <slider value="60" bindchange="slider2change" step="5"></slider>
-      </onekit-view>
+<!-- 
+<custom chineseName="文件管理系统" engName="fileSystem"></custom> -->
+<onekit-view onekit-class="wrap">
+    <onekit-view onekit-class="card-area">
+        <onekit-view onekit-class="display-area">
+          这里要放一张图片，还需要一个文件
+        </onekit-view>
+        <scroll-view scroll-y class="card-area button-area">
+            <button type="primary" bindtap="access">临时文件是否存在</button>
+            <button type="primary" bindtap="getFileInfo">获取临时文件的相关信息</button>
+            
+            <button type="primary" bindtap="mkdir">创建本地目录</button>
+            <button type="primary" bindtap="rmdir">删除目录</button>
+             <button type="primary" bindtap="copyFile">拷贝文件到mkdir目录下</button>
+            
+            <button type="primary" bindtap="unlink">删除mkdir目录下的拷贝文件</button>
+            
+            
+            
+            
+             <button type="primary" bindtap="readdir">读取mkdir目录内的文件列表</button>
+            
+            <button type="primary" bindtap="getSavedFileList">获取本地文件列表</button>
+            
+            <button type="primary" bindtap="readFile">读取本地文件内容</button>
+            
+            <button type="primary" bindtap="removeSavedFile">删除已保存的本地用户文件</button>
+            <button type="primary" bindtap="rename">重命名文件</button>
+            
+            
+            
+            
+            <button type="primary" bindtap="stat">获取文件 Stats 对象</button>
+            
+            
+            
+            
+        </scroll-view>
     </onekit-view>
-
-    <onekit-view onekit-class="page-section page-section-gap">
-      <onekit-view onekit-class="page-section-title">显示当前value</onekit-view>
-      <onekit-view onekit-class="body-view">
-        <slider value="50" bindchange="slider3change" show-value></slider>
-      </onekit-view>
-    </onekit-view>
-
-    <onekit-view onekit-class="page-section page-section-gap">
-      <onekit-view onekit-class="page-section-title">设置最小/最大值</onekit-view>
-      <onekit-view onekit-class="body-view">
-        <slider value="100" bindchange="slider4change" min="50" max="200" show-value></slider>
-      </onekit-view>
-    </onekit-view>
-
-
-  </onekit-view>
 </onekit-view>
-
