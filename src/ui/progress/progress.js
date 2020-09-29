@@ -28,20 +28,20 @@ Component({
 
   },
   // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
-  attached() {
-    let borderRadius = this.properties.borderRadius
-    borderRadius = this._num2str(borderRadius)
-    //
-    let strokeWidth = this.properties.strokeWidth
-    strokeWidth = this._str2num(strokeWidth)
-    //
-    let fontSize = this.properties.fontSize
-    fontSize = this._num2str(fontSize)
-    //
-    this.setData({borderRadius, strokeWidth, fontSize})
+  // attached() {
+  //   let borderRadius = this.properties.borderRadius
+  //   borderRadius = this._num2str(borderRadius)
+  //   //
+  //   let strokeWidth = this.properties.strokeWidth
+  //   strokeWidth = this._str2num(strokeWidth)
+  //   //
+  //   let fontSize = this.properties.fontSize
+  //   fontSize = this._num2str(fontSize)
+  //   //
+  //   this.setData({borderRadius, strokeWidth, fontSize})
 
-  // console.log(borderRadius)
-  },
+  // // console.log(borderRadius)
+  // },
   /**
    * 组件的方法列表
    */
