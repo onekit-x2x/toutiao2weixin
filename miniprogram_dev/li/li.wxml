@@ -1,2 +1,57 @@
-<!--li/li.wxml-->
-<text>li/li.wxml</text>
+<!--<icon>-->
+<!-- <view class="container">
+  <view class="body">
+    <view class="page-section page-default">
+      <view class="page-section-title page-section-title-space">默认样式</view>
+      <view class="icon-block">
+        <view class="ttui-flex icon-line" wx:for="{{icons}}" wx:for-item="iconline">
+          <view class="ttui-flex__item icon-single-wrapper" wx:for="{{iconline}}" wx:for-item="icon">
+            <label>
+              <onekit-icon class="tt-icon" type="{{icon}}"></onekit-icon>
+              {{icon}}
+            </label>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section page-size">
+      <view class="page-section-title page-section-title-space">尺寸选择</view>
+      <view class="icon-block">
+        <view class="icon-wrapper" wx:for="{{sizes}}">
+          <onekit-icon class="tt-icon" size="{{item}}" type="success"></onekit-icon>
+          <view class="icon-size">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section page-color">
+      <view class="page-section-title page-section-title-space">颜色选择</view>
+      <view class="icon-block">
+        <view class="icon-wrapper" wx:for="{{colors}}">
+          <onekit-icon class="tt-icon" size="36" color="{{item}}" type="success"></onekit-icon>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->
+<!-- <onekit-icon onekit-class="tt-icon" size="36" color="{{item}}" type="success"></onekit-icon> -->
+
+<!-- <progress> -->
+<view class="container">
+  <view class="body body-space">
+    <view class="page-section page-section-space">
+      <view class="progress-box">
+        <progress percent="20" show-info stroke-width="3" active-color="red" background-color="gray"
+          active="{{true}}" />
+      </view>
+      <view class="progress-box">
+        <progress percent="40" active stroke-width="6" />
+      </view>
+      <view class="progress-box">
+        <progress percent="60" active stroke-width="3" active-mode="forwards" />
+      </view>
+      <view class="progress-box">
+        <progress percent="80" color="#10AEFF" active stroke-width="3" />
+      </view>
+    </view>
+  </view>
+</view>
