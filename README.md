@@ -1,3 +1,4 @@
+Click this link to jump to the English version of the tutorial：[Tutorial]()
 # 微信小程序版字节跳动小程序SDK
 
 ## 项目介绍  
