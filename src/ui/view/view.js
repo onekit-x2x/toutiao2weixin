@@ -13,6 +13,10 @@ Component({
     virtualHost: true
   },
   properties: {
+    animation: {
+      type: String,
+      value: ''
+    },
 
     hoverClass: {
       type: String,
