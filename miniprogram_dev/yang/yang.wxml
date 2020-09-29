@@ -1,22 +1,28 @@
 <onekit-view onekit-class="container">
   <onekit-view onekit-class="body body-space">
-    <onekit-view onekit-class="page-section page-section-space">
 
-      <onekit-view onekit-class="progress-box">
-        <onekit-progress percent="20" show-info stroke-width="3" />
-      </onekit-view>
-
-      <onekit-view onekit-class="progress-box">
-        <onekit-progress percent="40" active stroke-width="3" />
-      </onekit-view>
-
-      <onekit-view onekit-class="progress-box">
-        <onekit-progress percent="60" active stroke-width="3" />
-      </onekit-view>
-
-      <onekit-view onekit-class="progress-box">
-        <onekit-progress percent="80" color="#10AEFF" active stroke-width="3" />
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title" active-color="#f85959">设置step</onekit-view>
+      <onekit-view onekit-class="body-view">
+        <slider value="60" bindchange="slider2change" step="5"></slider>
       </onekit-view>
     </onekit-view>
+
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">显示当前value</onekit-view>
+      <onekit-view onekit-class="body-view">
+        <slider value="50" bindchange="slider3change" show-value></slider>
+      </onekit-view>
+    </onekit-view>
+
+    <onekit-view onekit-class="page-section page-section-gap">
+      <onekit-view onekit-class="page-section-title">设置最小/最大值</onekit-view>
+      <onekit-view onekit-class="body-view">
+        <slider value="100" bindchange="slider4change" min="50" max="200" show-value></slider>
+      </onekit-view>
+    </onekit-view>
+
+
   </onekit-view>
 </onekit-view>
+
