@@ -1,3 +1,4 @@
+import OnekitPage from "../toutiao2weixin/OnekitPage.js"
 const pageData = {
   onShareAppMessage() {
     return {
@@ -15,4 +16,4 @@ for (let i = 1; i < 5; ++i) {
   }(i))
 }
 
-Page(pageData)
+OnekitPage(pageData)
