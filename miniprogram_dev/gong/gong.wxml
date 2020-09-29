@@ -4,7 +4,7 @@
     <onekit-view onekit-class="page-section page-section-gap">
       <onekit-view onekit-class="page-section-title" active-color="#f85959">设置step</onekit-view>
       <onekit-view onekit-class="body-view">
-        <onekit-slider onekit-class="sliderClass" value="60" bindchange="slider2change" step="5"></onekit-slider>
+        <onekit-slider value="60" bindchange="slider2change" step="5"></onekit-slider>
       </onekit-view>
     </onekit-view>
 
