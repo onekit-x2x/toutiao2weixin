@@ -1,18 +1,38 @@
-const pageData = {
-  onShareAppMessage() {
-    return {
-      title: 'slider',
-      path: 'page/component/pages/slider/slider'
-    }
-  },
-}
+import OnekitPage from '../toutiao2weixin/OnekitPage';
 
-for (let i = 1; i < 5; ++i) {
-  (function (index) {
-    pageData['slider' + index + 'change'] = function (e) {
-      console.log('slider' + index + '发生change事件，携带值为', e.detail.value)
+OnekitPage({
+    data:{
+        icons:[
+            [
+                'success',
+                'success_no_circle'
+            ],
+            [
+                'info',
+                'warn'
+            ],
+            [
+                'waiting',
+                'clear'
+            ],
+            [
+                'cancel',
+                'download'
+            ],
+            [
+                'search'
+            ]
+        ],
+        sizes:[
+            68,
+            50,
+            44
+        ],
+        colors:[
+            '#222222',
+            '#CACACA',
+            '',
+            '#50ABF9'
+        ]
     }
-  }(i))
-}
-
-Page(pageData)
+});
