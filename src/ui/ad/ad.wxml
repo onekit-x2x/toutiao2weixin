@@ -5,6 +5,7 @@ id="{{onekitId}}"
 unit-id="{{preRollUnitId}}"
 ad-intervals="{{adIntervals}}"
 ad-type="{{type}}"
+animation="{{animation}}"
 
 bindload="ad_load"
 binderror="ad_error"

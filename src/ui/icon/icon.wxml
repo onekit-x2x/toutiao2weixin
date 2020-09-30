@@ -5,6 +5,7 @@ id="{{onekitId}}"
 type="{{type}}"
 size="{{size}}"
 color="{{color}}"
+animation="{{animation}}"
 
 bindtap="ui_tap"
 bindtouchstart="ui_touchstart"
