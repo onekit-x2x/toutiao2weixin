@@ -1,32 +1,11 @@
-.icon-block{
-  background: #fff;
-  padding: 10px 15px;
-}
-.page-default .tt-icon {
-  margin-right: 10px;
-}
-.icon-line {
-  margin-bottom: 20px;
-}
-.icon-line:last-child {
-  margin-bottom: 0;
-}
-.page-size .ttui-flex {
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: center;
-}
-.page-size .icon-size {
+progress{
   width: 100%;
 }
-.page-size .icon-wrapper{
-  text-align: center;
+.progress-box{
+  display: flex;
+  height: 50rpx;
+  margin-bottom: 60rpx;
 }
-.icon-wrapper {
-  display: inline-block;
-  vertical-align: bottom;
-  margin-right: 5%;
-}
-.icon-single-wrapper {
-  white-space: nowrap;
+.progress-cancel{
+  margin-left: 40rpx;
 }
