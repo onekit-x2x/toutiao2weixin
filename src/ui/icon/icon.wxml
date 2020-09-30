@@ -1,4 +1,4 @@
-<icon
+<view
 class="onekit-icon-{{type}};{{onekitClass}}" 
 style="color:{{color}};font-size:{{size}}px;{{onekitStyle}}"
 id="{{onekitId}}"
@@ -20,4 +20,4 @@ bindanimationiteration="ui_animationiteration"
 bindanimationend="ui_animationend"
 bindtouchforcechange="ui_touchforcechange"
 >
-</icon>
+</view>
