@@ -30,10 +30,6 @@ Component({
       type: Boolean,
       value: false
     },
-    animation:
-    {
-      type: Object
-    },
   },
 
   /**
