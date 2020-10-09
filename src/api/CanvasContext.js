@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export default class CanvasContext {
   constructor(weixinCanvasContext) {
     this.weixinCanvasContext = weixinCanvasContext
