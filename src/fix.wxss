@@ -1,3 +1,6 @@
+page{
+  --onekit-REM:32rpx;
+}
 [style*="flex-direction:column"]>view{
   flex: auto !important;
 }
