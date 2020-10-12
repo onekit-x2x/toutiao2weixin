@@ -1,6 +1,20 @@
-/* eslint-disable no-console */
+/* eslint-disable semi-spacing */
+/* eslint-disable keyword-spacing */
+/* eslint-disable semi */
+/* eslint-disable consistent-return */
+/* eslint-disable no-var */
+/* eslint-disable default-case */
+/* eslint-disable no-unreachable */
+/* eslint-disable quotes */
+/* eslint-disable indent */
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-unused-vars */
+/* eslint-disable space-before-blocks */
+/* eslint-disable padded-blocks */
 /* eslint-disable camelcase */
 /* eslint-disable max-len */
+/* eslint-disable no-console */
 import CanvasContext from './api/CanvasContext'
 import LivePlayerContext from './api/LivePlayerContext'
 import VideoContext from './api/VideoContext'
@@ -1021,7 +1035,7 @@ export default class tt {
     //
     wx.showToast({
 
-      title: '请点击屏幕右上角圆形退出',
+      title: '点右上角圆退出',
       success() {
         const wx_res = {
           errMsg: 'exitMiniProgram:ok'
@@ -1039,10 +1053,92 @@ export default class tt {
     })
   }
 
-
-  static canIPutStuffOverComponent(componentName) {
+ 
+  static canIPutStuffOverComponent(componentName){
     return ['map', 'viedo', 'canvas', 'camera', 'live-player', 'live-pusher'].indexOf(componentName) < 0
   }
+
+  
+
+  static showFavoriteGuide(tt_object){
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    //
+    wx.showToast({
+      title: '点击右上三个点',
+      success() {
+        const wx_res = {
+          errMsg: 'showFavoriteGuide:ok'
+        }
+        if (tt_success) { tt_success(wx_res) }
+        if (tt_complete) { tt_complete(wx_res) }
+      },
+      fail() {
+        const wx_res = {
+          errMsg: 'showFavoriteGuide:fail'
+        }
+        if (tt_fail) { tt_fail(wx_res) }
+        if (tt_complete) { tt_complete(wx_res) }
+
+      }
+    })
+  }
+
+
+  static showInteractionBar(tt_object){
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    //
+    wx.showToast({
+      title: '不支持此类型',
+      icon: 'none',
+      success() {
+        const wx_res = {
+          errMsg: 'showInteractionBar:ok'
+        }
+        if (tt_success) { tt_success(wx_res) }
+        if (tt_complete) { tt_complete(wx_res) }
+      },
+      fail() {
+        const wx_res = {
+          errMsg: 'showInteractionBar:fail'
+        }
+        if (tt_fail) { tt_fail(wx_res) }
+        if (tt_complete) { tt_complete(wx_res) }
+
+      }
+    })
+  }
+
+
+  static hideInteractionBar(tt_object){
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    //
+    wx.showToast({
+      title: '不支持此类型',
+      icon: 'none',
+      success() {
+        const wx_res = {
+          errMsg: 'showInteractionBar:ok'
+        }
+        if (tt_success) { tt_success(wx_res) }
+        if (tt_complete) { tt_complete(wx_res) }
+      },
+      fail() {
+        const wx_res = {
+          errMsg: 'showInteractionBar:fail'
+        }
+        if (tt_fail) { tt_fail(wx_res) }
+        if (tt_complete) { tt_complete(wx_res) }
+
+      }
+    })
+  }
+
 }
 /*
 tt.ai = {}
