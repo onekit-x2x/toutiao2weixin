@@ -1,23 +1,10 @@
-/* eslint-disable semi-spacing */
-/* eslint-disable keyword-spacing */
-/* eslint-disable semi */
-/* eslint-disable consistent-return */
-/* eslint-disable no-var */
-/* eslint-disable default-case */
-/* eslint-disable no-unreachable */
-/* eslint-disable quotes */
-/* eslint-disable indent */
-/* eslint-disable no-multiple-empty-lines */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-unused-vars */
-/* eslint-disable space-before-blocks */
-/* eslint-disable padded-blocks */
 /* eslint-disable camelcase */
 /* eslint-disable max-len */
 /* eslint-disable no-console */
 import CanvasContext from './api/CanvasContext'
 import LivePlayerContext from './api/LivePlayerContext'
 import VideoContext from './api/VideoContext'
+import FileSystemManager from './api/FileSystemManager'
 
 export default class tt {
   // ///////////////// animation //////////////////////////
@@ -309,8 +296,8 @@ export default class tt {
   }
 
   // ////////////////// File //////////
-  static getFileSystemManager(object) {
-    return wx.getFileSystemManager(object)
+  static getFileSystemManager() {
+    return new FileSystemManager(wx.getFileSystemManager())
   }
 
   static getFileInfo(object) {
@@ -333,11 +320,52 @@ export default class tt {
     return wx.openDocument(object)
   }
 
-  static saveFile(object) {
-    return wx.saveFile(object)
-  }
 
   // ////////// Location ///////////////
+
+
+  static saveFile(tt_object) {
+    const tt_tempFilePath = tt_object.tempFilePath
+    const tt_filePath = tt_object.filePath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_object = {
+      tempFilePath: tt_tempFilePath,
+      success(wx_res) {
+        if (tt_filePath) {
+          // eslint-disable-next-line no-undef
+          getApp().ttSavePath2wxRandomPath[tt_filePath] = wx_res.savedFilePath
+        }
+
+        const tt_res = {
+          errMsg: wx_res.errMsg,
+          savedFilePath: tt_filePath || wx_res.savedFilePath
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+
+
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    wx.saveFile(wx_object)
+  }
+
   static openLocation(object) {
     return wx.openLocation(object)
   }
@@ -1032,6 +1060,7 @@ export default class tt {
     const tt_success = tt_object.success
     const tt_fail = tt_object.fail
     const tt_complete = tt_object.complete
+    tt_object = null
     //
     wx.showToast({
 
@@ -1053,17 +1082,17 @@ export default class tt {
     })
   }
 
- 
-  static canIPutStuffOverComponent(componentName){
+
+  static canIPutStuffOverComponent(componentName) {
     return ['map', 'viedo', 'canvas', 'camera', 'live-player', 'live-pusher'].indexOf(componentName) < 0
   }
 
-  
 
-  static showFavoriteGuide(tt_object){
+  static showFavoriteGuide(tt_object) {
     const tt_success = tt_object.success
     const tt_fail = tt_object.fail
     const tt_complete = tt_object.complete
+    tt_object = null
     //
     wx.showToast({
       title: '点击右上三个点',
@@ -1080,16 +1109,16 @@ export default class tt {
         }
         if (tt_fail) { tt_fail(wx_res) }
         if (tt_complete) { tt_complete(wx_res) }
-
       }
     })
   }
 
 
-  static showInteractionBar(tt_object){
+  static showInteractionBar(tt_object) {
     const tt_success = tt_object.success
     const tt_fail = tt_object.fail
     const tt_complete = tt_object.complete
+    tt_object = null
     //
     wx.showToast({
       title: '不支持此类型',
@@ -1107,16 +1136,16 @@ export default class tt {
         }
         if (tt_fail) { tt_fail(wx_res) }
         if (tt_complete) { tt_complete(wx_res) }
-
       }
     })
   }
 
 
-  static hideInteractionBar(tt_object){
+  static hideInteractionBar(tt_object) {
     const tt_success = tt_object.success
     const tt_fail = tt_object.fail
     const tt_complete = tt_object.complete
+    tt_object = null
     //
     wx.showToast({
       title: '不支持此类型',
@@ -1134,11 +1163,9 @@ export default class tt {
         }
         if (tt_fail) { tt_fail(wx_res) }
         if (tt_complete) { tt_complete(wx_res) }
-
       }
     })
   }
-
 }
 /*
 tt.ai = {}

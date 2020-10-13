@@ -15,3 +15,7 @@ miniprogram_dev
 miniprogram_dev/li/li.js
 miniprogram_dev/li/li.wxml
 miniprogram_dev/li/li.wxss
+miniprogram_dev/app.js
+miniprogram_dev/app.json
+miniprogram_dev/project.config.json
+miniprogram_dev/wang/wang.js
