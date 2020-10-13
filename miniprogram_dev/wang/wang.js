@@ -12,14 +12,51 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {  
-    tt.exitMiniProgram({
-      fail: (res) => console.log("接口调用失败",res),
-      success:(res) => console.log("接口调用成功",res),
-      complete:(res) => console.log("接口调用结束的回调函数",res)
-    }); 
-    const bool = tt.canIPutStuffOverComponent('view')
-    console.log(bool)
+    // tt.exitMiniProgram({
+    //   fail: (res) => console.log("接口调用失败",res),
+    //   success:(res) => console.log("接口调用成功",res),
+    //   complete:(res) => console.log("接口调用结束的回调函数",res)
+    // }); 
+    // const bool = tt.canIPutStuffOverComponent('view')
+    // console.log(bool)
+
+    // tt.showFavoriteGuide({
+    //   fail: (res) => console.log("接口调用失败",res),
+    //   success:(res) => console.log("接口调用成功",res),
+    //   complete:(res) => console.log("接口调用结束的回调函数",res) 
+    // }); 
+
+    // tt.showInteractionBar({  
+    //   fail: (res) => console.log("接口调用失败",res),
+    //   success:(res) => console.log("接口调用成功",res),
+    //   complete:(res) => console.log("接口调用结束的回调函数",res) 
+    // });  
+
+
+    // tt.hideInteractionBar({  
+    //   fail: (res) => console.log("接口调用失败",res),
+    //   success:(res) => console.log("接口调用成功",res),
+    //   complete:(res) => console.log("接口调用结束的回调函数",res) 
+    // }); 
+    
+    
+    const fileSystemManager = tt.getFileSystemManager();
+  tt.chooseImage({
+    success: (res) => {
+     const tempFilePath = res.tempFilePaths[0];
+     //
+    //  const savedFilePath = fileSystemManager.saveFileSync(tempFilePath);
+     //
+    const lastIndexOfExt = tempFilePath.lastIndexOf('.');
+    const ext = tempFilePath.substring(lastIndexOfExt + 1)
+    const randomString = Math.floor(Math.random()*( 10000000-1) + 1);
+     const savedFilePath = fileSystemManager.saveFileSync(tempFilePath,`ttfile://user/${randomString}.${ext}`);
+     console.log(tempFilePath,savedFilePath) 
+    } 
+  });
   }, 
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

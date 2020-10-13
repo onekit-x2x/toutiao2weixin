@@ -1,1 +1,3 @@
-App({})
+App({
+  ttSavePath2wxRandomPath:{}
+})

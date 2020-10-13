@@ -1,8 +1,8 @@
 {
   "pages": [
-    "li/li",
+    "wang/wang",
     "yang/yang",
-    "wang/wang"
+    "li/li"
   ],
   "window": {
     "usingComponents": {},
@@ -12,12 +12,6 @@
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
-    "onekit-ad":"/toutiao2weixin/ui/ad/ad",
-    "onekit-icon":"/toutiao2weixin/ui/icon/icon",
-    "onekit-progress":"/toutiao2weixin/ui/progress/progress",
-    "onekit-slider":"/toutiao2weixin/ui/slider/slider",
-    "onekit-video":"/toutiao2weixin/ui/video/video",
-    "onekit-view":"/toutiao2weixin/ui/view/view"
   },
   "sitemapLocation": "sitemap.json"
 }
