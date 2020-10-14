@@ -1,128 +1,300 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
+/* eslint-disable class-methods-use-this */
 /* eslint-disable camelcase */
 export default class FileSystemManager {
   constructor(weixinFileSystemManager) {
     this.weixinFileSystemManager = weixinFileSystemManager
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  _fixPath(path) {
-    // eslint-disable-next-line no-undef
-    const result = getApp().ttSavePath2wxRandomPath[path]
-    return result || path
-  }
 
-  accessSync(path) {
-    return this.weixinFileSystemManager.accessSync(this._fixPath(path))
-  }
-
-  access(options) {
-    return this.weixinFileSystemManager.access(options)
-  }
-
-  saveFileSync(tempFilePath, tt_filePath) {
-    const ext = tempFilePath.substring(tempFilePath.lastIndexOf('.') + 1)
+  _set_ttpath2wxpath(ext, tt_filePath) {
     const randomString = Math.floor(Math.random() * (1 - 10000000) + 10000000)
-    const wx_filePath = `${wx.env.USER_DATA_PATH}/${randomString}.${ext}`
+    const wx_filePath = `${wx.env.USER_DATA_PATH}/${randomString}${ext}`
     if (tt_filePath) {
-      // eslint-disable-next-line no-undef
+    // eslint-disable-next-line no-undef
       getApp().ttSavePath2wxRandomPath[tt_filePath] = wx_filePath
     }
-    // console.log(ext)
-    const savedFilePath = this.weixinFileSystemManager.saveFileSync(tempFilePath, wx_filePath)
-    // console.log(tempFilePath, savedFilePath)
-    return savedFilePath
+    return wx_filePath
+  }
+
+  _get_ttpath2wxpath(tt_path) {
+    // eslint-disable-next-line no-undef
+    const wx_path = getApp().ttSavePath2wxRandomPath[tt_path]
+    return wx_path || tt_path
   }
 
 
-  saveFile(options) {
-    return this.weixinFileSystemManager.saveFile(options)
+  accessSync(tt_path) {
+    return this.weixinFileSystemManager.accessSync(this._get_ttpath2wxpath(tt_path))
   }
 
-  getSavedFileList(options) {
-    return this.weixinFileSystemManager.getSavedFileList(options)
+  access(tt_object) {
+    return this.weixinFileSystemManager.access(tt_object)
   }
 
-  removeSavedFile(options) {
-    return this.weixinFileSystemManager.removeSavedFile(options)
+  saveFileSync(tt_tempFilePath, tt_filePath) {
+    const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
+    const wx_filePath = this._set_ttpath2wxpath(ext, tt_filePath)
+    return this.weixinFileSystemManager.saveFileSync(tt_tempFilePath, wx_filePath)
   }
 
-  copyFileSync(srcPath, destPath) {
-    return this.weixinFileSystemManager.copyFileSync(srcPath, destPath)
+
+  saveFile(tt_object) {
+    const tt_tempFilePath = tt_object.tempFilePath
+    const tt_filePath = tt_object.filePath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_tempFilePath = tt_tempFilePath
+    const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
+    const wx_filePath = this._set_ttpath2wxpath(ext, tt_filePath)
+    const wx_object = {
+      tempFilePath: wx_tempFilePath,
+      filePath: wx_filePath,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg,
+          savedFilePath: tt_filePath || wx_res.savedFilePath
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.saveFile(wx_object)
   }
 
-  copyFile(options) {
-    return this.weixinFileSystemManager.copyFile(options)
+  getSavedFileList(tt_object) {
+    return this.weixinFileSystemManager.getSavedFileList(tt_object)
   }
 
-  getFileInfo(options) {
-    return this.weixinFileSystemManager.getFileInfo(options)
+  removeSavedFile(tt_object) {
+    const tt_filePath = tt_object.filePath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_filePath = this._get_ttpath2wxpath(tt_filePath)
+    const wx_object = {
+      filePath: wx_filePath,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.removeSavedFile(wx_object)
   }
 
-  mkdirSync(dirPath) {
-    return this.weixinFileSystemManager.mkdirSync(dirPath)
+  copyFileSync(tt_srcPath, tt_destPath) {
+    const wx_srcPath = this._get_ttpath2wxpath(tt_srcPath)
+    const ext = tt_tempFilePath.substring(tt_destPath.lastIndexOf('.'))
+    const wx_destPath = this._set_ttpath2wxpath(ext, tt_destPath)
+    return this.weixinFileSystemManager.saveFileSync(wx_srcPath, wx_destPath)
   }
 
-  mkdir(options) {
-    return this.weixinFileSystemManager.mkdir(options)
+  copyFile(tt_object) {
+    const tt_srcPath = tt_object.srcPath
+    const tt_destPath = tt_object.destPath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_srcPath = this._get_ttpath2wxpath(tt_srcPath)
+    const ext = tt_tempFilePath.substring(tt_destPath.lastIndexOf('.'))
+    const wx_destPath = this._set_ttpath2wxpath(ext, tt_destPath)
+    const wx_object = {
+      srcPath: wx_srcPath,
+      destPath: wx_destPath,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.copyFile(wx_object)
+  }
+
+  getFileInfo(tt_object) {
+    const tt_filePath = tt_object.filePath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_filePath = this._get_ttpath2wxpath(tt_filePath)
+    const wx_object = {
+      filePath: wx_filePath,
+      success(wx_res) {
+        const tt_res = {
+          size: wx_res.size,
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.getFileInfo(wx_object)
+  }
+
+  mkdirSync(tt_dirPath) {
+    const wx_dirPath = this._set_ttpath2wxpath('', wx_dirPath)
+    return this.weixinFileSystemManager.mkdirSync(wx_dirPath)
+  }
+
+  mkdir(tt_object) {
+    const tt_dirPath = tt_object.dirPath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_dirPath = this._set_ttpath2wxpath('', wx_dirPath)
+    const wx_object = {
+      dirPath: wx_dirPath,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.mkdir(wx_object)
   }
 
   readdirSync(dirPath) {
     return this.weixinFileSystemManager.readdirSync(dirPath)
   }
 
-  readdir(options) {
-    return this.weixinFileSystemManager.readdir(options)
+  readdir(tt_object) {
+    return this.weixinFileSystemManager.readdir(tt_object)
   }
 
   readFileSync(filePath, encoding) {
     return this.weixinFileSystemManager.readFileSync(filePath, encoding)
   }
 
-  readFile(options) {
-    return this.weixinFileSystemManager.readFile(options)
+  readFile(tt_object) {
+    return this.weixinFileSystemManager.readFile(tt_object)
   }
 
   renameSync(oldPath, newPath) {
     return this.weixinFileSystemManager.renameSync(oldPath, newPath)
   }
 
-  rename(options) {
-    return this.weixinFileSystemManager.rename(options)
+  rename(tt_object) {
+    return this.weixinFileSystemManager.rename(tt_object)
   }
 
   rmdirSync(dirPath) {
     return this.weixinFileSystemManager.rmdirSync(dirPath)
   }
 
-  rmdir(options) {
-    return this.weixinFileSystemManager.rmdir(options)
+  rmdir(tt_object) {
+    return this.weixinFileSystemManager.rmdir(tt_object)
   }
 
   statSync(path) {
     return this.weixinFileSystemManager.statSync(path)
   }
 
-  stat(options) {
-    return this.weixinFileSystemManager.stat(options)
+  stat(tt_object) {
+    return this.weixinFileSystemManager.stat(tt_object)
   }
 
   unlinkSync(filePath) {
     return this.weixinFileSystemManager.unlinkSync(filePath)
   }
 
-  unlink(options) {
-    return this.weixinFileSystemManagerunlink(options)
+  unlink(tt_object) {
+    return this.weixinFileSystemManagerunlink(tt_object)
   }
 
-  unzip(options) {
-    return this.weixinFileSystemManager.unzip(options)
+  unzip(tt_object) {
+    return this.weixinFileSystemManager.unzip(tt_object)
   }
 
   writeFileSync(filePath, data, encoding) {
     return this.weixinFileSystemManager.writeFileSync(filePath, data, encoding)
   }
 
-  writeFile(options) {
-    return this.weixinFileSystemManager.writeFile(options)
+  writeFile(tt_object) {
+    return this.weixinFileSystemManager.writeFile(tt_object)
   }
 }
