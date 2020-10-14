@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "ad": "./ui/ad/ad",
+    "icon": "./ui/icon/icon",
+    "progress": "./ui/progress/progress",
+    "slider": "./ui/slider/slider",
+    "video": "./ui/video/video",
+    "view": "./ui/view/view"
+  }
+}
