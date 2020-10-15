@@ -5,6 +5,7 @@ import CanvasContext from './api/CanvasContext'
 import LivePlayerContext from './api/LivePlayerContext'
 import VideoContext from './api/VideoContext'
 import FileSystemManager from './api/FileSystemManager'
+// import onekit from './js/onekit'
 
 export default class tt {
   // ///////////////// animation //////////////////////////
@@ -332,8 +333,9 @@ export default class tt {
     const tt_complete = tt_object.complete
     tt_object = null
     //
+    const wx_tempFilePath = tt_tempFilePath
     const wx_object = {
-      tempFilePath: tt_tempFilePath,
+      tempFilePath: wx_tempFilePath,
       success(wx_res) {
         if (tt_filePath) {
           // eslint-disable-next-line no-undef

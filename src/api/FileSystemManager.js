@@ -1,44 +1,26 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
-/* eslint-disable class-methods-use-this */
 /* eslint-disable camelcase */
+import onekit from '../js/onekit'
+
 export default class FileSystemManager {
   constructor(weixinFileSystemManager) {
     this.weixinFileSystemManager = weixinFileSystemManager
   }
 
-
-  _set_ttpath2wxpath(ext, tt_filePath) {
-    const randomString = Math.floor(Math.random() * (1 - 10000000) + 10000000)
-    const wx_filePath = `${wx.env.USER_DATA_PATH}/${randomString}${ext}`
-    if (tt_filePath) {
-    // eslint-disable-next-line no-undef
-      getApp().ttSavePath2wxRandomPath[tt_filePath] = wx_filePath
-    }
-    return wx_filePath
-  }
-
-  _get_ttpath2wxpath(tt_path) {
-    // eslint-disable-next-line no-undef
-    const wx_path = getApp().ttSavePath2wxRandomPath[tt_path]
-    return wx_path || tt_path
-  }
-
-
   accessSync(tt_path) {
-    return this.weixinFileSystemManager.accessSync(this._get_ttpath2wxpath(tt_path))
+    return this.weixinFileSystemManager.accessSync(onekit.get_ttpath2wxpath(tt_path))
   }
 
-  access(tt_object) {
-    return this.weixinFileSystemManager.access(tt_object)
+  // eslint-disable-next-line class-methods-use-this
+  access() {
+    // this.weixinFileSystemManager.access(tt_object)
   }
 
   saveFileSync(tt_tempFilePath, tt_filePath) {
     const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
-    const wx_filePath = this._set_ttpath2wxpath(ext, tt_filePath)
-    return this.weixinFileSystemManager.saveFileSync(tt_tempFilePath, wx_filePath)
+    const tt_wx_filePath = onekit.set_ttpath2wxpath(ext, tt_filePath)
+    this.weixinFileSystemManager.saveFileSync(tt_tempFilePath, tt_wx_filePath[1])
+    return tt_wx_filePath[0]
   }
 
 
@@ -52,10 +34,10 @@ export default class FileSystemManager {
     //
     const wx_tempFilePath = tt_tempFilePath
     const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
-    const wx_filePath = this._set_ttpath2wxpath(ext, tt_filePath)
+    const tt_wx_filePath = onekit.set_ttpath2wxpath(ext, tt_filePath)
     const wx_object = {
       tempFilePath: wx_tempFilePath,
-      filePath: wx_filePath,
+      filePath: tt_wx_filePath[1],
       success(wx_res) {
         const tt_res = {
           errMsg: wx_res.errMsg,
@@ -92,7 +74,7 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_filePath = this._get_ttpath2wxpath(tt_filePath)
+    const wx_filePath = onekit.get_ttpath2wxpath(tt_filePath)
     const wx_object = {
       filePath: wx_filePath,
       success(wx_res) {
@@ -120,10 +102,10 @@ export default class FileSystemManager {
   }
 
   copyFileSync(tt_srcPath, tt_destPath) {
-    const wx_srcPath = this._get_ttpath2wxpath(tt_srcPath)
-    const ext = tt_tempFilePath.substring(tt_destPath.lastIndexOf('.'))
-    const wx_destPath = this._set_ttpath2wxpath(ext, tt_destPath)
-    return this.weixinFileSystemManager.saveFileSync(wx_srcPath, wx_destPath)
+    const wx_srcPath = onekit.get_ttpath2wxpath(tt_srcPath)
+    const ext = tt_destPath.substring(tt_destPath.lastIndexOf('.'))
+    const tt_wx_destPath = onekit.set_ttpath2wxpath(ext, tt_destPath)
+    return this.weixinFileSystemManager.saveFileSync(wx_srcPath, tt_wx_destPath[1])
   }
 
   copyFile(tt_object) {
@@ -134,12 +116,12 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_srcPath = this._get_ttpath2wxpath(tt_srcPath)
-    const ext = tt_tempFilePath.substring(tt_destPath.lastIndexOf('.'))
-    const wx_destPath = this._set_ttpath2wxpath(ext, tt_destPath)
+    const wx_srcPath = onekit.get_ttpath2wxpath(tt_srcPath)
+    const ext = tt_destPath.substring(tt_destPath.lastIndexOf('.'))
+    const tt_wx_destPath = onekit.set_ttpath2wxpath(ext, tt_destPath)
     const wx_object = {
       srcPath: wx_srcPath,
-      destPath: wx_destPath,
+      destPath: tt_wx_destPath[1],
       success(wx_res) {
         const tt_res = {
           errMsg: wx_res.errMsg
@@ -171,7 +153,7 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_filePath = this._get_ttpath2wxpath(tt_filePath)
+    const wx_filePath = onekit.get_ttpath2wxpath(tt_filePath)
     const wx_object = {
       filePath: wx_filePath,
       success(wx_res) {
@@ -200,8 +182,8 @@ export default class FileSystemManager {
   }
 
   mkdirSync(tt_dirPath) {
-    const wx_dirPath = this._set_ttpath2wxpath('', wx_dirPath)
-    return this.weixinFileSystemManager.mkdirSync(wx_dirPath)
+    const tt_wx_dirPath = onekit.set_ttpath2wxpath('', tt_dirPath)
+    return this.weixinFileSystemManager.mkdirSync(tt_wx_dirPath[1])
   }
 
   mkdir(tt_object) {
@@ -211,9 +193,9 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_dirPath = this._set_ttpath2wxpath('', wx_dirPath)
+    const tt_wx_dirPath = onekit.set_ttpath2wxpath('', tt_dirPath)
     const wx_object = {
-      dirPath: wx_dirPath,
+      dirPath: tt_wx_dirPath[1],
       success(wx_res) {
         const tt_res = {
           errMsg: wx_res.errMsg
@@ -238,12 +220,44 @@ export default class FileSystemManager {
     return this.weixinFileSystemManager.mkdir(wx_object)
   }
 
-  readdirSync(dirPath) {
-    return this.weixinFileSystemManager.readdirSync(dirPath)
+  readdirSync(tt_dirPath) {
+    const wx_dirPath = onekit.get_ttpath2wxpath('', tt_dirPath)
+    return this.weixinFileSystemManager.readdirSync(wx_dirPath)
   }
 
   readdir(tt_object) {
-    return this.weixinFileSystemManager.readdir(tt_object)
+    const tt_dirPath = tt_object.dirPath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_dirPath = onekit.get_ttpath2wxpath('', tt_dirPath)
+    const wx_object = {
+      dirPath: wx_dirPath,
+      success(wx_res) {
+        const tt_res = {
+          files: wx_res.files,
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.readdir(wx_object)
   }
 
   readFileSync(filePath, encoding) {
