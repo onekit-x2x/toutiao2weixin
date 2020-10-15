@@ -224,11 +224,7 @@ export default class FileSystemManager {
   }
 
   readdirSync(tt_dirPath) {
-<<<<<<< HEAD
     const wx_dirPath = onekit.tt_filePath2wx_filePath(tt_dirPath)
-=======
-    const wx_dirPath = onekit.get_ttpath2wxpath('', tt_dirPath)
->>>>>>> 3e8d086b7f61312d568957a9642337a269650f3b
     return this.weixinFileSystemManager.readdirSync(wx_dirPath)
   }
 
@@ -239,11 +235,7 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-<<<<<<< HEAD
     const wx_dirPath = onekit.tt_filePath2wx_filePath(tt_dirPath)
-=======
-    const wx_dirPath = onekit.get_ttpath2wxpath('', tt_dirPath)
->>>>>>> 3e8d086b7f61312d568957a9642337a269650f3b
     const wx_object = {
       dirPath: wx_dirPath,
       success(wx_res) {

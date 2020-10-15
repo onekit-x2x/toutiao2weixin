@@ -22,9 +22,7 @@ function tt_filePath2wx_filePath(tt_filePath) {
 function save_wx_storePath(tt_filePath, wx_storePath) {
   // eslint-disable-next-line no-undef
   getApp().ttSavePath2wxRandomPath[tt_filePath] = wx_storePath
-
 }
-
 
 /*
 OneKit.current = function () {
