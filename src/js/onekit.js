@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable camelcase */
 const TT_USER_FOLDER = 'ttfile://user/'
 const WX_USER_FOLDER = `${wx.env.USER_DATA_PATH}/`
@@ -23,7 +22,9 @@ function tt_filePath2wx_filePath(tt_filePath) {
 function save_wx_storePath(tt_filePath, wx_storePath) {
   // eslint-disable-next-line no-undef
   getApp().ttSavePath2wxRandomPath[tt_filePath] = wx_storePath
+
 }
+
 
 /*
 OneKit.current = function () {
