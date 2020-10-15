@@ -8,8 +8,9 @@ export default class FileSystemManager {
     this.weixinFileSystemManager = weixinFileSystemManager
   }
 
-  accessSync(tt_path) {
-    return this.weixinFileSystemManager.accessSync(onekit.get_ttpath2wxpath(tt_path))
+  accessSync(tt_filePath) {
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    return this.weixinFileSystemManager.accessSync(wx_filePath)
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -18,31 +19,35 @@ export default class FileSystemManager {
   }
 
   saveFileSync(tt_tempFilePath, tt_filePath) {
-    const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
-    const tt_wx_filePath = onekit.set_ttpath2wxpath(ext, tt_filePath)
-    this.weixinFileSystemManager.saveFileSync(tt_tempFilePath, tt_wx_filePath[1])
-    return tt_wx_filePath[0]
+    if (!tt_filePath) {
+      const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
+      tt_filePath = onekit.new_tt_filePath(ext)
+    }
+    const wx_tempFilePath = tt_tempFilePath
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    this.weixinFileSystemManager.saveFileSync(wx_tempFilePath, wx_filePath)
+    return tt_filePath
   }
 
 
   saveFile(tt_object) {
     const tt_tempFilePath = tt_object.tempFilePath
-    const tt_filePath = tt_object.filePath
+    const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
+    const tt_filePath = tt_object.filePath || onekit.new_tt_filePath(ext)
     const tt_success = tt_object.success
     const tt_fail = tt_object.fail
     const tt_complete = tt_object.complete
     tt_object = null
     //
     const wx_tempFilePath = tt_tempFilePath
-    const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
-    const tt_wx_filePath = onekit.set_ttpath2wxpath(ext, tt_filePath)
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
     const wx_object = {
       tempFilePath: wx_tempFilePath,
-      filePath: tt_wx_filePath[1],
+      filePath: wx_filePath,
       success(wx_res) {
         const tt_res = {
           errMsg: wx_res.errMsg,
-          savedFilePath: tt_filePath || wx_res.savedFilePath
+          savedFilePath: tt_filePath
         }
         if (tt_success) {
           tt_success(tt_res)
@@ -75,7 +80,7 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_filePath = onekit.get_ttpath2wxpath(tt_filePath)
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
     const wx_object = {
       filePath: wx_filePath,
       success(wx_res) {
@@ -103,10 +108,9 @@ export default class FileSystemManager {
   }
 
   copyFileSync(tt_srcPath, tt_destPath) {
-    const wx_srcPath = onekit.get_ttpath2wxpath(tt_srcPath)
-    const ext = tt_destPath.substring(tt_destPath.lastIndexOf('.'))
-    const tt_wx_destPath = onekit.set_ttpath2wxpath(ext, tt_destPath)
-    return this.weixinFileSystemManager.saveFileSync(wx_srcPath, tt_wx_destPath[1])
+    const wx_srcPath = onekit.tt_filePath2wx_filePath(tt_srcPath)
+    const wx_destPath = onekit.tt_filePath2wx_filePath(tt_destPath)
+    return this.weixinFileSystemManager.saveFileSync(wx_srcPath, wx_destPath)
   }
 
   copyFile(tt_object) {
@@ -117,12 +121,11 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_srcPath = onekit.get_ttpath2wxpath(tt_srcPath)
-    const ext = tt_destPath.substring(tt_destPath.lastIndexOf('.'))
-    const tt_wx_destPath = onekit.set_ttpath2wxpath(ext, tt_destPath)
+    const wx_srcPath = onekit.tt_filePath2wx_filePath(tt_srcPath)
+    const wx_destPath = onekit.tt_filePath2wx_filePath(tt_destPath)
     const wx_object = {
       srcPath: wx_srcPath,
-      destPath: tt_wx_destPath[1],
+      destPath: wx_destPath,
       success(wx_res) {
         const tt_res = {
           errMsg: wx_res.errMsg
@@ -154,7 +157,7 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_filePath = onekit.get_ttpath2wxpath(tt_filePath)
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
     const wx_object = {
       filePath: wx_filePath,
       success(wx_res) {
@@ -183,8 +186,8 @@ export default class FileSystemManager {
   }
 
   mkdirSync(tt_dirPath) {
-    const tt_wx_dirPath = onekit.set_ttpath2wxpath('', tt_dirPath)
-    return this.weixinFileSystemManager.mkdirSync(tt_wx_dirPath[1])
+    const wx_dirPath = onekit.tt_filePath2wx_filePath(tt_dirPath)
+    return this.weixinFileSystemManager.mkdirSync(wx_dirPath)
   }
 
   mkdir(tt_object) {
@@ -194,9 +197,9 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const tt_wx_dirPath = onekit.set_ttpath2wxpath('', tt_dirPath)
+    const wx_dirPath = onekit.tt_filePath2wx_filePath(tt_dirPath)
     const wx_object = {
-      dirPath: tt_wx_dirPath[1],
+      dirPath: wx_dirPath,
       success(wx_res) {
         const tt_res = {
           errMsg: wx_res.errMsg
@@ -222,8 +225,7 @@ export default class FileSystemManager {
   }
 
   readdirSync(tt_dirPath) {
-    const wx_dirPath = onekit.get_ttpath2wxpath(tt_dirPath)
-    // console.log('wx_dirPath', wx_dirPath)
+    const wx_dirPath = onekit.tt_filePath2wx_filePath(tt_dirPath)
     return this.weixinFileSystemManager.readdirSync(wx_dirPath)
   }
 
@@ -234,7 +236,7 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_dirPath = onekit.get_ttpath2wxpath(tt_dirPath)
+    const wx_dirPath = onekit.tt_filePath2wx_filePath(tt_dirPath)
     const wx_object = {
       dirPath: wx_dirPath,
       success(wx_res) {
@@ -270,8 +272,10 @@ export default class FileSystemManager {
     return this.weixinFileSystemManager.readFile(tt_object)
   }
 
-  renameSync(oldPath, newPath) {
-    return this.weixinFileSystemManager.renameSync(oldPath, newPath)
+  renameSync(tt_oldPath, tt_newPath) {
+    const wx_oldPath = onekit.tt_filePath2wx_filePath(tt_oldPath)
+    const wx_newPath = onekit.tt_filePath2wx_filePath(tt_newPath)
+    return this.weixinFileSystemManager.renameSync(wx_oldPath, wx_newPath)
   }
 
   rename(tt_object) {
