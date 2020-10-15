@@ -1,4 +1,4 @@
-import {tt} from '../toutiao2weixin/tt'
+import {tt} from '../toutiao2weixin/index'
 Page({
 
   /**
@@ -14,15 +14,14 @@ Page({
   onLoad: function (options) {  
 
 
-
     const fileSystemManager = tt.getFileSystemManager();
 
-try {
-  const files = fileSystemManager.readdirSync("ttfile://user/");
-  console.log("调用成功", files);
-} catch (err) {
-  console.log("调用失败", err);
-}
+    try {
+      const files = fileSystemManager.readdirSync("ttfile://user/");
+      console.log("调用成功", files);
+    } catch (err) {
+      console.log("调用失败", err);
+    }
 
 
 

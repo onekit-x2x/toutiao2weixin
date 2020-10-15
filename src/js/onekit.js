@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 const TT_USER_FOLDER = 'ttfile://user/'
 const WX_USER_FOLDER = `${wx.env.USER_DATA_PATH}/`
@@ -12,11 +13,12 @@ function set_ttpath2wxpath(ext, tt_filePath) {
     tt_filePath = `${TT_USER_FOLDER}${_filePath}`
     wx_filePath = `${WX_USER_FOLDER}${_filePath}`
   }
-  return wx_filePath
+  return [tt_filePath, wx_filePath]
 }
 
 function get_ttpath2wxpath(tt_path) {
   const wx_path = tt_path.replace(TT_USER_FOLDER, WX_USER_FOLDER)
+  // console.log('[get_ttpath2wxpath]', tt_path, wx_path)
   return wx_path
 }
 

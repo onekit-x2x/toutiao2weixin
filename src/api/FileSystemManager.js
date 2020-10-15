@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable max-len */
 /* eslint-disable camelcase */
 import onekit from '../js/onekit'
@@ -221,7 +222,8 @@ export default class FileSystemManager {
   }
 
   readdirSync(tt_dirPath) {
-    const wx_dirPath = onekit.get_ttpath2wxpath('', tt_dirPath)
+    const wx_dirPath = onekit.get_ttpath2wxpath(tt_dirPath)
+    // console.log('wx_dirPath', wx_dirPath)
     return this.weixinFileSystemManager.readdirSync(wx_dirPath)
   }
 
@@ -232,7 +234,7 @@ export default class FileSystemManager {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_dirPath = onekit.get_ttpath2wxpath('', tt_dirPath)
+    const wx_dirPath = onekit.get_ttpath2wxpath(tt_dirPath)
     const wx_object = {
       dirPath: wx_dirPath,
       success(wx_res) {
