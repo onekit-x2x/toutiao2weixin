@@ -8,7 +8,5 @@ App({
     onHide: function () {
         console.log('App Hide')
     },
-    globalData: {
-        hasLogin: false
-    }
+    ttSavePath2wxRandomPath: {}
 });
