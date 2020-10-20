@@ -1,0 +1,26 @@
+<swiper
+class="onekit-swiper {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+indicator-dots="{{indicatorDots}}"
+indicator-color="{{indicatorColor}}"
+indicator-active-color="{{indicatorActiveColor}}"
+autoplay="{{autoplay}}"
+current="{{current}}"
+duration="{{duration}}"
+interval="{{interval}}"
+circular="{{circular}}"
+vertical="{{vertical}}"
+previous-margin="{{previousMargin}}"
+next-margin="{{nextMargin}}"
+bindchange="swiper_change"
+bindtransition="swiper_transition"
+bindanimationfinish="swiper_animationfinish"
+
+active-class="{{activeClass}}"
+changing-class="{{changingClass}}"
+acceleration="{{acceleration}}"
+disable-programmatic-animation="{{disableProgrammaticAnimation}}"
+>
+<slot></slot>
+</swiper>

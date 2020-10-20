@@ -1,0 +1,10 @@
+<navigator
+class="onekit-navigator {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+url="{{url}}"
+open-type="{{openType}}"
+hover-class="{{hoverClass}}"
+>
+<slot/>
+</navigator>

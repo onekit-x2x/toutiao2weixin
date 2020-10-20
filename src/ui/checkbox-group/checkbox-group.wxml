@@ -1,0 +1,10 @@
+<checkbox-group
+class="onekit-checkbox-group {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+name="{{name}}"
+value="{{value}}"
+bindchange="checkboxGroup_change"
+>
+<slot></slot>
+</checkbox-group>

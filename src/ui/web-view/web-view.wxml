@@ -1,0 +1,6 @@
+<web-view
+class="onekit-web-view {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+src="{{src}}"
+></web-view>

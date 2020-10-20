@@ -1,10 +1,11 @@
 {
   "pages": [
-    "wang/wang",
     "li/li",
     "new-tabs/new-tabs",
+    
     "zhang/zhang",
-    "yang/yang"
+    "yang/yang",
+    "wang/wang"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -20,12 +21,16 @@
   },
   "debug": true,
   "usingComponents": {
-    "onekit-ad": "toutiao2weixin/ui/ad/ad",
-    "onekit-icon": "toutiao2weixin/ui/icon/icon",
-    "onekit-progress": "toutiao2weixin/ui/progress/progress",
-    "onekit-slider": "toutiao2weixin/ui/slider/slider",
-    "onekit-video": "toutiao2weixin/ui/video/video",
-    "onekit-view": "toutiao2weixin/ui/view/view"
+    "onekit-ad":"baidu2weixin/ui/ad/ad",
+    "onekit-animation-video":"baidu2weixin/ui/animation-video/animation-video",
+    "onekit-animation-view":"baidu2weixin/ui/animation-view/animation-view",
+    "onekit-button":"baidu2weixin/ui/button/button",
+    "onekit-icon":"baidu2weixin/ui/icon/icon",
+    "onekit-rtc-room":"baidu2weixin/ui/rtc-room/rtc-room",
+    "onekit-rtc-room-item":"baidu2weixin/ui/rtc-room-item/rtc-room-item",
+    "onekit-tab-item":"baidu2weixin/ui/tab-item/tab-item",
+    "onekit-tabs":"baidu2weixin/ui/tabs/tabs",
+    "onekit-view":"baidu2weixin/ui/view/view"
   },
   "sitemapLocation": "sitemap.json"
 }

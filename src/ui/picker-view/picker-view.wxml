@@ -1,0 +1,15 @@
+<picker-view
+class="onekit-picker-view {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+value="{{value}}"
+indicator-style="{{indicatorStyle}}"
+indicator-class="{{indicatorClass}}"
+mask-style="{{maskStyle}}"
+mask-class="{{maskClass}}"
+style="width:100%;height:100%;display:flex;"
+bindchange="pickerView_change"
+>
+<slot>
+</slot>
+</picker-view>
