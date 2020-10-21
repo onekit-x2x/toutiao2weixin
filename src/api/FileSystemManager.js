@@ -1,4 +1,5 @@
 
+
 /* eslint-disable max-len */
 /* eslint-disable camelcase */
 import onekit from '../js/onekit'
@@ -398,7 +399,6 @@ export default class FileSystemManager {
       dirPath: wx_dirPath,
       success(wx_res) {
         const tt_res = {
-
           errMsg: wx_res.errMsg
         }
         if (tt_success) {
@@ -427,7 +427,38 @@ export default class FileSystemManager {
   }
 
   stat(tt_object) {
-    return this.weixinFileSystemManager.stat(tt_object)
+    const tt_path = tt_object.Path
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_path = onekit.tt_filePath2wx_filePath(tt_path)
+    const wx_object = {
+      path: wx_path,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg,
+          stats: wx_res.stats
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.stat(wx_object)
   }
 
   unlinkSync(filePath) {
