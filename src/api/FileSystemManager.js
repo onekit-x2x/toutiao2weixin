@@ -461,12 +461,43 @@ export default class FileSystemManager {
     return this.weixinFileSystemManager.stat(wx_object)
   }
 
-  unlinkSync(filePath) {
-    return this.weixinFileSystemManager.unlinkSync(filePath)
+  unlinkSync(tt_filePath) {
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    return this.weixinFileSystemManager.unlinkSync(wx_filePath)
   }
 
   unlink(tt_object) {
-    return this.weixinFileSystemManagerunlink(tt_object)
+    const tt_filePath = tt_object.filePath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    const wx_object = {
+      filePath: wx_filePath,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManagerunlink(wx_object)
   }
 
   unzip(tt_object) {
