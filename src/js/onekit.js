@@ -1,61 +1,42 @@
-const onekit = {}
-onekit.trim = function (str) {
-  return str.replace(/^\s+|\s+$/gm, '')
+/* eslint-disable camelcase */
+const TT_USER_FOLDER = 'ttfile://user/'
+const WX_USER_FOLDER = `${wx.env.USER_DATA_PATH}/`
+
+function new_tt_filePath(ext) {
+  const randomString = Math.floor(Math.random() * (1 - 10000000) + 10000000)
+  const tt_filePath = `${TT_USER_FOLDER}${randomString}${ext}`
+  return tt_filePath
 }
 
-onekit.firstUpper = function (str) {
-  return str.substr(0, 1).toUpperCase() + str.substr(1)
+function tt_filePath2wx_filePath(tt_filePath) {
+  // eslint-disable-next-line no-undef
+  const wx_storePath = getApp().ttSavePath2wxRandomPath[tt_filePath]
+  if (wx_storePath) {
+    return wx_storePath
+  } else {
+    const wx_filePath = tt_filePath.replace(TT_USER_FOLDER, WX_USER_FOLDER)
+    return wx_filePath
+  }
 }
-onekit.color = {}
-onekit.color.fix = function (string) {
-  let str = string
-  if (!str) {
-    return null
-  }
-  switch (str) {
-    case 'transparent':
-      return '#00000000'
-    case 'black':
-      return '#000000FF'
-    default:
-      break
-  }
-  if (str.indexOf('rgb') < 0) {
-    if (str.length === 7) {
-      str += 'FF'
-    }
-    return str
-  }
-  str = str.substring(str.indexOf('(') + 1, str.indexOf(')'))
-  const array = str.split(',')
-  if (array.length === 3) {
-    array.push(1)
-  }
-  const color = onekit.color.rgba2str(array[0], array[1], array[2], array[3] * 255 + '')
-  return color
+
+function save_wx_storePath(tt_filePath, wx_storePath) {
+  // eslint-disable-next-line no-undef
+  getApp().ttSavePath2wxRandomPath[tt_filePath] = wx_storePath
 }
-onekit.color.rgba2str = function (r, g, b, a) {
-  function componentToHex(c) {
-    c = onekit.trim(c)
-    const hex = parseInt(c, 10).toString(16)
-    return hex.length === 1 ? '0' + hex : hex
+
+/*
+OneKit.current = function () {
+  const pages = getCurrentPages()
+  if (pages.length === 0) {
+    return {}
   }
-  return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b) +
-    componentToHex(a)
+  return pages[pages.length - 1]
 }
-onekit.color.str2array = function (str) {
-  return [parseInt(str.substr(1, 2), 16),
-    parseInt(str.substr(3, 2), 16),
-    parseInt(str.substr(5, 2), 16),
-    parseInt(str.substr(7, 2), 16)]
+OneKit.currentUrl = function () {
+  return OneKit.current().route
+} */
+module.exports = {
+  save_wx_storePath,
+  new_tt_filePath,
+  tt_filePath2wx_filePath
 }
-onekit.color.array2str = function (array) {
-  function f(v) {
-    let s = v.toString(16)
-    if (s.length === 1) { s = '0' + s }
-    return s
-  }
-  const str = '#' + f(array[0]) + f(array[1]) + f(array[2]) + f(array[3])
-  return str
-}
-export default onekit

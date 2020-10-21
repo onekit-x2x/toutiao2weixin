@@ -1,6 +1,4 @@
 /* eslint-disable max-len */
-// import onekit from '../js/onekit'
-
 export default class CanvasContext {
   constructor(weixinCanvasContext) {
     this.weixinCanvasContext = weixinCanvasContext
@@ -18,7 +16,6 @@ export default class CanvasContext {
     return this.weixinCanvasContext.restore()
   }
 
-  //
   setGlobalAlpha(alpha) {
     return this.weixinCanvasContext.setGlobalAlpha(alpha)
   }
@@ -79,12 +76,12 @@ export default class CanvasContext {
     return this.weixinCanvasContext.closePath()
   }
 
-  fillText(text, x, y) {
-    return this.weixinCanvasContext.fillText(text, x, y)
+  fillText(text, x, y, maxWidth) {
+    return this.weixinCanvasContext.fillText(text, x, y, maxWidth)
   }
 
-  drawImage(imageResource, x, y, width, height) {
-    return this.weixinCanvasContext.drawImage(imageResource, x, y, width, height, x, y, width, height)
+  drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) {
+    return this.weixinCanvasContext.drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
   }
 
   arc(x, y, r, sAngle, eAngle, counterclockwise) {
@@ -99,12 +96,10 @@ export default class CanvasContext {
     return this.weixinCanvasContext.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
   }
 
-  //
   rect(x, y, width, height) {
     return this.weixinCanvasContext.rect(x, y, width, height)
   }
 
-  //
   clearRect(x, y, width, height) {
     return this.weixinCanvasContext.clearRect(x, y, width, height)
   }
