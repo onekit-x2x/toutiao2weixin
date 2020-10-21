@@ -33,3 +33,4 @@ miniprogram_dev/pages/index/index.wxml
 miniprogram_dev/pages/index/index.wxss
 miniprogram_dev/sitemap.json
 miniprogram_dev/wang/wang.js
+.DS_Store
