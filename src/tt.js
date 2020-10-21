@@ -9,6 +9,12 @@ import onekit from './js/onekit'
 // import onekit from './js/onekit'
 
 export default class tt {
+  static get env() {
+    return {
+      USER_DATA_PATH: wx.env.USER_DATA_PATH
+    }
+  }
+
   // ///////////////// animation //////////////////////////
   static createAnimation(object) {
     return wx.createAnimation(object)

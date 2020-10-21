@@ -346,39 +346,39 @@ export default class FileSystemManager {
   }
 
   rename(tt_object) {
-    // const tt_newPath = tt_object.newPath
-    // const tt_oldPath = tt_object.oldPath
-    // const tt_success = tt_object.success
-    // const tt_fail = tt_object.fail
-    // const tt_complete = tt_object.complete
-    // //
-    // const wx_newPath = onekit.tt_filePath2wx_filePath(tt_newPath)
-    // const wx_oldPath = onekit.tt_filePath2wx_filePath(tt_oldPath)
-    // const wx_object = {
-    //   oldPath: wx_oldPath,
-    //   newPath: wx_newPath,
-    //   success(wx_res) {
-    //     const tt_res = {
-    //       errMsg: wx_res.errMsg
-    //     }
-    //     if (tt_success) {
-    //       tt_success(tt_res)
-    //     }
-    //     if (tt_complete) {
-    //       tt_complete(tt_res)
-    //     }
-    //   },
-    //   fail(wx_res) {
-    //     const tt_res = wx_res
-    //     if (tt_fail) {
-    //       tt_fail(tt_res)
-    //     }
-    //     if (tt_complete) {
-    //       tt_complete(tt_res)
-    //     }
-    //   }
-    // }
-    return this.weixinFileSystemManager.rename(tt_object)
+    const tt_newPath = tt_object.newPath
+    const tt_oldPath = tt_object.oldPath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    //
+    const wx_newPath = onekit.tt_filePath2wx_filePath(tt_newPath)
+    const wx_oldPath = onekit.tt_filePath2wx_filePath(tt_oldPath)
+    const wx_object = {
+      oldPath: wx_oldPath,
+      newPath: wx_newPath,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.rename(wx_object)
   }
 
   rmdirSync(dirPath) {
