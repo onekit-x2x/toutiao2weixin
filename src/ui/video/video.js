@@ -1,76 +1,143 @@
-/* eslint-disable camelcase */
-/* eslint-disable no-console */
-import onekit_behavior from '../../behavior/onekit_behavior'
-import toutiao_behavior from '../../behavior/toutiao_behavior'
-
+import onekit_behavior from `../../behavior/onekit_behavior`
+import alipay_behavior from `../../behavior/alipay_behavior`
 Component({
-  behaviors: [onekit_behavior, toutiao_behavior],
+  behaviors:[onekit_behavior,alipay_behavior],
   options: {
     virtualHost: true
   },
   properties: {
-    src: {
-      type: String,
-      value: '',
-    },
-    autoplay: {
-      type: Boolean,
-      value: false,
-    },
-    poster: {
-      type: String,
-      value: '',
-    },
-    loop: {
-      type: Boolean,
-      value: false,
-    },
-    showFullscreenBtn: {
-      type: Boolean,
-      value: false,
-    },
-    showPlayBtn: {
-      type: Boolean,
-      value: false,
-    },
-    controls: {
-      type: Boolean,
-      value: true,
-    },
-    objectFit: {
-      type: String,
-      value: 'contain',
-    },
-    playBtnPosition: {
-      type: String,
-      value: 'center',
-    },
-    preRollUnitId: {
-      type: String,
-      value: '',
-    },
-  },
-  methods: {
-    video_play() {
-      this.triggerEvent('Play')
-    },
-    video_pause() {
-      this.triggerEvent('Pause')
-    },
-    video_ended() {
-      this.triggerEvent('Ended')
-    },
-    video_error() {
-      this.triggerEvent('Error')
-    },
-    video_timeupdate(wx_e) {
-      const wx_detail = wx_e.wx_detail
-      const tt_detail = wx_detail
-      this.triggerEvent('Timeupdate', tt_detail)
-    },
-    video_fullscreenchange() {
-      this.triggerEvent('Fullscreenchange')
-    },
-  }
+     src:{
+          type: String,
+          value: "",
+      },
+      video:{
+          type: String,
+          value: "",
+      },
+      duration:{
+          type: Number,
+          value: "",
+      },
+      controls:{
+          type: Boolean,
+          value: false,
+      },
+      danmuList:{
+          type: Array,
+          value: "",
+      },
 
-})
+      danmuBtn:{
+          type: Boolean,
+          value: false,
+      },
+      enableBanmu:{
+          type: Boolean,
+          value: false,
+      },
+      autoplay:{
+          type: Boolean,
+          value: false,
+      },
+      loop:{
+          type: Boolean,
+          value: false,
+      },
+      muted:{
+          type: Boolean,
+          value: false,
+      },
+      initialTime:{
+          type: Number,
+          value: '0',
+      },
+      pageGesture:{
+          type: Boolean,
+          value: false,
+      },
+      direction:{
+          type: Number,
+          value: "",
+      },
+      showProgress:{
+          type: Boolean,
+          value: true,
+      },
+      showFullscreenBtn:{
+          type: Boolean,
+          value: true,
+      },
+
+      showPlayBtn:{
+          type: Boolean,
+          value: true,
+      },
+      showCenterPlayBtn:{
+          type: Boolean,
+          value: true,
+      },
+      enableProgressGesture:{
+          type: Boolean,
+          value: true,
+      },
+      poster:{
+          type: String,
+          value: "",
+      },
+      showMuteBtn:{
+          type: Boolean,
+          value:false,
+      },
+      title:{
+          type: String,
+          value: "",
+      },
+      enablePlayGesture:{
+          type: Boolean,
+          value:false,
+      },
+      pageGesture:{
+          type: Boolean,
+          value:false,
+      },
+      vslideGestureInFullscreen:{
+          type: Boolean,
+          value:true,
+      },
+      enableDanmu:{
+      type: Boolean,
+      value:false,
+      }
+
+  },
+   methods: {
+        video_play(e){
+        console.log("video_play", e);
+        this.triggerEvent('play',e.details)
+        },
+        video_pause(e){
+        console.log("video_pause", e);
+        this.triggerEvent('pause',e.details)
+        },
+        video_ended(e){
+        console.log("video_ended", e);
+        this.triggerEvent('ended',e.details)
+        },
+        video_timeupdate(e){
+        console.log("video_timeupdate", e);
+        this.triggerEvent('timeupdate',e.details)
+        },
+        video_fullscreenchang(e){
+        console.log("video_fullscreenchang", e);
+        this.triggerEvent('fullscreenchang',e.details)
+        },
+        video_error(e){
+        console.log("video_error", e);
+        this.triggerEvent('error',e.details)
+        },
+        video_loadedmetadata(e){
+        console.log("video_loadedmetadata", e);
+        this.triggerEvent('loadedmetadata',e.details)
+        },
+}
+});
