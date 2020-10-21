@@ -1,3 +1,4 @@
+
 /* eslint-disable max-len */
 /* eslint-disable camelcase */
 import onekit from '../js/onekit'
@@ -12,9 +13,39 @@ export default class FileSystemManager {
     return this.weixinFileSystemManager.accessSync(wx_filePath)
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  access() {
-    // this.weixinFileSystemManager.access(tt_object)
+
+  access(tt_object) {
+    const tt_path = tt_object.Path
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_path = onekit.tt_filePath2wx_filePath(tt_path)
+    const wx_object = {
+      path: wx_path,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.access(wx_object)
   }
 
   saveFileSync(tt_tempFilePath, tt_filePath) {
@@ -263,12 +294,49 @@ export default class FileSystemManager {
     return this.weixinFileSystemManager.readdir(wx_object)
   }
 
-  readFileSync(filePath, encoding) {
-    return this.weixinFileSystemManager.readFileSync(filePath, encoding)
+  readFileSync(tt_filePath, tt_encoding) {
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    const wx_encoding = tt_encoding
+    return this.weixinFileSystemManager.readFileSync(wx_filePath, wx_encoding)
   }
 
   readFile(tt_object) {
-    return this.weixinFileSystemManager.readFile(tt_object)
+    const tt_filePath = tt_object.filePath
+    const tt_encoding = tt_object.encoding
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    const wx_encoding = tt_encoding
+    const wx_object = {
+      filePath: wx_filePath,
+      encoding: wx_encoding,
+      success(wx_res) {
+        const tt_res = {
+          data: wx_res.data,
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+
+    }
+    return this.weixinFileSystemManager.readFile(wx_object)
   }
 
   renameSync(tt_oldPath, tt_newPath) {
@@ -278,6 +346,38 @@ export default class FileSystemManager {
   }
 
   rename(tt_object) {
+    // const tt_newPath = tt_object.newPath
+    // const tt_oldPath = tt_object.oldPath
+    // const tt_success = tt_object.success
+    // const tt_fail = tt_object.fail
+    // const tt_complete = tt_object.complete
+    // //
+    // const wx_newPath = onekit.tt_filePath2wx_filePath(tt_newPath)
+    // const wx_oldPath = onekit.tt_filePath2wx_filePath(tt_oldPath)
+    // const wx_object = {
+    //   oldPath: wx_oldPath,
+    //   newPath: wx_newPath,
+    //   success(wx_res) {
+    //     const tt_res = {
+    //       errMsg: wx_res.errMsg
+    //     }
+    //     if (tt_success) {
+    //       tt_success(tt_res)
+    //     }
+    //     if (tt_complete) {
+    //       tt_complete(tt_res)
+    //     }
+    //   },
+    //   fail(wx_res) {
+    //     const tt_res = wx_res
+    //     if (tt_fail) {
+    //       tt_fail(tt_res)
+    //     }
+    //     if (tt_complete) {
+    //       tt_complete(tt_res)
+    //     }
+    //   }
+    // }
     return this.weixinFileSystemManager.rename(tt_object)
   }
 
