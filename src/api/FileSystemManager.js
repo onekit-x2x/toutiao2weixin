@@ -1,5 +1,4 @@
-
-
+/* eslint-disable no-console */
 /* eslint-disable max-len */
 /* eslint-disable camelcase */
 import onekit from '../js/onekit'
@@ -9,9 +8,13 @@ export default class FileSystemManager {
     this.weixinFileSystemManager = weixinFileSystemManager
   }
 
-  accessSync(tt_filePath) {
-    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
-    return this.weixinFileSystemManager.accessSync(wx_filePath)
+  accessSync(tt_path) {
+    try {
+      const wx_Path = onekit.tt_filePath2wx_filePath(tt_path)
+      this.weixinFileSystemManager.accessSync(wx_Path)
+    } catch (ex) {
+      throw new Error('accessSync:fail no such file or directory, accessSync')
+    }
   }
 
 

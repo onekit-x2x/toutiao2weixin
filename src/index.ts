@@ -1,8 +1,13 @@
+/* eslint-disable no-console */
 import OnekitApp from './OnekitApp'
 import OnekitBehavior from './OnekitBehavior'
 import OnekitComponent from './OnekitComponent'
 import OnekitPage from './OnekitPage'
 import tt from './tt'
+import TheKit from './js/TheKit'
+import onekit from './js/onekit'
+
+console.log('onekit', onekit)
 
 export {
   OnekitApp,
@@ -10,4 +15,6 @@ export {
   OnekitComponent,
   OnekitPage,
   tt,
+  TheKit,
+  onekit
 }

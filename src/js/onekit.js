@@ -23,20 +23,20 @@ function save_wx_storePath(tt_filePath, wx_storePath) {
   // eslint-disable-next-line no-undef
   getApp().ttSavePath2wxRandomPath[tt_filePath] = wx_storePath
 }
-
-/*
-OneKit.current = function () {
+function current() {
   const pages = getCurrentPages()
   if (pages.length === 0) {
     return {}
   }
   return pages[pages.length - 1]
 }
-OneKit.currentUrl = function () {
-  return OneKit.current().route
-} */
+function currentUrl() {
+  return current().route
+}
 module.exports = {
   save_wx_storePath,
   new_tt_filePath,
-  tt_filePath2wx_filePath
+  tt_filePath2wx_filePath,
+  current,
+  currentUrl
 }
