@@ -1,11 +1,11 @@
 {
   "pages": [
+    "wang/wang",
     "li/li",
     "new-tabs/new-tabs",
     
     "zhang/zhang",
-    "yang/yang",
-    "wang/wang"
+    "yang/yang"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -21,16 +21,11 @@
   },
   "debug": true,
   "usingComponents": {
-    "onekit-ad":"alipay2weixin/ui/ad/ad",
-    "onekit-animation-video":"alipay2weixin/ui/animation-video/animation-video",
-    "onekit-animation-view":"alipay2weixin/ui/animation-view/animation-view",
-    "onekit-button":"alipay2weixin/ui/button/button",
-    "onekit-icon":"alipay2weixin/ui/icon/icon",
-    "onekit-rtc-room":"alipay2weixin/ui/rtc-room/rtc-room",
-    "onekit-rtc-room-item":"alipay2weixin/ui/rtc-room-item/rtc-room-item",
-    "onekit-tab-item":"alipay2weixin/ui/tab-item/tab-item",
-    "onekit-tabs":"alipay2weixin/ui/tabs/tabs",
-    "onekit-view":"alipay2weixin/ui/view/view"
-  },
-  "sitemapLocation": "sitemap.json"
+    "onekit-ad": "toutiao2weixin/ui/ad/ad",
+    "onekit-icon": "toutiao2weixin/ui/icon/icon",
+    "onekit-progress": "toutiao2weixin/ui/progress/progress",
+    "onekit-slider": "toutiao2weixin/ui/slider/slider",
+    "onekit-video": "toutiao2weixin/ui/video/video",
+    "onekit-view": "toutiao2weixin/ui/view/view"
+  }
 }
