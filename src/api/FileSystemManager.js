@@ -497,7 +497,7 @@ export default class FileSystemManager {
         }
       }
     }
-    return this.weixinFileSystemManagerunlink(wx_object)
+    return this.weixinFileSystemManager.unlink(wx_object)
   }
 
   unzip(tt_object) {
