@@ -501,14 +501,80 @@ export default class FileSystemManager {
   }
 
   unzip(tt_object) {
-    return this.weixinFileSystemManager.unzip(tt_object)
+    const tt_zipFilePath = tt_object.zipFilePath
+    const tt_targetPath = tt_object.targetPath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    //
+    const wx_targetPath = onekit.tt_filePath2wx_filePath(tt_targetPath)
+    const wx_object = {
+      zipFilePath: tt_zipFilePath,
+      targetPath: wx_targetPath,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.unzip(wx_object)
   }
 
-  writeFileSync(filePath, data, encoding) {
-    return this.weixinFileSystemManager.writeFileSync(filePath, data, encoding)
+  writeFileSync(tt_filePath, data, encoding) {
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    return this.weixinFileSystemManager.writeFileSync(wx_filePath, data, encoding)
   }
 
   writeFile(tt_object) {
-    return this.weixinFileSystemManager.writeFile(tt_object)
+    const tt_filePath = tt_object.filePath
+    const tt_data = tt_object.data
+    const tt_encoding = tt_object.encoding
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    const wx_object = {
+      filePath: wx_filePath,
+      data: tt_data,
+      encoding: tt_encoding,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return this.weixinFileSystemManager.writeFile(wx_object)
   }
 }
