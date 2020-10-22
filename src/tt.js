@@ -320,8 +320,35 @@ export default class tt {
     return wx.getSavedFileInfo(object)
   }
 
-  static getSavedFileList(object) {
-    return wx.getSavedFileList(object)
+  static getSavedFileList(tt_object) {
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_object = {
+      success(wx_res) {
+        const tt_res = {
+          fileList: wx_res.fileList
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return wx.getSavedFileList(wx_object)
   }
 
   static openDocument(object) {
@@ -358,8 +385,6 @@ export default class tt {
           tt_complete(tt_res)
         }
       },
-
-
       fail(wx_res) {
         const tt_res = wx_res
         if (tt_fail) {
