@@ -343,8 +343,38 @@ export default class tt {
     return wx.getFileInfo(wx_object)
   }
 
-  static removeSavedFile(object) {
-    return wx.removeSavedFile(object)
+  static removeSavedFile(tt_object) {
+    const tt_filePath = tt_object.filePath
+    const tt_success = tt_object.success
+    const tt_fail = tt_object.fail
+    const tt_complete = tt_object.complete
+    tt_object = null
+    //
+    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    const wx_object = {
+      filePath: wx_filePath,
+      success(wx_res) {
+        const tt_res = {
+          errMsg: wx_res.errMsg
+        }
+        if (tt_success) {
+          tt_success(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      },
+      fail(wx_res) {
+        const tt_res = wx_res
+        if (tt_fail) {
+          tt_fail(tt_res)
+        }
+        if (tt_complete) {
+          tt_complete(tt_res)
+        }
+      }
+    }
+    return wx.removeSavedFile(wx_object)
   }
 
   static getSavedFileInfo(object) {

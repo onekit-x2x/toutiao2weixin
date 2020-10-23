@@ -3,6 +3,7 @@
     "wang/wang",
     "li/li",
     "new-tabs/new-tabs",
+    
     "zhang/zhang",
     "yang/yang"
   ],
@@ -26,6 +27,5 @@
     "onekit-slider": "toutiao2weixin/ui/slider/slider",
     "onekit-video": "toutiao2weixin/ui/video/video",
     "onekit-view": "toutiao2weixin/ui/view/view"
-  },
-  "sitemapLocation": "sitemap64.json"
+  }
 }

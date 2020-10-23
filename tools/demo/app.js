@@ -8,5 +8,5 @@ App({
     onHide: function () {
         console.log('App Hide')
     },
-    ttSavePath2wxRandomPath: {}
+    ttSavePath2wxStorePath: {}
 });

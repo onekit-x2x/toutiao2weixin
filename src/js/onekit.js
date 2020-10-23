@@ -10,7 +10,7 @@ function new_tt_filePath(ext) {
 
 function tt_filePath2wx_filePath(tt_filePath) {
   // eslint-disable-next-line no-undef
-  const wx_storePath = getApp().ttSavePath2wxRandomPath[tt_filePath]
+  const wx_storePath = getApp().ttSavePath2wxStorePath[tt_filePath]
   if (wx_storePath) {
     return wx_storePath
   } else {
