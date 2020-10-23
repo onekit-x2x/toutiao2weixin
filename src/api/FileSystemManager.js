@@ -10,8 +10,8 @@ export default class FileSystemManager {
 
   accessSync(tt_path) {
     try {
-      const wx_Path = onekit.tt_filePath2wx_filePath(tt_path)
-      this.weixinFileSystemManager.accessSync(wx_Path)
+      const wx_path = onekit.tt_filePath2wx_filePath(tt_path)
+      this.weixinFileSystemManager.accessSync(wx_path)
     } catch (ex) {
       throw new Error('accessSync:fail no such file or directory, accessSync')
     }
@@ -19,7 +19,7 @@ export default class FileSystemManager {
 
 
   access(tt_object) {
-    const tt_path = tt_object.Path
+    const tt_path = tt_object.path
     const tt_success = tt_object.success
     const tt_fail = tt_object.fail
     const tt_complete = tt_object.complete
@@ -430,7 +430,7 @@ export default class FileSystemManager {
   }
 
   stat(tt_object) {
-    const tt_path = tt_object.Path
+    const tt_path = tt_object.path
     const tt_success = tt_object.success
     const tt_fail = tt_object.fail
     const tt_complete = tt_object.complete

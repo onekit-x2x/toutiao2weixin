@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable camelcase */
 const TT_USER_FOLDER = 'ttfile://user/'
 const WX_USER_FOLDER = `${wx.env.USER_DATA_PATH}/`
@@ -9,6 +10,10 @@ function new_tt_filePath(ext) {
 }
 
 function tt_filePath2wx_filePath(tt_filePath) {
+  // eslint-disable-next-line no-undef
+  if (!getApp().ttSavePath2wxStorePath) {
+    return tt_filePath
+  }
   // eslint-disable-next-line no-undef
   const wx_storePath = getApp().ttSavePath2wxStorePath[tt_filePath]
   if (wx_storePath) {
