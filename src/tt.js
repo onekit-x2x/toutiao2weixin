@@ -329,7 +329,15 @@ export default class tt {
     const wx_object = {
       success(wx_res) {
         const tt_res = {
-          fileList: wx_res.fileList
+          fileList: wx_res.fileList.map(function (wx_file) {
+            const tt_file = {
+              // eslint-disable-next-line no-undef
+              filePath: getApp().wxStorePath2ttSavePath[wx_file.filePath],
+              createTime: wx_file.createTime,
+              size: wx_file.size
+            }
+            return tt_file
+          })
         }
         if (tt_success) {
           tt_success(tt_res)

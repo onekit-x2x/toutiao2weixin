@@ -21,7 +21,20 @@ function tt_filePath2wx_filePath(tt_filePath) {
 
 function save_wx_storePath(tt_filePath, wx_storePath) {
   // eslint-disable-next-line no-undef
-  getApp().ttSavePath2wxRandomPath[tt_filePath] = wx_storePath
+  if (!getApp().ttSavePath2wxStorePath) {
+    // eslint-disable-next-line no-undef
+    getApp().ttSavePath2wxStorePath = {}
+  }
+  // eslint-disable-next-line no-undef
+  getApp().ttSavePath2wxStorePath[tt_filePath] = wx_storePath
+  // ///////////////////////
+  // eslint-disable-next-line no-undef
+  if (!getApp().wxStorePath2ttSavePath) {
+    // eslint-disable-next-line no-undef
+    getApp().wxStorePath2ttSavePath = {}
+  }
+  // eslint-disable-next-line no-undef
+  getApp().wxStorePath2ttSavePath[wx_storePath] = tt_filePath
 }
 function current() {
   const pages = getCurrentPages()
