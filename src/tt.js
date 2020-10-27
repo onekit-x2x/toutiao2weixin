@@ -1090,8 +1090,8 @@ export default class tt {
     return wx.hideTabBarRedDot(object)
   }
 
-  static showTabBarRedDot(object) {
-    return wx.showTabBarRedDot(object)
+  static showTabBarRedDot(tt_object) {
+    return wx.showTabBarRedDot(tt_object)
   }
 
   static removeTabBarBadge(object) {
