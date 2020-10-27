@@ -1,7 +1,6 @@
 {
   "pages": [
     "wang/wang",
-    "tabBar2/tabBar2",
     "li/li",
     "new-tabs/new-tabs",
     
@@ -13,24 +12,6 @@
     "navigationBarTitleText": "小程序拓展组件库",
     "navigationBarBackgroundColor": "#f8f8f8",
     "backgroundColor": "#f8f8f8"
-  },
-  "tabBar": {
-    "color": "#505050",
-    "selectedColor": "#F85959",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
-    "list": [
-      {
-        "pagePath": "tabBar2/tabBar2",
-        "iconPath": "image/category/tab_component.png",
-        "text": "组件"
-      },
-      { 
-        "pagePath": "wang/wang",
-        "iconPath": "image/category/tab_api.png",
-        "text": "API"
-      }
-    ]
   },
   "networkTimeout": {
     "request": 10000,
