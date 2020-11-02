@@ -5,8 +5,7 @@ import CanvasContext from './api/CanvasContext'
 import LivePlayerContext from './api/LivePlayerContext'
 import VideoContext from './api/VideoContext'
 import FileSystemManager from './api/FileSystemManager'
-import onekit from './js/onekit'
-// import onekit from './js/onekit'
+import OneKit from './js/OneKit'
 
 export default class tt {
   static get env() {
@@ -315,7 +314,7 @@ export default class tt {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    const wx_filePath = OneKit.tt_filePath2wx_filePath(tt_filePath)
     const wx_object = {
       filePath: wx_filePath,
       success(wx_res) {
@@ -350,7 +349,7 @@ export default class tt {
     const tt_complete = tt_object.complete
     tt_object = null
     //
-    const wx_filePath = onekit.tt_filePath2wx_filePath(tt_filePath)
+    const wx_filePath = OneKit.tt_filePath2wx_filePath(tt_filePath)
     const wx_object = {
       filePath: wx_filePath,
       success(wx_res) {
@@ -431,7 +430,7 @@ export default class tt {
   static saveFile(tt_object) {
     const tt_tempFilePath = tt_object.tempFilePath
     const ext = tt_tempFilePath.substring(tt_tempFilePath.lastIndexOf('.'))
-    const tt_filePath = tt_object.filePath || onekit.new_tt_filePath(ext)
+    const tt_filePath = tt_object.filePath || OneKit.new_tt_filePath(ext)
     const tt_success = tt_object.success
     const tt_fail = tt_object.fail
     const tt_complete = tt_object.complete
@@ -441,7 +440,7 @@ export default class tt {
     const wx_object = {
       tempFilePath: wx_tempFilePath,
       success(wx_res) {
-        onekit.save_wx_storePath(tt_filePath, wx_res.savedFilePath)
+        OneKit.save_wx_storePath(tt_filePath, wx_res.savedFilePath)
 
         const tt_res = {
           errMsg: wx_res.errMsg,
