@@ -3,6 +3,17 @@
 const TT_USER_FOLDER = 'ttfile://user/'
 const WX_USER_FOLDER = `${wx.env.USER_DATA_PATH}/`
 
+function current() {
+  const pages = getCurrentPages()
+  if (pages.length === 0) {
+    return {}
+  }
+  return pages[pages.length - 1]
+}
+function currentUrl() {
+  return current().route
+}
+
 function new_tt_filePath(ext) {
   const randomString = Math.floor(Math.random() * (1 - 10000000) + 10000000)
   const tt_filePath = `${TT_USER_FOLDER}${randomString}${ext}`
@@ -40,16 +51,6 @@ function save_wx_storePath(tt_filePath, wx_storePath) {
   }
   // eslint-disable-next-line no-undef
   getApp().wxStorePath2ttSavePath[wx_storePath] = tt_filePath
-}
-function current() {
-  const pages = getCurrentPages()
-  if (pages.length === 0) {
-    return {}
-  }
-  return pages[pages.length - 1]
-}
-function currentUrl() {
-  return current().route
 }
 module.exports = {
   save_wx_storePath,
