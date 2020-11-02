@@ -5,7 +5,7 @@ import OnekitComponent from './OnekitComponent'
 import OnekitPage from './OnekitPage'
 import tt from './tt'
 import TheKit from './js/TheKit'
-import onekit from './js/onekit'
+import onekit from './js/onekit2'
 
 console.log('onekit', onekit)
 
