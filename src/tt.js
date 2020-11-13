@@ -669,7 +669,7 @@ export default class tt {
   static _checkSession() {
     const now = new Date().getTime()
     // eslint-disable-next-line no-undef
-    return getApp().onekitwx._jscode && getApp().onekitwx._login && now <= getApp().onekitwx._login + 1000 * 60 * 60 * 24 * 3
+    return getApp().onekit_jscode && getApp().onekit_login && now <= getApp().onekit_login + 1000 * 60 * 60 * 24 * 3
   }
 
   static checkSession(object) {
@@ -698,9 +698,9 @@ export default class tt {
     const object2 = {}
     object2.success = function (res) {
       // eslint-disable-next-line no-undef
-      getApp().onekitwx._jscode = res.code
+      getApp().onekit_jscode = res.code
       // eslint-disable-next-line no-undef
-      getApp().onekitwx._login = new Date().getTime()
+      getApp().onekit_login = new Date().getTime()
       const result = {
         code: res.code
       }
@@ -722,7 +722,7 @@ export default class tt {
     if (tt._checkSession()) {
       object2.success({
         // eslint-disable-next-line no-undef
-        code: getApp().onekitwx._jscode
+        code: getApp().onekit_jscode
       })
     } else {
       wx.login(object2)
