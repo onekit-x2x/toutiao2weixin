@@ -91,6 +91,7 @@ module.exports = {
   'globals': {
     'window': true,
     'document': true,
+    'getApp':true,
     'App': true,
     'Page': true,
     'Component': true,
