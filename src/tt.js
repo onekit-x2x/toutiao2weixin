@@ -391,7 +391,7 @@ export default class tt {
         const tt_res = {
           fileList: wx_res.fileList.map(function (wx_file) {
             const tt_file = {
-              
+
               filePath: getApp().wxStorePath2ttSavePath[wx_file.filePath],
               createTime: wx_file.createTime,
               size: wx_file.size
@@ -668,7 +668,7 @@ export default class tt {
   // /////// Open Interface //////////
   static _checkSession() {
     const now = new Date().getTime()
-    
+
     return getApp().onekit_jscode && getApp().onekit_login && now <= getApp().onekit_login + 1000 * 60 * 60 * 24 * 3
   }
 
@@ -697,9 +697,8 @@ export default class tt {
     }
     const object2 = {}
     object2.success = function (res) {
-      
       getApp().onekit_jscode = res.code
-      
+
       getApp().onekit_login = new Date().getTime()
       const result = {
         code: res.code
@@ -721,7 +720,7 @@ export default class tt {
     }
     if (tt._checkSession()) {
       object2.success({
-        
+
         code: getApp().onekit_jscode
       })
     } else {
@@ -734,9 +733,9 @@ export default class tt {
       success(res) {
         console.log(res)
         const code = res.code
-        
+
         const withCredentials = getApp().onekitwx.getuserinfo_withCredentials === true
-        
+
         const url = getApp().onekit_server + 'userinfo'
         wx.request({
           url,
@@ -766,9 +765,8 @@ export default class tt {
   }
 
   static getUserInfo(object) {
-    
     getApp().onekitwx.getuserinfo_withCredentials = object.withCredentials
-    
+
     getApp().onekitwx.getuserinfo = (data) => {
       tt._getUserInfo(data, (res) => {
         if (object.success) {
@@ -792,7 +790,7 @@ export default class tt {
     tt.login({
       success: (res) => {
         const code = res.code
-        
+
         const url = getApp().onekit_server + 'phonenumber'
         console.log(data, code)
         wx.request({
@@ -818,7 +816,6 @@ export default class tt {
   }
 
   static getPhoneNumber(object) {
-    
     getApp().onekitwx._bindgetphonenumber = (data) => {
       tt._getPhoneNumber(data, (res) => {
         if (object.success) {
@@ -853,7 +850,6 @@ export default class tt {
   }
 
   static pay(object) {
-    
     const url = getApp().onekit_server + 'orderinfo'
     wx.request({
       url,

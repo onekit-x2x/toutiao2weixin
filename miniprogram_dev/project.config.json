@@ -6,7 +6,7 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "enhance": true,
+    "enhance": false,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
@@ -14,7 +14,7 @@
     "coverView": true,
     "nodeModules": true,
     "autoAudits": false,
-    "showShadowRootInWxmlPanel": false,
+    "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
     "uglifyFileName": false,
     "checkInvalidKey": true,
@@ -28,20 +28,23 @@
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
-    "packNpmRelationList": []
+    "packNpmRelationList": [],
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.14.0",
   "appid": "wxecb5d25a4a5c222f",
-  "projectname": "小程序拓展组件库",
+  "projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8B%93%E5%B1%95%E7%BB%84%E4%BB%B6%E5%BA%93",
   "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
     "miniprogram": {
-      "current": -1,
       "list": [
         {
           "id": -1,
