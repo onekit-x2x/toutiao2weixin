@@ -737,7 +737,7 @@ export default class tt {
         
         const withCredentials = getApp().onekitwx.getuserinfo_withCredentials === true
         
-        const url = getApp().onekitwx.server + 'userinfo'
+        const url = getApp().onekit_server + 'userinfo'
         wx.request({
           url,
           header: {
@@ -793,7 +793,7 @@ export default class tt {
       success: (res) => {
         const code = res.code
         
-        const url = getApp().onekitwx.server + 'phonenumber'
+        const url = getApp().onekit_server + 'phonenumber'
         console.log(data, code)
         wx.request({
           url,
@@ -854,7 +854,7 @@ export default class tt {
 
   static pay(object) {
     
-    const url = getApp().onekitwx.server + 'orderinfo'
+    const url = getApp().onekit_server + 'orderinfo'
     wx.request({
       url,
       method: 'POST',
