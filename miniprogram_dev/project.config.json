@@ -37,9 +37,9 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.14.0",
+  "libVersion": "2.11.3",
   "appid": "wxecb5d25a4a5c222f",
-  "projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8B%93%E5%B1%95%E7%BB%84%E4%BB%B6%E5%BA%93",
+  "projectname": "小程序拓展组件库",
   "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},

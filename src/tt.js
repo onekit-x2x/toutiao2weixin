@@ -15,8 +15,8 @@ export default class tt {
   }
 
   // ///////////////// animation //////////////////////////
-  static createAnimation(object) {
-    return wx.createAnimation(object)
+  static createAnimation(tt_object) {
+    return wx.createAnimation(tt_object)
   }
 
   // /////////////// basic ////////////////////////////////
@@ -24,8 +24,8 @@ export default class tt {
     return true
   }
 
-  static getSystemInfo(object) {
-    return wx.getSystemInfo(object)
+  static getSystemInfo(tt_object) {
+    return wx.getSystemInfo(tt_object)
   }
 
   static getSystemInfoSync() {
@@ -40,52 +40,52 @@ export default class tt {
     return wx.arrayBufferToBase64(arrayBuffer)
   }
 
-  static getUpdateManager(object) {
-    return wx.getUpdateManager(object)
+  static getUpdateManager(tt_object) {
+    return wx.getUpdateManager(tt_object)
   }
 
-  static getLaunchOptionsSync(object) {
-    return wx.getLaunchOptionsSync(object)
+  static getLaunchOptionsSync(tt_object) {
+    return wx.getLaunchOptionsSync(tt_object)
   }
 
-  static offPageNotFound(object) {
-    return wx.offPageNotFound(object)
+  static offPageNotFound(tt_object) {
+    return wx.offPageNotFound(tt_object)
   }
 
-  static onPageNotFound(object) {
-    return wx.onPageNotFound(object)
+  static onPageNotFound(tt_object) {
+    return wx.onPageNotFound(tt_object)
   }
 
-  static offError(object) {
-    return wx.offError(object)
+  static offError(tt_object) {
+    return wx.offError(tt_object)
   }
 
-  static onError(object) {
-    return wx.onError(object)
+  static onError(tt_object) {
+    return wx.onError(tt_object)
   }
 
-  static offAppShow(object) {
-    return wx.offAppShow(object)
+  static offAppShow(tt_object) {
+    return wx.offAppShow(tt_object)
   }
 
-  static onAppShow(object) {
-    return wx.onAppShow(object)
+  static onAppShow(tt_object) {
+    return wx.onAppShow(tt_object)
   }
 
-  static offAppHide(object) {
-    return wx.offAppHide(object)
+  static offAppHide(tt_object) {
+    return wx.offAppHide(tt_object)
   }
 
-  static onAppHide(object) {
-    return wx.onAppHide(object)
+  static onAppHide(tt_object) {
+    return wx.onAppHide(tt_object)
   }
 
-  static setEnableDebug(object) {
-    return wx.setEnableDebug(object)
+  static setEnableDebug(tt_object) {
+    return wx.setEnableDebug(tt_object)
   }
 
-  static getLogManager(object) {
-    return wx.getLogManager(object)
+  static getLogManager(tt_object) {
+    return wx.getLogManager(tt_object)
   }
 
   static createCanvasContext(canvasId) {
@@ -100,69 +100,69 @@ export default class tt {
     return new VideoContext(wx.createVideoContext(videoId))
   }
 
-  static canvasToTempFilePath(object) {
-    return wx.canvasToTempFilePath(object)
+  static canvasToTempFilePath(tt_object) {
+    return wx.canvasToTempFilePath(tt_object)
   }
 
-  static canvasPutImageData(object) {
-    return wx.canvasPutImageData(object)
+  static canvasPutImageData(tt_object) {
+    return wx.canvasPutImageData(tt_object)
   }
 
-  static canvasGetImageData(object) {
-    return wx.canvasGetImageData(object)
+  static canvasGetImageData(tt_object) {
+    return wx.canvasGetImageData(tt_object)
   }
 
   // //////////// Device //////////////////
-  static onBeaconServiceChange(object) {
-    return wx.onBeaconServiceChange(object)
+  static onBeaconServiceChange(tt_object) {
+    return wx.onBeaconServiceChange(tt_object)
   }
 
-  static onBeaconUpdate(object) {
-    return wx.onBeaconUpdate(object)
+  static onBeaconUpdate(tt_object) {
+    return wx.onBeaconUpdate(tt_object)
   }
 
-  static getBeacons(object) {
-    return wx.getBeacons(object)
+  static getBeacons(tt_object) {
+    return wx.getBeacons(tt_object)
   }
 
-  static stopBeaconDiscovery(object) {
-    return wx.stopBeaconDiscovery(object)
+  static stopBeaconDiscovery(tt_object) {
+    return wx.stopBeaconDiscovery(tt_object)
   }
 
-  static startBeaconDiscovery(object) {
-    return wx.startBeaconDiscovery(object)
+  static startBeaconDiscovery(tt_object) {
+    return wx.startBeaconDiscovery(tt_object)
   }
 
-  static stopWifi(object) {
-    return wx.stopWifi(object)
+  static stopWifi(tt_object) {
+    return wx.stopWifi(tt_object)
   }
 
-  static startWifi(object) {
-    return wx.startWifi(object)
+  static startWifi(tt_object) {
+    return wx.startWifi(tt_object)
   }
 
-  static setWifiList(object) {
-    return wx.setWifiList(object)
+  static setWifiList(tt_object) {
+    return wx.setWifiList(tt_object)
   }
 
-  static onWifiConnected(object) {
-    return wx.onWifiConnected(object)
+  static onWifiConnected(tt_object) {
+    return wx.onWifiConnected(tt_object)
   }
 
-  static onGetWifiList(object) {
-    return wx.onGetWifiList(object)
+  static onGetWifiList(tt_object) {
+    return wx.onGetWifiList(tt_object)
   }
 
-  static getWifiList(object) {
-    return wx.getWifiList(object)
+  static getWifiList(tt_object) {
+    return wx.getWifiList(tt_object)
   }
 
-  static getConnectedWifi(object) {
-    return wx.getConnectedWifi(object)
+  static getConnectedWifi(tt_object) {
+    return wx.getConnectedWifi(tt_object)
   }
 
-  static connectWifi(object) {
-    return wx.connectWifi(object)
+  static connectWifi(tt_object) {
+    return wx.connectWifi(tt_object)
   }
 
   //
@@ -170,83 +170,83 @@ export default class tt {
     return wx.onAccelerometerChange(callback)
   }
 
-  static stopAccelerometer(object) {
-    return wx.stopAccelerometer(object)
+  static stopAccelerometer(tt_object) {
+    return wx.stopAccelerometer(tt_object)
   }
 
-  static startAccelerometer(object) {
-    return wx.startAccelerometer(object)
+  static startAccelerometer(tt_object) {
+    return wx.startAccelerometer(tt_object)
   }
 
-  static getBatteryInfoSync(object) {
-    return wx.getBatteryInfoSync(object)
+  static getBatteryInfoSync(tt_object) {
+    return wx.getBatteryInfoSync(tt_object)
   }
 
-  static _getBatteryInfo(result) {
-    return wx._getBatteryInfo(result)
+  static _getBatteryInfo(tt_res) {
+    return wx._getBatteryInfo(tt_res)
   }
 
-  static getBatteryInfo(object) {
-    return wx.getBatteryInfo(object)
+  static getBatteryInfo(tt_object) {
+    return wx.getBatteryInfo(tt_object)
   }
 
   //
-  static getClipboardData(object) {
-    return wx.getClipboardData(object)
+  static getClipboardData(tt_object) {
+    return wx.getClipboardData(tt_object)
   }
 
-  static setClipboardData(object) {
-    return wx.setClipboardData(object)
+  static setClipboardData(tt_object) {
+    return wx.setClipboardData(tt_object)
   }
 
   static onCompassChange(callback) {
     return wx.onCompassChange(callback)
   }
 
-  static stopCompass(object) {
-    return wx.stopCompass(object)
+  static stopCompass(tt_object) {
+    return wx.stopCompass(tt_object)
   }
 
-  static startCompass(object) {
-    return wx.startCompass(object)
+  static startCompass(tt_object) {
+    return wx.startCompass(tt_object)
   }
 
-  static addPhoneContact(object) {
-    return wx.addPhoneContact(object)
+  static addPhoneContact(tt_object) {
+    return wx.addPhoneContact(tt_object)
   }
 
   static onGyroscopeChange(callback) {
     return wx.onGyroscopeChange(callback)
   }
 
-  static stopGyroscope(object) {
-    return wx.stopGyroscope(object)
+  static stopGyroscope(tt_object) {
+    return wx.stopGyroscope(tt_object)
   }
 
-  static startGyroscope(object) {
-    return wx.startGyroscope(object)
-  }
-
-  //
-  static onDeviceMotionChange(object) {
-    return wx.onDeviceMotionChange(object)
-  }
-
-  static stopDeviceMotionListening(object) {
-    return wx.stopDeviceMotionListening(object)
-  }
-
-  static startDeviceMotionListening(object) {
-    return wx.startDeviceMotionListening(object)
+  static startGyroscope(tt_object) {
+    return wx.startGyroscope(tt_object)
   }
 
   //
-  static getNetworkType(object) {
-    return wx.getNetworkType(object)
+  static onDeviceMotionChange(tt_object) {
+    return wx.onDeviceMotionChange(tt_object)
   }
 
-  static _network(res) {
-    return wx._network(res)
+  static stopDeviceMotionListening(tt_object) {
+    return wx.stopDeviceMotionListening(tt_object)
+  }
+
+  static startDeviceMotionListening(tt_object) {
+    return wx.startDeviceMotionListening(tt_object)
+  }
+
+  //
+  static getNetworkType(tt_object) {
+    return wx.getNetworkType(tt_object)
+  }
+
+  static _network(wx_res) {
+    return wx._network(wx_res)
   }
 
   static onNetworkStatusChange(callback) {
@@ -254,52 +254,52 @@ export default class tt {
   }
 
   //
-  static makePhoneCall(object) {
-    return wx.makePhoneCall(object)
+  static makePhoneCall(tt_object) {
+    return wx.makePhoneCall(tt_object)
   }
 
-  static scanCode(object) {
-    return wx.scanCode(object)
-  }
-
-  //
-  static vibrateLong(object) {
-    return wx.vibrateLong(object)
-  }
-
-  static vibrateShort(object) {
-    return wx.vibrateShort(object)
+  static scanCode(tt_object) {
+    return wx.scanCode(tt_object)
   }
 
   //
-  static onMemoryWarning(object) {
-    return wx.onMemoryWarning(object)
+  static vibrateLong(tt_object) {
+    return wx.vibrateLong(tt_object)
+  }
+
+  static vibrateShort(tt_object) {
+    return wx.vibrateShort(tt_object)
   }
 
   //
-  static setScreenBrightness(object) {
-    return wx.setScreenBrightness(object)
+  static onMemoryWarning(tt_object) {
+    return wx.onMemoryWarning(tt_object)
   }
 
-  static setKeepScreenOn(object) {
-    return wx.setKeepScreenOn(object)
+  //
+  static setScreenBrightness(tt_object) {
+    return wx.setScreenBrightness(tt_object)
   }
 
-  static onUserCaptureScreen(object) {
-    return wx.onUserCaptureScreen(object)
+  static setKeepScreenOn(tt_object) {
+    return wx.setKeepScreenOn(tt_object)
   }
 
-  static getScreenBrightness(object) {
-    return wx.getScreenBrightness(object)
+  static onUserCaptureScreen(tt_object) {
+    return wx.onUserCaptureScreen(tt_object)
+  }
+
+  static getScreenBrightness(tt_object) {
+    return wx.getScreenBrightness(tt_object)
   }
 
   // ///////////////// Ext //////////////
-  static getExtConfigSync(object) {
-    return wx.getExtConfigSync(object)
+  static getExtConfigSync(tt_object) {
+    return wx.getExtConfigSync(tt_object)
   }
 
-  static getExtConfig(object) {
-    return wx.getExtConfig(object)
+  static getExtConfig(tt_object) {
+    return wx.getExtConfig(tt_object)
   }
 
   // ////////////////// File //////////
@@ -376,8 +376,8 @@ export default class tt {
     return wx.removeSavedFile(wx_object)
   }
 
-  static getSavedFileInfo(object) {
-    return wx.getSavedFileInfo(object)
+  static getSavedFileInfo(tt_object) {
+    return wx.getSavedFileInfo(tt_object)
   }
 
   static getSavedFileList(tt_object) {
@@ -419,8 +419,8 @@ export default class tt {
     return wx.getSavedFileList(wx_object)
   }
 
-  static openDocument(object) {
-    return wx.openDocument(object)
+  static openDocument(tt_object) {
+    return wx.openDocument(tt_object)
   }
 
 
@@ -466,273 +466,248 @@ export default class tt {
     wx.saveFile(wx_object)
   }
 
-  static openLocation(object) {
-    return wx.openLocation(object)
+  static openLocation(tt_object) {
+    return wx.openLocation(tt_object)
   }
 
-  static getLocation(object) {
-    return wx.getLocation(object)
+  static getLocation(tt_object) {
+    return wx.getLocation(tt_object)
   }
 
-  static chooseLocation(object) {
-    return wx.chooseLocation(object)
+  static chooseLocation(tt_object) {
+    return wx.chooseLocation(tt_object)
   }
 
   // //////// Media ////////////////////
-  static createMapContext(object) {
-    return wx.createMapContext(object)
+  static createMapContext(tt_object) {
+    return wx.createMapContext(tt_object)
   }
 
-  static compressImage(object) {
-    return wx.compressImage(object)
+  static compressImage(tt_object) {
+    return wx.compressImage(tt_object)
   }
 
-  static saveImageToPhotosAlbum(object) {
-    return wx.saveImageToPhotosAlbum(object)
+  static saveImageToPhotosAlbum(tt_object) {
+    return wx.saveImageToPhotosAlbum(tt_object)
   }
 
-  static getImageInfo(object) {
-    return wx.getImageInfo(object)
+  static getImageInfo(tt_object) {
+    return wx.getImageInfo(tt_object)
   }
 
-  static previewImage(object) {
-    return wx.previewImage(object)
+  static previewImage(tt_object) {
+    return wx.previewImage(tt_object)
   }
 
-  static chooseImage(object) {
-    return wx.chooseImage(object)
+  static chooseImage(tt_object) {
+    return wx.chooseImage(tt_object)
   }
 
-  static saveVideoToPhotosAlbum(object) {
-    return wx.saveVideoToPhotosAlbum(object)
+  static saveVideoToPhotosAlbum(tt_object) {
+    return wx.saveVideoToPhotosAlbum(tt_object)
   }
 
-  static chooseVideo(object) {
-    return wx.chooseVideo(object)
+  static chooseVideo(tt_object) {
+    return wx.chooseVideo(tt_object)
   }
 
-  static stopVoice(object) {
-    return wx.stopVoice(object)
+  static stopVoice(tt_object) {
+    return wx.stopVoice(tt_object)
   }
 
-  static pauseVoice(object) {
-    return wx.pauseVoice(object)
+  static pauseVoice(tt_object) {
+    return wx.pauseVoice(tt_object)
   }
 
-  static playVoice(object) {
-    return wx.playVoice(object)
+  static playVoice(tt_object) {
+    return wx.playVoice(tt_object)
   }
 
-  static setInnerAudioOption(object) {
-    return wx.setInnerAudioOption(object)
+  static setInnerAudioOption(tt_object) {
+    return wx.setInnerAudioOption(tt_object)
   }
 
-  static getAvailableAudioSources(object) {
-    return wx.getAvailableAudioSources(object)
+  static getAvailableAudioSources(tt_object) {
+    return wx.getAvailableAudioSources(tt_object)
   }
 
-  static createInnerAudioContext(object) {
-    return wx.createInnerAudioContext(object)
+  static createInnerAudioContext(tt_object) {
+    return wx.createInnerAudioContext(tt_object)
   }
 
-  static createAudioContext(object) {
-    return wx.createAudioContext(object)
+  static createAudioContext(tt_object) {
+    return wx.createAudioContext(tt_object)
   }
 
-  static onBackgroundAudioStop(object) {
-    return wx.onBackgroundAudioStop(object)
+  static onBackgroundAudioStop(tt_object) {
+    return wx.onBackgroundAudioStop(tt_object)
   }
 
-  static onBackgroundAudioPause(object) {
-    return wx.onBackgroundAudioPause(object)
+  static onBackgroundAudioPause(tt_object) {
+    return wx.onBackgroundAudioPause(tt_object)
   }
 
-  static onBackgroundAudioPlay(object) {
-    return wx.onBackgroundAudioPlay(object)
+  static onBackgroundAudioPlay(tt_object) {
+    return wx.onBackgroundAudioPlay(tt_object)
   }
 
-  static stopBackgroundAudio(object) {
-    return wx.stopBackgroundAudio(object)
+  static stopBackgroundAudio(tt_object) {
+    return wx.stopBackgroundAudio(tt_object)
   }
 
-  static seekBackgroundAudio(object) {
-    return wx.seekBackgroundAudio(object)
+  static seekBackgroundAudio(tt_object) {
+    return wx.seekBackgroundAudio(tt_object)
   }
 
-  static pauseBackgroundAudio(object) {
-    return wx.pauseBackgroundAudio(object)
+  static pauseBackgroundAudio(tt_object) {
+    return wx.pauseBackgroundAudio(tt_object)
   }
 
-  static playBackgroundAudio(object) {
-    return wx.playBackgroundAudio(object)
+  static playBackgroundAudio(tt_object) {
+    return wx.playBackgroundAudio(tt_object)
   }
 
-  static getBackgroundAudioPlayerState(object) {
-    return wx.getBackgroundAudioPlayerState(object)
+  static getBackgroundAudioPlayerState(tt_object) {
+    return wx.getBackgroundAudioPlayerState(tt_object)
   }
 
-  static getBackgroundAudioManager(object) {
-    return wx.getBackgroundAudioManager(object)
+  static getBackgroundAudioManager(tt_object) {
+    return wx.getBackgroundAudioManager(tt_object)
   }
 
-  static createLivePusherContext(object) {
-    return wx.createLivePusherContext(object)
+  static createLivePusherContext(tt_object) {
+    return wx.createLivePusherContext(tt_object)
   }
 
-  static getRecorderManager(object) {
-    return wx.getRecorderManager(object)
+  static getRecorderManager(tt_object) {
+    return wx.getRecorderManager(tt_object)
   }
 
   // ////////////// Network ///////////////
-  static request(object) {
-    return wx.request(object)
+  static request(tt_object) {
+    return wx.request(tt_object)
   }
 
-  static downloadFile(object) {
-    return wx.downloadFile(object)
+  static downloadFile(tt_object) {
+    return wx.downloadFile(tt_object)
   }
 
-  static uploadFile(object) {
-    return wx.uploadFile(object)
+  static uploadFile(tt_object) {
+    return wx.uploadFile(tt_object)
   }
 
   //
-  static connectSocket(object) {
-    return wx.connectSocket(object)
+  static connectSocket(tt_object) {
+    return wx.connectSocket(tt_object)
   }
 
-  static onSocketError(object) {
-    return wx.onSocketError(object)
+  static onSocketError(tt_object) {
+    return wx.onSocketError(tt_object)
   }
 
-  static onSocketMessage(object) {
-    return wx.onSocketMessage(object)
+  static onSocketMessage(tt_object) {
+    return wx.onSocketMessage(tt_object)
   }
 
-  static onSocketClose(object) {
-    return wx.onSocketClose(object)
+  static onSocketClose(tt_object) {
+    return wx.onSocketClose(tt_object)
   }
 
-  static onSocketOpen(object) {
-    return wx.connectSocket(object)
+  static onSocketOpen(tt_object) {
+    return wx.connectSocket(tt_object)
   }
 
-  static sendSocketMessage(object) {
-    return wx.sendSocketMessage(object)
+  static sendSocketMessage(tt_object) {
+    return wx.sendSocketMessage(tt_object)
   }
 
-  static closeSocket(object) {
-    return wx.closeSocket(object)
+  static closeSocket(tt_object) {
+    return wx.closeSocket(tt_object)
   }
 
-  static offLocalServiceResolveFail(object) {
-    return wx.offLocalServiceResolveFail(object)
+  static offLocalServiceResolveFail(tt_object) {
+    return wx.offLocalServiceResolveFail(tt_object)
   }
 
-  static onLocalServiceResolveFail(object) {
-    return wx.onLocalServiceResolveFail(object)
+  static onLocalServiceResolveFail(tt_object) {
+    return wx.onLocalServiceResolveFail(tt_object)
   }
 
-  static offLocalServiceDiscoveryStop(object) {
-    return wx.offLocalServiceDiscoveryStop(object)
+  static offLocalServiceDiscoveryStop(tt_object) {
+    return wx.offLocalServiceDiscoveryStop(tt_object)
   }
 
-  static onLocalServiceDiscoveryStop(object) {
-    return wx.onLocalServiceDiscoveryStop(object)
+  static onLocalServiceDiscoveryStop(tt_object) {
+    return wx.onLocalServiceDiscoveryStop(tt_object)
   }
 
-  static offLocalServiceLost(object) {
-    return wx.offLocalServiceLost(object)
+  static offLocalServiceLost(tt_object) {
+    return wx.offLocalServiceLost(tt_object)
   }
 
-  static onLocalServiceLost(object) {
-    return wx.onLocalServiceLost(object)
+  static onLocalServiceLost(tt_object) {
+    return wx.onLocalServiceLost(tt_object)
   }
 
-  static offLocalServiceFound(object) {
-    return wx.offLocalServiceFound(object)
+  static offLocalServiceFound(tt_object) {
+    return wx.offLocalServiceFound(tt_object)
   }
 
-  static onLocalServiceFound(object) {
-    return wx.onLocalServiceFound(object)
+  static onLocalServiceFound(tt_object) {
+    return wx.onLocalServiceFound(tt_object)
   }
 
-  static stopLocalServiceDiscovery(object) {
-    return wx.stopLocalServiceDiscovery(object)
+  static stopLocalServiceDiscovery(tt_object) {
+    return wx.stopLocalServiceDiscovery(tt_object)
   }
 
-  static startLocalServiceDiscovery(object) {
-    return wx.startLocalServiceDiscovery(object)
+  static startLocalServiceDiscovery(tt_object) {
+    return wx.startLocalServiceDiscovery(tt_object)
   }
 
   // /////// Open Interface //////////
   static _checkSession() {
     const now = new Date().getTime()
 
-    return getApp().onekit_jscode && getApp().onekit_login && now <= getApp().onekit_login + 1000 * 60 * 60 * 24 * 3
+    return getApp().onekit_code && getApp().onekit_login && now <= getApp().onekit_login + 1000 * 60 * 60 * 24 * 3
   }
 
-  static checkSession(object) {
-    if (tt._checkSession()) {
-      if (object.success) {
-        object.success()
-      }
-      if (object.complete) {
-        object.complete()
-      }
-    } else {
-      if (object.fail) {
-        object.fail()
-      }
-      if (object.complete) {
-        object.complete()
-      }
-    }
-  }
-
-  static login(object) {
-    if (!object) {
-      wx.login(object)
+  static login(tt_object) {
+    if (!tt_object) {
       return
     }
-    const object2 = {}
-    object2.success = function (res) {
-      getApp().onekit_jscode = res.code
+    const wx_object = {}
+    wx_object.success = function (wx_res) {
+      getApp().onekit_code = wx_res.code
 
       getApp().onekit_login = new Date().getTime()
-      const result = {
-        code: res.code
+      const tt_res = {
+        code: wx_res.code
       }
-      if (object.success) {
-        object.success(result)
+      if (tt_object.success) {
+        tt_object.success(tt_res)
       }
-      if (object.complete) {
-        object.complete(result)
-      }
-    }
-    object2.fail = function (res) {
-      if (object.fail) {
-        object.fail(res)
-      }
-      if (object.complete) {
-        object.complete(res)
+      if (tt_object.complete) {
+        tt_object.complete(tt_res)
       }
     }
-    if (tt._checkSession()) {
-      object2.success({
+    wx_object.fail = function (wx_res) {
+      if (tt_object.fail) {
+        tt_object.fail(wx_res)
+      }
+      if (tt_object.complete) {
+        tt_object.complete(wx_res)
+      }
+    }
 
-        code: getApp().onekit_jscode
-      })
-    } else {
-      wx.login(object2)
-    }
+    wx.login(wx_object)
   }
 
   static _getUserInfo(data, callback) {
     tt.login({
-      success(res) {
-        console.log(res)
-        const code = res.code
+      success(wx_res) {
+        console.log(wx_res)
+        const code = wx_res.code
 
         const withCredentials = getApp().onekitwx.getuserinfo_withCredentials === true
 
@@ -748,32 +723,32 @@ export default class tt {
             withCredentials,
             data: JSON.stringify(data)
           },
-          success(res) {
-            callback(res.data)
+          success(wx_res) {
+            callback(wx_res.data)
           },
-          fail(res) {
-            console.log(res)
-            callback(res)
+          fail(wx_res) {
+            console.log(wx_res)
+            callback(wx_res)
           }
         })
       },
-      fail(res) {
-        console.log(res)
+      fail(wx_res) {
+        console.log(wx_res)
       }
 
     })
   }
 
-  static getUserInfo(object) {
-    getApp().onekitwx.getuserinfo_withCredentials = object.withCredentials
+  static getUserInfo(tt_object) {
+    getApp().onekitwx.getuserinfo_withCredentials = tt_object.withCredentials
 
     getApp().onekitwx.getuserinfo = (data) => {
-      tt._getUserInfo(data, (res) => {
-        if (object.success) {
-          object.success(res)
+      tt._getUserInfo(data, (wx_res) => {
+        if (tt_object.success) {
+          tt_object.success(wx_res)
         }
-        if (object.complete) {
-          object.complete(res)
+        if (tt_object.complete) {
+          tt_object.complete(wx_res)
         }
       })
     }
@@ -782,14 +757,14 @@ export default class tt {
     })
   }
 
-  static getOpenData(object) {
-    return wx.getOpenData(object)
+  static getOpenData(tt_object) {
+    return wx.getOpenData(tt_object)
   }
 
   static _getPhoneNumber(data, callback) {
     tt.login({
-      success: (res) => {
-        const code = res.code
+      success: (wx_res) => {
+        const code = wx_res.code
 
         const url = getApp().onekit_server + 'phonenumber'
         console.log(data, code)
@@ -803,53 +778,53 @@ export default class tt {
             data: JSON.stringify(data),
             code
           },
-          success(res) {
-            const data = res.data
+          success(wx_res) {
+            const data = wx_res.data
             callback(data)
           },
-          fail(res) {
-            console.log(res.data)
+          fail(wx_res) {
+            console.log(wx_res.data)
           }
         })
       }
     })
   }
 
-  static getPhoneNumber(object) {
+  static getPhoneNumber(tt_object) {
     getApp().onekitwx._bindgetphonenumber = (data) => {
-      tt._getPhoneNumber(data, (res) => {
-        if (object.success) {
-          object.success(res)
+      tt._getPhoneNumber(data, (wx_res) => {
+        if (tt_object.success) {
+          tt_object.success(wx_res)
         }
-        if (object.complete) {
-          object.complete(res)
+        if (tt_object.complete) {
+          tt_object.complete(wx_res)
         }
       })
     }
     wx.navigateTo({url: 'page/getphonenumber'})
   }
 
-  static navigateToMiniProgram(object) {
-    return wx.navigateToMiniProgram(object)
+  static navigateToMiniProgram(tt_object) {
+    return wx.navigateToMiniProgram(tt_object)
   }
 
-  static navigateBackMiniProgram(object) {
-    return wx.navigateBackMiniProgram(object)
+  static navigateBackMiniProgram(tt_object) {
+    return wx.navigateBackMiniProgram(tt_object)
   }
 
-  static getAccountInfoSync(object) {
-    return wx.getAccountInfoSync(object)
+  static getAccountInfoSync(tt_object) {
+    return wx.getAccountInfoSync(tt_object)
   }
 
-  static reportMonitor(object) {
-    return wx.reportMonitor(object)
+  static reportMonitor(tt_object) {
+    return wx.reportMonitor(tt_object)
   }
 
-  static reportAnalytics(object, eventName) {
-    return wx.reportAnalytics(object, eventName)
+  static reportAnalytics(tt_object, eventName) {
+    return wx.reportAnalytics(tt_object, eventName)
   }
 
-  static pay(object) {
+  static pay(tt_object) {
     const url = getApp().onekit_server + 'orderinfo'
     wx.request({
       url,
@@ -858,293 +833,293 @@ export default class tt {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       data: {
-        orderInfo: JSON.stringify(object.orderInfo)
+        orderInfo: JSON.stringify(tt_object.orderInfo)
       },
-      success(res) {
+      success(wx_res) {
         const data = {
-          out_trade_no: res.data.out_trade_no
+          out_trade_no: wx_res.data.out_trade_no
         }
         wx.requestPayment({
-          timeStamp: res.data.timeStamp,
-          nonceStr: res.data.nonceStr,
-          package: res.data.package,
-          signType: res.data.signType,
-          paySign: res.data.paySign,
+          timeStamp: wx_res.data.timeStamp,
+          nonceStr: wx_res.data.nonceStr,
+          package: wx_res.data.package,
+          signType: wx_res.data.signType,
+          paySign: wx_res.data.paySign,
           success() {
-            if (object.getOrderStatus) {
-              object.getOrderStatus(data)
+            if (tt_object.getOrderStatus) {
+              tt_object.getOrderStatus(data)
               console.log('ok')
             }
           },
-          fail(res) {
-            console.log(res)
+          fail(wx_res) {
+            console.log(wx_res)
           }
         })
       },
-      fail(res) {
-        console.log(res)
+      fail(wx_res) {
+        console.log(wx_res)
       }
     })
   }
 
-  static authorize(object) {
-    return wx.authorize(object)
+  static authorize(tt_object) {
+    return wx.authorize(tt_object)
   }
 
-  static openSetting(object) {
-    return wx.openSetting(object)
+  static openSetting(tt_object) {
+    return wx.openSetting(tt_object)
   }
 
-  static getSetting(object) {
-    return wx.getSetting(object)
+  static getSetting(tt_object) {
+    return wx.getSetting(tt_object)
   }
 
-  static chooseAddress(object) {
-    return wx.chooseAddress(object)
+  static chooseAddress(tt_object) {
+    return wx.chooseAddress(tt_object)
   }
 
-  static openCard(object) {
-    return wx.openCard(object)
+  static openCard(tt_object) {
+    return wx.openCard(tt_object)
   }
 
-  static addCard(object) {
-    return wx.addCard(object)
+  static addCard(tt_object) {
+    return wx.addCard(tt_object)
   }
 
-  static chooseInvoiceTitle(object) {
-    return wx.chooseInvoiceTitle(object)
+  static chooseInvoiceTitle(tt_object) {
+    return wx.chooseInvoiceTitle(tt_object)
   }
 
-  static chooseInvoice(object) {
-    return wx.chooseInvoice(object)
+  static chooseInvoice(tt_object) {
+    return wx.chooseInvoice(tt_object)
   }
 
-  static startSoterAuthentication(object) {
-    return wx.startSoterAuthentication(object)
+  static startSoterAuthentication(tt_object) {
+    return wx.startSoterAuthentication(tt_object)
   }
 
-  static checkIsSupportSoterAuthentication(object) {
-    return wx.checkIsSupportSoterAuthentication(object)
+  static checkIsSupportSoterAuthentication(tt_object) {
+    return wx.checkIsSupportSoterAuthentication(tt_object)
   }
 
-  static checkIsSoterEnrolledInDevice(object) {
-    return wx.checkIsSoterEnrolledInDevice(object)
+  static checkIsSoterEnrolledInDevice(tt_object) {
+    return wx.checkIsSoterEnrolledInDevice(tt_object)
   }
 
-  static getWeRunData(object) {
-    return wx.getWeRunData(object)
+  static getWeRunData(tt_object) {
+    return wx.getWeRunData(tt_object)
   }
 
   // //////// Router //////////////
-  static navigateBack(object) {
-    return wx.navigateBack(object)
+  static navigateBack(tt_object) {
+    return wx.navigateBack(tt_object)
   }
 
-  static switchTab(object) {
-    return wx.switchTab(object)
+  static switchTab(tt_object) {
+    return wx.switchTab(tt_object)
   }
 
-  static navigateTo(object) {
-    return wx.navigateTo(object)
+  static navigateTo(tt_object) {
+    return wx.navigateTo(tt_object)
   }
 
-  static reLaunch(object) {
-    return wx.reLaunch(object)
+  static reLaunch(tt_object) {
+    return wx.reLaunch(tt_object)
   }
 
-  static redirectTo(object) {
-    return wx.redirectTo(object)
+  static redirectTo(tt_object) {
+    return wx.redirectTo(tt_object)
   }
 
   // /////////// Share /////////////
-  static updateShareMenu(object) {
-    return wx.updateShareMenu(object)
+  static updateShareMenu(tt_object) {
+    return wx.updateShareMenu(tt_object)
   }
 
-  static showShareMenu(object) {
-    return wx.showShareMenu(object)
+  static showShareMenu(tt_object) {
+    return wx.showShareMenu(tt_object)
   }
 
-  static hideShareMenu(object) {
-    return wx.hideShareMenu(object)
+  static hideShareMenu(tt_object) {
+    return wx.hideShareMenu(tt_object)
   }
 
-  static getShareInfo(object) {
-    return wx.getShareInfo(object)
+  static getShareInfo(tt_object) {
+    return wx.getShareInfo(tt_object)
   }
 
   // ///////////// Storage //////////////
-  static getStorageInfoSync(object) {
-    return wx.getStorageInfoSync(object)
+  static getStorageInfoSync(tt_object) {
+    return wx.getStorageInfoSync(tt_object)
   }
 
-  static getStorageInfo(object) {
-    return wx.getStorageInfo(object)
+  static getStorageInfo(tt_object) {
+    return wx.getStorageInfo(tt_object)
   }
 
-  static clearStorageSync(object) {
-    return wx.clearStorageSync(object)
+  static clearStorageSync(tt_object) {
+    return wx.clearStorageSync(tt_object)
   }
 
-  static clearStorage(object) {
-    return wx.clearStorage(object)
+  static clearStorage(tt_object) {
+    return wx.clearStorage(tt_object)
   }
 
-  static removeStorageSync(object) {
-    return wx.removeStorageSync(object)
+  static removeStorageSync(tt_object) {
+    return wx.removeStorageSync(tt_object)
   }
 
-  static removeStorage(object) {
-    return wx.removeStorage(object)
+  static removeStorage(tt_object) {
+    return wx.removeStorage(tt_object)
   }
 
   static setStorageSync(key, value) {
     return wx.setStorageSync(key, value)
   }
 
-  static setStorage(object) {
-    return wx.setStorage(object)
+  static setStorage(tt_object) {
+    return wx.setStorage(tt_object)
   }
 
   static getStorageSync(key) {
     return wx.getStorageSync(key)
   }
 
-  static getStorage(object) {
-    return wx.getStorage(object)
+  static getStorage(tt_object) {
+    return wx.getStorage(tt_object)
   }
 
   // //////////// UI ////////////////
-  static showActionSheet(object) {
-    return wx.showActionSheet(object)
+  static showActionSheet(tt_object) {
+    return wx.showActionSheet(tt_object)
   }
 
-  // static redirectTo(object) { return wx.redirectTo(object) }
-  // static redirectTo(object) { return wx.redirectTo(object) }
-  static hideLoading(object) {
-    return wx.hideLoading(object)
+  // static redirectTo(tt_object) { return wx.redirectTo(tt_object) }
+  // static redirectTo(tt_object) { return wx.redirectTo(tt_object) }
+  static hideLoading(tt_object) {
+    return wx.hideLoading(tt_object)
   }
 
-  static showLoading(object) {
-    return wx.showLoading(object)
+  static showLoading(tt_object) {
+    return wx.showLoading(tt_object)
   }
 
-  static hideToast(object) {
-    return wx.hideToast(object)
+  static hideToast(tt_object) {
+    return wx.hideToast(tt_object)
   }
 
-  static showToast(object) {
-    return wx.showToast(object)
+  static showToast(tt_object) {
+    return wx.showToast(tt_object)
   }
 
-  static showModal(object) {
-    return wx.showModal(object)
+  static showModal(tt_object) {
+    return wx.showModal(tt_object)
   }
 
-  static setNavigationBarColor(object) {
-    return wx.setNavigationBarColor(object)
+  static setNavigationBarColor(tt_object) {
+    return wx.setNavigationBarColor(tt_object)
   }
 
-  static hideNavigationBarLoading(object) {
-    return wx.hideNavigationBarLoading(object)
+  static hideNavigationBarLoading(tt_object) {
+    return wx.hideNavigationBarLoading(tt_object)
   }
 
-  static showNavigationBarLoading(object) {
-    return wx.showNavigationBarLoading(object)
+  static showNavigationBarLoading(tt_object) {
+    return wx.showNavigationBarLoading(tt_object)
   }
 
-  static setNavigationBarTitle(object) {
-    return wx.setNavigationBarTitle(object)
+  static setNavigationBarTitle(tt_object) {
+    return wx.setNavigationBarTitle(tt_object)
   }
 
-  static setBackgroundTextStyle(object) {
-    return wx.setBackgroundTextStyle(object)
+  static setBackgroundTextStyle(tt_object) {
+    return wx.setBackgroundTextStyle(tt_object)
   }
 
-  static setBackgroundColor(object) {
-    return wx.setBackgroundColor(object)
+  static setBackgroundColor(tt_object) {
+    return wx.setBackgroundColor(tt_object)
   }
 
-  static setTabBarItem(object) {
-    return wx.setTabBarItem(object)
+  static setTabBarItem(tt_object) {
+    return wx.setTabBarItem(tt_object)
   }
 
-  static setTabBarStyle(object) {
-    return wx.setTabBarStyle(object)
+  static setTabBarStyle(tt_object) {
+    return wx.setTabBarStyle(tt_object)
   }
 
-  static hideTabBar(object) {
-    return wx.hideTabBar(object)
+  static hideTabBar(tt_object) {
+    return wx.hideTabBar(tt_object)
   }
 
-  static showTabBar(object) {
-    return wx.showTabBar(object)
+  static showTabBar(tt_object) {
+    return wx.showTabBar(tt_object)
   }
 
-  static hideTabBarRedDot(object) {
-    return wx.hideTabBarRedDot(object)
+  static hideTabBarRedDot(tt_object) {
+    return wx.hideTabBarRedDot(tt_object)
   }
 
   static showTabBarRedDot(tt_object) {
     return wx.showTabBarRedDot(tt_object)
   }
 
-  static removeTabBarBadge(object) {
-    return wx.removeTabBarBadge(object)
+  static removeTabBarBadge(tt_object) {
+    return wx.removeTabBarBadge(tt_object)
   }
 
-  static setTabBarBadge(object) {
-    return wx.setTabBarBadge(object)
+  static setTabBarBadge(tt_object) {
+    return wx.setTabBarBadge(tt_object)
   }
 
-  static loadFontFace(object) {
-    return wx.loadFontFace(object)
+  static loadFontFace(tt_object) {
+    return wx.loadFontFace(tt_object)
   }
 
-  static stopPullDownRefresh(object) {
-    return wx.stopPullDownRefresh(object)
+  static stopPullDownRefresh(tt_object) {
+    return wx.stopPullDownRefresh(tt_object)
   }
 
-  static startPullDownRefresh(object) {
-    return wx.startPullDownRefresh(object)
+  static startPullDownRefresh(tt_object) {
+    return wx.startPullDownRefresh(tt_object)
   }
 
-  static pageScrollTo(object) {
-    return wx.pageScrollTo(object)
+  static pageScrollTo(tt_object) {
+    return wx.pageScrollTo(tt_object)
   }
 
-  static setTopBarText(object) {
-    return wx.setTopBarText(object)
+  static setTopBarText(tt_object) {
+    return wx.setTopBarText(tt_object)
   }
 
-  static nextTick(object) {
-    return wx.nextTick(object)
+  static nextTick(tt_object) {
+    return wx.nextTick(tt_object)
   }
 
-  static getMenuButtonBoundingClientRect(object) {
-    return wx.getMenuButtonBoundingClientRect(object)
+  static getMenuButtonBoundingClientRect(tt_object) {
+    return wx.getMenuButtonBoundingClientRect(tt_object)
   }
 
-  static offWindowResize(object) {
-    return wx.offWindowResize(object)
+  static offWindowResize(tt_object) {
+    return wx.offWindowResize(tt_object)
   }
 
-  static onWindowResize(object) {
-    return wx.onWindowResize(object)
+  static onWindowResize(tt_object) {
+    return wx.onWindowResize(tt_object)
   }
 
   // //////////// WXML ///////////////
-  static createSelectorQuery(object) {
-    return wx.createSelectorQuery(object)
+  static createSelectorQuery(tt_object) {
+    return wx.createSelectorQuery(tt_object)
   }
 
-  static createIntersectionObserver(object) {
-    return wx.createIntersectionObserver(object)
+  static createIntersectionObserver(tt_object) {
+    return wx.createIntersectionObserver(tt_object)
   }
 
   // ///////////////////////////////////
-  static hideKeyboard(object) {
-    return wx.hideKeyboard(object)
+  static hideKeyboard(tt_object) {
+    return wx.hideKeyboard(tt_object)
   }
 
   // /////////////////////////////////
@@ -1270,6 +1245,6 @@ for (const api of ['ocrIdCard', 'ocrBankCard', 'ocrDrivingLicense', 'ocrVehicleL
 }
 
 function ai_init(api) {
-  tt.ai[api] = (object) => swan_ai.run(api, object)
+  tt.ai[api] = (tt_object) => swan_ai.run(api, tt_object)
 }
 */
