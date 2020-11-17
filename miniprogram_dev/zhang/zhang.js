@@ -1,5 +1,5 @@
 import {tt,OnekitPage} from '../toutiao2weixin/index'
-const SERVER = 'https://localhost:41443'
+const SERVER = 'https://192.168.22.172:41443'
 const API = `${SERVER}/`
 const header = { 'content-type': "application/x-www-form-urlencoded" }
 var code, anonymous_code, openid, session_key, unionid, anonymous_openid, access_token;

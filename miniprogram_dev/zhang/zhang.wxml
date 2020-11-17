@@ -1,9 +1,9 @@
+<button bindtap="getAccessToken_tap">getAccessToken</button>
 <button bindtap="tt_login_tap">tt.login</button>
 <button bindtap="code2Session1_tap">code2Session(code)</button>
 <button bindtap="code2Session2_tap">code2Session(anonymousCode)</button>
 <button bindtap="tt_getUserInfo_tap">tt.getUserInfo</button>
 <button bindgetphonenumber ="button_getphonenumber" open-type="getPhoneNumber">open-type=getPhoneNumber</button>
-<button bindtap="getAccessToken_tap">getAccessToken</button>
 <button bindtap="setUserStorage_tap">setUserStorage</button>
 <button bindtap="removeUserStorage_tap">removeUserStorage</button>
 <button bindtap="createQRCode_tap">createQRCode</button>

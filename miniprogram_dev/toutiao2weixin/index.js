@@ -979,7 +979,7 @@ var tt = function () {
   };
 
   tt.login = function login(tt_object) {
-    if (!tt_object) {
+    if (tt_object == null) {
       return;
     }
     var tt_success = tt_object.success;
@@ -989,7 +989,10 @@ var tt = function () {
     // //////////////////////
     if (tt._checkSession()) {
       var tt_res = {
-        code: getApp().onekit_code
+        anonymousCode: getApp().onekit_code,
+        code: getApp().onekit_code,
+        errMsg: 'login:ok',
+        isLogin: true
       };
       if (tt_success) {
         tt_success(tt_res);
@@ -1006,7 +1009,10 @@ var tt = function () {
 
       getApp().onekit_login = new Date().getTime();
       var tt_res = {
-        code: wx_res.code
+        anonymousCode: wx_res.code,
+        code: wx_res.code,
+        errMsg: 'login:ok',
+        isLogin: true
       };
       if (tt_success) {
         tt_success(tt_res);
@@ -1016,11 +1022,20 @@ var tt = function () {
       }
     };
     wx_object.fail = function (wx_res) {
+      getApp().onekit_code = wx_res.code;
+
+      getApp().onekit_login = new Date().getTime();
+      var tt_res = {
+        anonymousCode: wx_res.code,
+        code: wx_res.code,
+        errMsg: 'login:false',
+        isLogin: true
+      };
       if (tt_fail) {
-        tt_fail(wx_res);
+        tt_fail(tt_res);
       }
       if (tt_complete) {
-        tt_complete(wx_res);
+        tt_complete(tt_res);
       }
     };
     wx.login(wx_object);
@@ -1079,9 +1094,9 @@ var tt = function () {
         }
       });
     };
-    wx.navigateTo({
-      url: '/onekitwx/page/getuserinfo/getuserinfo'
-    });
+    // wx.navigateTo({
+    //   url: '/onekitwx/page/getuserinfo/getuserinfo'
+    // })
   };
 
   tt.getOpenData = function getOpenData(tt_object) {

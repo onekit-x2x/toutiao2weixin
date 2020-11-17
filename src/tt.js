@@ -6,6 +6,7 @@ import LivePlayerContext from './api/LivePlayerContext'
 import VideoContext from './api/VideoContext'
 import FileSystemManager from './api/FileSystemManager'
 import OneKit from './js/OneKit'
+import { data } from 'autoprefixer'
 
 export default class tt {
   static get env() {
@@ -672,7 +673,7 @@ export default class tt {
   }
 
   static login(tt_object) {
-    if (tt_object==null) {
+    if (tt_object == null) {
       return
     }
     const tt_success = tt_object.success
@@ -682,7 +683,10 @@ export default class tt {
     // //////////////////////
     if (tt._checkSession()) {
       const tt_res = {
-        code: getApp().onekit_code
+        anonymousCode: getApp().onekit_code,
+        code: getApp().onekit_code,
+        errMsg: 'login:ok',
+        isLogin: true
       }
       if (tt_success) {
         tt_success(tt_res)
@@ -699,7 +703,10 @@ export default class tt {
 
       getApp().onekit_login = new Date().getTime()
       const tt_res = {
-        code: wx_res.code
+        anonymousCode: wx_res.code,
+        code: wx_res.code,
+        errMsg: 'login:ok',
+        isLogin: true
       }
       if (tt_success) {
         tt_success(tt_res)
@@ -709,11 +716,20 @@ export default class tt {
       }
     }
     wx_object.fail = function (wx_res) {
+      getApp().onekit_code = wx_res.code
+
+      getApp().onekit_login = new Date().getTime()
+      const tt_res = {
+        anonymousCode: wx_res.code,
+        code: wx_res.code,
+        errMsg: 'login:false',
+        isLogin: true
+      }
       if (tt_fail) {
-        tt_fail(wx_res)
+        tt_fail(tt_res)
       }
       if (tt_complete) {
-        tt_complete(wx_res)
+        tt_complete(tt_res)
       }
     }
     wx.login(wx_object)
@@ -763,6 +779,52 @@ export default class tt {
     // ///////
     getApp().onekit_getuserinfo_withCredentials = tt_withCredentials
 
+    // const wx_object = {}
+    // wx_object.success (data, (wx_res) => {
+    //   getApp().onekit_code = wx_res.code
+    //   const tt_res = {
+    //     errMsg: 'getuserinfo:ok',
+    //     rawData: data,
+    //     userinfo: {
+    //       avatartar:'',
+    //       nickname:'',
+    //       gender:0,
+    //       city:'',
+    //       province:'',
+    //       country:'',
+    //       language:''
+    //     },
+    //     // if (tt_withCredentials) {
+    //     //   tt_res.call({
+    //     //     signature:'',
+    //     //     encryptedData:{
+    //     //       //
+    //     //     },
+    //     //     lv:''
+    //     //   })
+    //     // }
+    //   }
+    //   if (tt_success) {
+    //     tt_success(tt_res)
+    //   }
+    //   if (tt_complete) {
+    //     tt_complete(tt_res)
+    //   }
+    // },
+
+    // wx_object.fail = function (wx_res) {
+    //   getApp().onekit_code = wx_res.code
+    //   const tt_res = {
+    //     errMsg: 'getuserinfo::false',
+    //   }
+    //   if (tt_fail) {
+    //     tt_fail(tt_res)
+    //   }
+    //   if (tt_complete) {
+    //     tt_complete(tt_res)
+    //   }
+    // }
+
     getApp().onekit_getuserinfo = (data) => {
       tt._getUserInfo(data, (wx_res) => {
         if (tt_success) {
@@ -775,6 +837,9 @@ export default class tt {
     }
     wx.navigateTo({
       url: '/onekitwx/page/getuserinfo/getuserinfo'
+    })
+    wx.getUserInfo({
+
     })
   }
 
