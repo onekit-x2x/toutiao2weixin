@@ -975,7 +975,6 @@ var tt = function () {
 
   tt._checkSession = function _checkSession() {
     var now = new Date().getTime();
-
     return getApp().onekit_code && getApp().onekit_login && now <= getApp().onekit_login + 1000 * 60 * 60 * 24 * 3;
   };
 
@@ -983,6 +982,24 @@ var tt = function () {
     if (!tt_object) {
       return;
     }
+    var tt_success = tt_object.success;
+    var tt_fail = tt_object.fail;
+    var tt_complete = tt_object.complete;
+    tt_object = null;
+    // //////////////////////
+    if (tt._checkSession()) {
+      var tt_res = {
+        code: getApp().onekit_code
+      };
+      if (tt_success) {
+        tt_success(tt_res);
+      }
+      if (tt_complete) {
+        tt_complete(tt_res);
+      }
+      return;
+    }
+
     var wx_object = {};
     wx_object.success = function (wx_res) {
       getApp().onekit_code = wx_res.code;
@@ -991,22 +1008,21 @@ var tt = function () {
       var tt_res = {
         code: wx_res.code
       };
-      if (tt_object.success) {
-        tt_object.success(tt_res);
+      if (tt_success) {
+        tt_success(tt_res);
       }
-      if (tt_object.complete) {
-        tt_object.complete(tt_res);
+      if (tt_complete) {
+        tt_complete(tt_res);
       }
     };
     wx_object.fail = function (wx_res) {
-      if (tt_object.fail) {
-        tt_object.fail(wx_res);
+      if (tt_fail) {
+        tt_fail(wx_res);
       }
-      if (tt_object.complete) {
-        tt_object.complete(wx_res);
+      if (tt_complete) {
+        tt_complete(wx_res);
       }
     };
-
     wx.login(wx_object);
   };
 
@@ -1016,7 +1032,7 @@ var tt = function () {
         console.log(wx_res);
         var code = wx_res.code;
 
-        var withCredentials = getApp().onekitwx.getuserinfo_withCredentials === true;
+        var withCredentials = getApp().onekit_getuserinfo_withCredentials === true;
 
         var url = getApp().onekit_server + 'userinfo';
         wx.request({
@@ -1046,15 +1062,20 @@ var tt = function () {
   };
 
   tt.getUserInfo = function getUserInfo(tt_object) {
-    getApp().onekitwx.getuserinfo_withCredentials = tt_object.withCredentials;
+    var tt_withCredentials = tt_object.withCredentials;
+    var tt_success = tt_object.success;
+    // const tt_fail = tt_object.fail
+    var tt_complete = tt_object.complete;
+    // ///////
+    getApp().onekit_getuserinfo_withCredentials = tt_withCredentials;
 
-    getApp().onekitwx.getuserinfo = function (data) {
+    getApp().onekit_getuserinfo = function (data) {
       tt._getUserInfo(data, function (wx_res) {
-        if (tt_object.success) {
-          tt_object.success(wx_res);
+        if (tt_success) {
+          tt_success(wx_res);
         }
-        if (tt_object.complete) {
-          tt_object.complete(wx_res);
+        if (tt_complete) {
+          tt_complete(wx_res);
         }
       });
     };
@@ -1097,13 +1118,18 @@ var tt = function () {
   };
 
   tt.getPhoneNumber = function getPhoneNumber(tt_object) {
-    getApp().onekitwx._bindgetphonenumber = function (data) {
+    var tt_success = tt_object.success;
+    // const tt_fail = tt_object.fail
+    var tt_complete = tt_object.complete;
+    tt_object = null;
+    //
+    getApp().onekit__bindgetphonenumber = function (data) {
       tt._getPhoneNumber(data, function (wx_res) {
-        if (tt_object.success) {
-          tt_object.success(wx_res);
+        if (tt_success) {
+          tt_success(wx_res);
         }
-        if (tt_object.complete) {
-          tt_object.complete(wx_res);
+        if (tt_complete) {
+          tt_complete(wx_res);
         }
       });
     };

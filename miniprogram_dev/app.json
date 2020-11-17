@@ -2,7 +2,9 @@
   "pages": [
     "zhang/zhang",
     "wang/wang",
-    "li/li"
+    "li/li",
+    "new-tabs/new-tabs",
+    "yang/yang"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -25,5 +27,5 @@
     "onekit-video": "toutiao2weixin/ui/video/video",
     "onekit-view": "toutiao2weixin/ui/view/view"
   },
-  "sitemapLocation": "sitemap72.json"
+  "sitemapLocation": "sitemap26.json"
 }
