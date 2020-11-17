@@ -672,7 +672,7 @@ export default class tt {
   }
 
   static login(tt_object) {
-    if (!tt_object) {
+    if (tt_object==null) {
       return
     }
     const tt_success = tt_object.success
