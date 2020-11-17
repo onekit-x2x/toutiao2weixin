@@ -1,0 +1,233 @@
+page{
+  --onekit-REM:32rpx;
+}
+[style*="flex-direction:column"]>view{
+  flex: auto !important;
+}
+.onekit-picker-view{
+width:100%;
+display:flex;
+}
+
+
+@font-face{
+  font-weight:normal;
+  font-style:normal;
+  font-family:"onekit-icon";
+  src:url('data:application/octet-stream;base64,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') format('truetype');
+}
+[class^="onekit-icon-"],
+[class*=" onekit-icon-"]{
+  display:inline-block;
+  vertical-align:middle;
+  font:normal normal normal 14px/1 "onekit-icon";
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+}
+[class^="onekit-icon-"]:before,
+[class*=" onekit-icon-"]:before{
+  display:inline-block;
+  margin-left:.2em;
+  margin-right:.2em;
+}
+
+.onekit-icon-download:before{
+  content:"\e60a";
+}
+.onekit-icon-info:before{
+  content:"\e611";
+}
+.onekit-icon-safe-success:before{
+  content:"\EA04";
+}
+.onekit-icon-safe-warn:before{
+  content:"\EA05";
+}
+.onekit-icon-success:before{
+  content:"\e60d";
+}
+.onekit-icon-success-circle:before{
+  content:"\EA07";
+}
+.onekit-icon-success_no_circle:before{
+  content:"\e60c";
+}
+.onekit-icon-waiting:before{
+  content:"\e60e";
+}
+.onekit-icon-waiting-circle:before{
+  content:"\EA0A";
+}
+.onekit-icon-warn:before{
+  content:"\e610";
+}
+.onekit-icon-info_circle:before{
+  content:"\EA0C";
+}
+.onekit-icon-cancel:before{
+  content:"\e60f";
+}
+.onekit-icon-search:before{
+  content:"\e608";
+}
+.onekit-icon-clear:before{
+  content:"\e60b";
+}
+.onekit-icon-back:before{
+  content:"\EA10";
+}
+.onekit-icon-delete:before{
+  content:"\EA11";
+}
+[class^="onekit-icon_"]:before{color: rebeccapurple;}
+[class^="onekit-icon_"]:before{
+  margin:0;
+}
+.onekit-icon-success{
+  font-size:23px;
+  color:#F95959;
+}
+.onekit-icon-waiting{
+  font-size:23px;
+  color:#50ABF9;
+}
+.onekit-icon-warn{
+  font-size:23px;
+  color:#f5a623;
+}
+.onekit-icon-info{
+  font-size:23px;
+  color:#CACACA;
+}
+.onekit-icon-success-circle{
+  font-size:23px;
+  color:#09BB07;
+}
+.onekit-icon-success_no_circle{
+  font-size:23px;
+  color:#F95959;
+}
+.onekit-icon-waiting-circle{
+  font-size:23px;
+  color:#10AEFF;
+}
+.onekit-icon-circle{
+  font-size:23px;
+  color:#C9C9C9;
+}
+.onekit-icon-download{
+  font-size:23px;
+  color:#222222;
+}
+.onekit-icon-info_circle{
+  font-size:23px;
+  color:#09BB07;
+}
+.onekit-icon-safe-success{
+  color:#09BB07;
+}
+.onekit-icon-safe-warn{
+  color:#FFBE00;
+}
+.onekit-icon-cancel{
+  color:#222222;
+  font-size:22px;
+}
+.onekit-icon-search{
+  color:#222222;
+  font-size:14px;
+}
+.onekit-icon-clear{
+  color:#F95959;
+  font-size:14px;
+}
+.onekit-icon-delete.onekit-icon_gallery-delete{
+  color:#FFFFFF;
+  font-size:22px;
+}
+.onekit-icon_msg{
+  font-size:93px;
+}
+.onekit-icon_msg.onekit-icon-warn{
+  color:#F76260;
+}
+.onekit-icon_msg-primary{
+  font-size:93px;
+}
+.onekit-icon_msg-primary.onekit-icon-warn{
+  color:#FFBE00;
+}
+
+/*
+.wx-icon-success:before{
+  color:#F85959;
+  }
+  .wx-icon-success_no_circle:before{
+  color:#F85959;
+  }
+  .wx-icon-info:before{
+    color:#CACACA;
+  }
+ .wx-icon-warn:before{
+    color:#f5a623;
+  }
+  .wx-icon-clear:before{
+    color:#f95959;
+  }*/
+  /**/
+wx-switch .wx-switch-input.wx-switch-input-checked {
+  border-color: #F85959;
+  background-color: #F85959;
+}
+/**/
+button[type=primary] {
+    color: rgba(255,255,255,1);
+    border-color: rgba(248,89,89,1);
+    background-color: rgba(248,89,89,1);
+}
+[type=primary].button-hover{
+color:rgba(255,255,255,0.6);
+background-color:rgba(222,79,79,1);
+
+}
+button[loading][type=primary] {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(222,79,79,1);
+}
+button[disabled][type=primary] {
+    background-color: rgba(252,192,193,1);
+    color: rgba(255,255,255,0.4);
+}
+button[loading][type=default] {
+    color: rgba(34,34,34,0.6);
+    background-color: rgba(219,220,220,1);
+    border-color: rgba(216,216,216,1);
+}
+button[size=mini] {
+    display: inline-block;
+    line-height: 2.3;
+    font-size: 14px;
+    padding: 0 1.34em;
+}
+
+wx-checkbox .wx-checkbox-input{
+  margin-right:5px;
+  -webkit-application:none;
+  outline:0;
+  border:1px solid #f85959;
+  border-radius:100%;
+  width:22px;
+  height:22px;
+  position:relative;
+}
+wx-checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+color:#FFFFFF;
+background-color:#f85959;
+}
+wx-radio .wx-radio-input.wx-radio-input-checked{
+  color:#FFFFFF;
+background-color:#f85959;
+  border:1px solid #f85959;
+
+}
