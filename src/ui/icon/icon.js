@@ -10,7 +10,7 @@ Component({
   },
   properties: {
     type: {type: String, value: ''},
-    size: {type: Number, value: 23},
+    size: {type: Number, value: 24},
     color: {type: String, value: ''},
 
   }

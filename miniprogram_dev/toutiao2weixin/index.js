@@ -285,8 +285,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// import { data } from 'autoprefixer'
-
 var tt = function () {
   function tt() {
     _classCallCheck(this, tt);
@@ -1142,9 +1140,9 @@ var tt = function () {
         }
       });
     };
-    // wx.navigateTo({
-    //   url: '/onekitwx/page/getuserinfo/getuserinfo'
-    // })
+    wx.navigateTo({
+      url: '/onekitwx/page/getuserinfo/getuserinfo'
+    });
     wx.getUserInfo({});
   };
 

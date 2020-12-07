@@ -28,8 +28,8 @@ display:flex;
 [class^="onekit-icon-"]:before,
 [class*=" onekit-icon-"]:before{
   display:inline-block;
-  margin-left:.2em;
-  margin-right:.2em;
+  /* margin-left:.2em;
+  margin-right:.2em; */
 }
 
 .onekit-icon-download:before{
