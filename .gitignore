@@ -12,3 +12,4 @@ miniprogram_dist
 node_modules
 coverage
 .DS_Store
+miniprogram_dev/toutiao2weixin/index.js
