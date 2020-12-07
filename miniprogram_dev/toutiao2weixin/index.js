@@ -285,6 +285,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// import { data } from 'autoprefixer'
+
 var tt = function () {
   function tt() {
     _classCallCheck(this, tt);
@@ -1084,6 +1086,52 @@ var tt = function () {
     // ///////
     getApp().onekit_getuserinfo_withCredentials = tt_withCredentials;
 
+    // const wx_object = {}
+    // wx_object.success (data, (wx_res) => {
+    //   getApp().onekit_code = wx_res.code
+    //   const tt_res = {
+    //     errMsg: 'getuserinfo:ok',
+    //     rawData: data,
+    //     userinfo: {
+    //       avatartar:'',
+    //       nickname:'',
+    //       gender:0,
+    //       city:'',
+    //       province:'',
+    //       country:'',
+    //       language:''
+    //     },
+    //     // if (tt_withCredentials) {
+    //     //   tt_res.call({
+    //     //     signature:'',
+    //     //     encryptedData:{
+    //     //       //
+    //     //     },
+    //     //     lv:''
+    //     //   })
+    //     // }
+    //   }
+    //   if (tt_success) {
+    //     tt_success(tt_res)
+    //   }
+    //   if (tt_complete) {
+    //     tt_complete(tt_res)
+    //   }
+    // },
+
+    // wx_object.fail = function (wx_res) {
+    //   getApp().onekit_code = wx_res.code
+    //   const tt_res = {
+    //     errMsg: 'getuserinfo::false',
+    //   }
+    //   if (tt_fail) {
+    //     tt_fail(tt_res)
+    //   }
+    //   if (tt_complete) {
+    //     tt_complete(tt_res)
+    //   }
+    // }
+
     getApp().onekit_getuserinfo = function (data) {
       tt._getUserInfo(data, function (wx_res) {
         if (tt_success) {
@@ -1097,6 +1145,7 @@ var tt = function () {
     // wx.navigateTo({
     //   url: '/onekitwx/page/getuserinfo/getuserinfo'
     // })
+    wx.getUserInfo({});
   };
 
   tt.getOpenData = function getOpenData(tt_object) {
