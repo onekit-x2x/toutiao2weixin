@@ -1710,6 +1710,8 @@ exports.default = tt;
 
 exports.__esModule = true;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var CanvasContext = function () {
@@ -1986,6 +1988,36 @@ var CanvasContext = function () {
   CanvasContext.prototype.closePath = function closePath() {
     return this.weixinCanvasContext.closePath();
   };
+
+  _createClass(CanvasContext, [{
+    key: "font",
+    set: function set(font) {
+      this.weixinCanvasContext.font = font;
+    }
+
+    // toutiao is not support
+
+    // set lineWidth(lineWidth) {
+    //   this.weixinCanvasContext.lineWidth = lineWidth
+    // }
+
+    // set textAlign(textAlign) {
+    //   this.weixinCanvasContext.textAlign = textAlign
+    // }
+
+    // set textBaseline(textBaseline) {
+    //   this.weixinCanvasContext.textBaseline = textBaseline
+    // }
+
+    // set fillStyle(fillStyle) {
+    //   this.weixinCanvasContext.fillStyle = fillStyle
+    // }
+
+    // set lineCap(lineCap) {
+    //   this.weixinCanvasContext.lineCap = lineCap
+    // }
+
+  }]);
 
   return CanvasContext;
 }();

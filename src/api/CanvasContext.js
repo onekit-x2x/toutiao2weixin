@@ -150,4 +150,30 @@ export default class CanvasContext {
   closePath() {
     return this.weixinCanvasContext.closePath()
   }
+
+  set font(font) {
+    this.weixinCanvasContext.font = font
+  }
+
+  // toutiao is not support
+
+  // set lineWidth(lineWidth) {
+  //   this.weixinCanvasContext.lineWidth = lineWidth
+  // }
+
+  // set textAlign(textAlign) {
+  //   this.weixinCanvasContext.textAlign = textAlign
+  // }
+
+  // set textBaseline(textBaseline) {
+  //   this.weixinCanvasContext.textBaseline = textBaseline
+  // }
+
+  // set fillStyle(fillStyle) {
+  //   this.weixinCanvasContext.fillStyle = fillStyle
+  // }
+
+  // set lineCap(lineCap) {
+  //   this.weixinCanvasContext.lineCap = lineCap
+  // }
 }
