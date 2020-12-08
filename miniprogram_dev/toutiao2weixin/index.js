@@ -259,21 +259,15 @@ exports.__esModule = true;
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /* eslint-disable camelcase */
 /* eslint-disable max-len */
 /* eslint-disable no-console */
+// import CanvasContext from './api/CanvasContext'
+// import LivePlayerContext from './api/LivePlayerContext'
 
 
-var _CanvasContext = __webpack_require__(15);
-
-var _CanvasContext2 = _interopRequireDefault(_CanvasContext);
-
-var _LivePlayerContext = __webpack_require__(16);
-
-var _LivePlayerContext2 = _interopRequireDefault(_LivePlayerContext);
-
-var _VideoContext = __webpack_require__(17);
+var _VideoContext = __webpack_require__(15);
 
 var _VideoContext2 = _interopRequireDefault(_VideoContext);
 
-var _FileSystemManager = __webpack_require__(18);
+var _FileSystemManager = __webpack_require__(16);
 
 var _FileSystemManager2 = _interopRequireDefault(_FileSystemManager);
 
@@ -367,11 +361,13 @@ var tt = function () {
   };
 
   tt.createCanvasContext = function createCanvasContext(canvasId) {
-    return new _CanvasContext2.default(wx.createCanvasContext(canvasId));
+    // return new CanvasContext(wx.createCanvasContext(canvasId))
+    return wx.createCanvasContext(canvasId);
   };
 
   tt.createLivePlayerContext = function createLivePlayerContext(livePlayerId) {
-    return new _LivePlayerContext2.default(wx.createLivePlayerContext(livePlayerId));
+    // return new LivePlayerContext(wx.createLivePlayerContext(livePlayerId))
+    return wx.createLivePlayerContext(livePlayerId);
   };
 
   tt.createVideoContext = function createVideoContext(videoId) {
@@ -1712,177 +1708,6 @@ exports.__esModule = true;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/* eslint-disable max-len */
-var CanvasContext = function () {
-  function CanvasContext(weixinCanvasContext) {
-    _classCallCheck(this, CanvasContext);
-
-    this.weixinCanvasContext = weixinCanvasContext;
-  }
-
-  CanvasContext.prototype.beginPath = function beginPath(a) {
-    return this.weixinCanvasContext.beginPath(a);
-  };
-
-  CanvasContext.prototype.save = function save() {
-    return this.weixinCanvasContext.save();
-  };
-
-  CanvasContext.prototype.restore = function restore() {
-    return this.weixinCanvasContext.restore();
-  };
-
-  CanvasContext.prototype.setGlobalAlpha = function setGlobalAlpha(alpha) {
-    return this.weixinCanvasContext.setGlobalAlpha(alpha);
-  };
-
-  CanvasContext.prototype.setFillStyle = function setFillStyle(color) {
-    return this.weixinCanvasContext.setFillStyle(color);
-  };
-
-  CanvasContext.prototype.setStrokeStyle = function setStrokeStyle(color) {
-    return this.weixinCanvasContext.setStrokeStyle(color);
-  };
-
-  CanvasContext.prototype.setShadow = function setShadow(offsetX, offsetY, blur, color) {
-    return this.weixinCanvasContext.setShadow(offsetX, offsetY, blur, color);
-  };
-
-  CanvasContext.prototype.setLineCap = function setLineCap(lineCap) {
-    return this.weixinCanvasContext.setLineCap(lineCap);
-  };
-
-  CanvasContext.prototype.setLineJoin = function setLineJoin(lineJoin) {
-    return this.weixinCanvasContext.setLineJoin(lineJoin);
-  };
-
-  CanvasContext.prototype.setLineWidth = function setLineWidth(lineWidth) {
-    return this.weixinCanvasContext.setLineWidth(lineWidth);
-  };
-
-  CanvasContext.prototype.setMiterLimit = function setMiterLimit(miterLimit) {
-    return this.weixinCanvasContext.setMiterLimit(miterLimit);
-  };
-
-  CanvasContext.prototype.setFontSize = function setFontSize(fontSize) {
-    return this.weixinCanvasContext.setFontSize(fontSize);
-  };
-
-  CanvasContext.prototype.rotate = function rotate(_rotate) {
-    return this.weixinCanvasContext.rotate(_rotate);
-  };
-
-  CanvasContext.prototype.scale = function scale(scaleWidth, scaleHeight) {
-    return this.weixinCanvasContext.scale(scaleWidth, scaleHeight);
-  };
-
-  CanvasContext.prototype.translate = function translate(x, y) {
-    return this.weixinCanvasContext.translate(x, y);
-  };
-
-  CanvasContext.prototype.moveTo = function moveTo(x, y) {
-    return this.weixinCanvasContext.moveTo(x, y);
-  };
-
-  CanvasContext.prototype.lineTo = function lineTo(x, y) {
-    return this.weixinCanvasContext.lineTo(x, y);
-  };
-
-  CanvasContext.prototype.closePath = function closePath() {
-    return this.weixinCanvasContext.closePath();
-  };
-
-  CanvasContext.prototype.fillText = function fillText(text, x, y, maxWidth) {
-    return this.weixinCanvasContext.fillText(text, x, y, maxWidth);
-  };
-
-  CanvasContext.prototype.drawImage = function drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) {
-    return this.weixinCanvasContext.drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
-  };
-
-  CanvasContext.prototype.arc = function arc(x, y, r, sAngle, eAngle, counterclockwise) {
-    return this.weixinCanvasContext.arc(x, y, r, sAngle, eAngle, counterclockwise);
-  };
-
-  CanvasContext.prototype.quadraticCurveTo = function quadraticCurveTo(cpx, cpy, x, y) {
-    return this.weixinCanvasContext.quadraticCurveTo(cpx, cpy, x, y);
-  };
-
-  CanvasContext.prototype.bezierCurveTo = function bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y) {
-    return this.weixinCanvasContext.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
-  };
-
-  CanvasContext.prototype.rect = function rect(x, y, width, height) {
-    return this.weixinCanvasContext.rect(x, y, width, height);
-  };
-
-  CanvasContext.prototype.clearRect = function clearRect(x, y, width, height) {
-    return this.weixinCanvasContext.clearRect(x, y, width, height);
-  };
-
-  CanvasContext.prototype.stroke = function stroke() {
-    return this.weixinCanvasContext.stroke();
-  };
-
-  CanvasContext.prototype.fill = function fill() {
-    return this.weixinCanvasContext.fill();
-  };
-
-  CanvasContext.prototype.draw = function draw(reserve, callback) {
-    return this.weixinCanvasContext.draw(reserve, callback);
-  };
-
-  CanvasContext.prototype.fillRect = function fillRect(x, y, width, height) {
-    return this.weixinCanvasContext.fillRect(x, y, width, height);
-  };
-
-  CanvasContext.prototype.getActions = function getActions() {
-    return this.weixinCanvasContext.getActions();
-  };
-
-  return CanvasContext;
-}();
-
-exports.default = CanvasContext;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var LivePlayerContext = function () {
-  function LivePlayerContext(weixinLivePlayerContext) {
-    _classCallCheck(this, LivePlayerContext);
-
-    this.weixinLivePlayerContext = weixinLivePlayerContext;
-  }
-
-  LivePlayerContext.prototype.play = function play() {
-    return this.weixinLivePlayerContext.play();
-  };
-
-  return LivePlayerContext;
-}();
-
-exports.default = LivePlayerContext;
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 var VideoContext = function () {
   function VideoContext(weixinVideoContext) {
     _classCallCheck(this, VideoContext);
@@ -1920,7 +1745,7 @@ var VideoContext = function () {
 exports.default = VideoContext;
 
 /***/ }),
-/* 18 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

@@ -4,7 +4,6 @@
     "zhang/zhang",
     "wang/wang",
     "new-tabs/new-tabs",
-    
     "yang/yang"
   ],
   "window": {
@@ -27,5 +26,6 @@
     "onekit-slider": "toutiao2weixin/ui/slider/slider",
     "onekit-video": "toutiao2weixin/ui/video/video",
     "onekit-view": "toutiao2weixin/ui/view/view"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

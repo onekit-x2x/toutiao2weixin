@@ -1,35 +1,5 @@
 <onekit-view onekit-class="container">
-    <onekit-view onekit-class="body">
-      <onekit-view onekit-class="page-section page-default">
-        <onekit-view onekit-class="page-section-title page-section-title-space">默认样式</onekit-view>
-        <onekit-view onekit-class="icon-block">
-          <onekit-view wx:for="{{icons}}" wx:for-item="iconline" onekit-class="ttui-flex icon-line">
-            <onekit-view wx:for="{{iconline}}" wx:for-item="icon" onekit-class="ttui-flex__item icon-single-wrapper">
-              <label>
-                <onekit-icon onekit-class="tt-icon" type="{{icon}}"></onekit-icon>
-                {{icon}}
-              </label>
-            </onekit-view>
-          </onekit-view>
-        </onekit-view>
-      </onekit-view>
-      <onekit-view onekit-class="page-section page-size">
-        <onekit-view onekit-class="page-section-title page-section-title-space">尺寸选择</onekit-view>
-        <onekit-view onekit-class="icon-block">
-            <onekit-view wx:for="{{sizes}}" onekit-class="icon-wrapper">
-                <onekit-icon onekit-class="tt-icon" size="{{item}}" type="success"></onekit-icon>
-                <onekit-view onekit-class="icon-size">{{item}}</onekit-view>
-            </onekit-view>
-        </onekit-view>
-      </onekit-view>
-
-      <onekit-view onekit-class="page-section page-color">
-          <onekit-view onekit-class="page-section-title page-section-title-space">颜色选择</onekit-view>
-          <onekit-view onekit-class="icon-block">
-            <onekit-view wx:for="{{colors}}" onekit-class="icon-wrapper">
-                <onekit-icon onekit-class="tt-icon" size="36" color="{{item}}" type="success"></onekit-icon>
-            </onekit-view>
-          </onekit-view>
-        </onekit-view>
-    </onekit-view>
+  <onekit-view onekit-class="body canvas-space">
+    <canvas canvas-id="canvas" class="canvas"></canvas>
   </onekit-view>
+</onekit-view>
