@@ -1,11 +1,86 @@
-/* eslint-disable max-len */
 export default class CanvasContext {
   constructor(weixinCanvasContext) {
     this.weixinCanvasContext = weixinCanvasContext
   }
 
-  beginPath(a) {
-    return this.weixinCanvasContext.beginPath(a)
+  draw() {
+    return this.weixinCanvasContext.draw.apply(this, arguments)
+  }
+
+  beginPath() {
+    return this.weixinCanvasContext.beginPath()
+  }
+
+  clip() {
+    return this.weixinCanvasContext.clip()
+  }
+
+  lineTo() {
+    return this.weixinCanvasContext.lineTo.apply(this, arguments)
+  }
+
+  setFontSize(size) {
+    return this.weixinCanvasContext.setFontSize(size)
+  }
+
+  setFillStyle(color) {
+    return this.weixinCanvasContext.setFillStyle(color)
+  }
+
+  createLinearGradient() {
+    return this.weixinCanvasContext.createLinearGradient.apply(this, arguments)
+  }
+
+  setStrokeStyle(color) {
+    return this.setStrokeStyle(color)
+  }
+
+  setGlobalAlpha(alpha) {
+    return this.setGlobalAlpha(alpha)
+  }
+
+  setShadow() {
+    return this.weixinCanvasContext.setShadow.apply(this, arguments)
+  }
+
+  setLineDash() {
+    return this.weixinCanvasContext.setLineDash.apply(this, arguments)
+  }
+
+  fill() {
+    return this.weixinCanvasContext.fill()
+  }
+
+  stroke() {
+    return this.weixinCanvasContext.stroke()
+  }
+
+  fillRect() {
+    return this.weixinCanvasContext.fillRect.apply(this, arguments)
+  }
+
+  strokeRect() {
+    return this.weixinCanvasContext.strokeRect.apply(this, arguments)
+  }
+
+  drawImage() {
+    return this.weixinCanvasContext.drawImage.apply(this, arguments)
+  }
+
+  measureText(string) {
+    return this.weixinCanvasContext.measureText(string)
+  } 
+  
+  scale() {
+    return this.weixinCanvasContext.scale.apply(this, arguments)
+  }
+
+  rotate(r) {
+    return this.weixinCanvasContext.rotate(r)
+  }
+
+  translate() {
+    return this.weixinCanvasContext.translate.apply(this, arguments)
   }
 
   save() {
@@ -16,111 +91,63 @@ export default class CanvasContext {
     return this.weixinCanvasContext.restore()
   }
 
-  setGlobalAlpha(alpha) {
-    return this.weixinCanvasContext.setGlobalAlpha(alpha)
+  clearRect() {
+    return this.weixinCanvasContext.clearRect.apply(this, arguments)
   }
 
-  setFillStyle(color) {
-    return this.weixinCanvasContext.setFillStyle(color)
+  fillText() {
+    return this.weixinCanvasContext.fillText.apply(this, arguments)
   }
 
-  setStrokeStyle(color) {
-    return this.weixinCanvasContext.setStrokeStyle(color)
+  setTextAlign(string) {
+    return this.weixinCanvasContext.setTextAlign(string)
   }
 
-  setShadow(offsetX, offsetY, blur, color) {
-    return this.weixinCanvasContext.setShadow(offsetX, offsetY, blur, color)
+  setLineCap(string) {
+    return this.weixinCanvasContext.setLineCap(string)
   }
 
-  setLineCap(lineCap) {
-    return this.weixinCanvasContext.setLineCap(lineCap)
+  setLineJoin(string) {
+    return this.weixinCanvasContext.setLineJoin(string)
   }
 
-  setLineJoin(lineJoin) {
-    return this.weixinCanvasContext.setLineJoin(lineJoin)
+  setLineWidth(string) {
+    return this.weixinCanvasContext.setLineWidth(string)
+  }
+  
+  setMiterLimit(string) {
+    return this.weixinCanvasContext.setMiterLimit(string)
+  }
+  
+  setTextBaseline(string) {
+    return this.weixinCanvasContext.setTextBaseline(string)
   }
 
-  setLineWidth(lineWidth) {
-    return this.weixinCanvasContext.setLineWidth(lineWidth)
+  transform() {
+    return this.weixinCanvasContext.transform.apply(this, arguments)
   }
 
-  setMiterLimit(miterLimit) {
-    return this.weixinCanvasContext.setMiterLimit(miterLimit)
+  setTransform() {
+    return this.weixinCanvasContext.setTransform.apply(this, arguments)
+  }
+  
+  moveTo() {
+    return this.weixinCanvasContext.moveTo.apply(this, arguments)
   }
 
-  setFontSize(fontSize) {
-    return this.weixinCanvasContext.setFontSize(fontSize)
+  arc() {
+    return this.weixinCanvasContext.arc.apply(this, arguments)
   }
 
-  rotate(rotate) {
-    return this.weixinCanvasContext.rotate(rotate)
+  quadraticCurveTo() {
+    return this.weixinCanvasContext.quadraticCurveTo.apply(this, arguments)
   }
 
-  scale(scaleWidth, scaleHeight) {
-    return this.weixinCanvasContext.scale(scaleWidth, scaleHeight)
-  }
-
-  translate(x, y) {
-    return this.weixinCanvasContext.translate(x, y)
-  }
-
-  moveTo(x, y) {
-    return this.weixinCanvasContext.moveTo(x, y)
-  }
-
-  lineTo(x, y) {
-    return this.weixinCanvasContext.lineTo(x, y)
+  bezierCurveTo() {
+    return this.weixinCanvasContext.bezierCurveTo.apply(this, arguments)
   }
 
   closePath() {
     return this.weixinCanvasContext.closePath()
-  }
-
-  fillText(text, x, y, maxWidth) {
-    return this.weixinCanvasContext.fillText(text, x, y, maxWidth)
-  }
-
-  drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) {
-    return this.weixinCanvasContext.drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
-  }
-
-  arc(x, y, r, sAngle, eAngle, counterclockwise) {
-    return this.weixinCanvasContext.arc(x, y, r, sAngle, eAngle, counterclockwise)
-  }
-
-  quadraticCurveTo(cpx, cpy, x, y) {
-    return this.weixinCanvasContext.quadraticCurveTo(cpx, cpy, x, y)
-  }
-
-  bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y) {
-    return this.weixinCanvasContext.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
-  }
-
-  rect(x, y, width, height) {
-    return this.weixinCanvasContext.rect(x, y, width, height)
-  }
-
-  clearRect(x, y, width, height) {
-    return this.weixinCanvasContext.clearRect(x, y, width, height)
-  }
-
-  stroke() {
-    return this.weixinCanvasContext.stroke()
-  }
-
-  fill() {
-    return this.weixinCanvasContext.fill()
-  }
-
-  draw(reserve, callback) {
-    return this.weixinCanvasContext.draw(reserve, callback)
-  }
-
-  fillRect(x, y, width, height) {
-    return this.weixinCanvasContext.fillRect(x, y, width, height)
-  }
-
-  getActions() {
-    return this.weixinCanvasContext.getActions()
   }
 }
