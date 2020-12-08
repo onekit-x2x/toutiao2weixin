@@ -1,8 +1,8 @@
 /* eslint-disable camelcase */
 /* eslint-disable max-len */
 /* eslint-disable no-console */
-import CanvasContext from './api/CanvasContext'
-import LivePlayerContext from './api/LivePlayerContext'
+// import CanvasContext from './api/CanvasContext'
+// import LivePlayerContext from './api/LivePlayerContext'
 import VideoContext from './api/VideoContext'
 import FileSystemManager from './api/FileSystemManager'
 import OneKit from './js/OneKit'
@@ -89,11 +89,13 @@ export default class tt {
   }
 
   static createCanvasContext(canvasId) {
-    return new CanvasContext(wx.createCanvasContext(canvasId))
+    // return new CanvasContext(wx.createCanvasContext(canvasId))
+    return wx.createCanvasContext(canvasId)
   }
 
   static createLivePlayerContext(livePlayerId) {
-    return new LivePlayerContext(wx.createLivePlayerContext(livePlayerId))
+    // return new LivePlayerContext(wx.createLivePlayerContext(livePlayerId))
+    return wx.createLivePlayerContext(livePlayerId)
   }
 
   static createVideoContext(videoId) {
