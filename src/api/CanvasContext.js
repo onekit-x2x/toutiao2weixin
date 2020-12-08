@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 export default class CanvasContext {
   constructor(weixinCanvasContext) {
     this.weixinCanvasContext = weixinCanvasContext
@@ -156,24 +157,23 @@ export default class CanvasContext {
   }
 
   // toutiao is not support
+  static set lineWidth(lineWidth) {
+    console.warn(`toutiao is not support lineCap lineWidth ${lineWidth}`)
+  }
 
-  // set lineWidth(lineWidth) {
-  //   this.weixinCanvasContext.lineWidth = lineWidth
-  // }
+  static set textAlign(textAlign) {
+    console.warn(`toutiao is not support lineCap ${textAlign}`)
+  }
 
-  // set textAlign(textAlign) {
-  //   this.weixinCanvasContext.textAlign = textAlign
-  // }
+  static set textBaseline(textBaseline) {
+    console.warn(`toutiao is not support textBaseline ${textBaseline}`)
+  }
 
-  // set textBaseline(textBaseline) {
-  //   this.weixinCanvasContext.textBaseline = textBaseline
-  // }
+  static set fillStyle(fillStyle) {
+    console.warn(`toutiao is not support fillStyle ${fillStyle}`)
+  }
 
-  // set fillStyle(fillStyle) {
-  //   this.weixinCanvasContext.fillStyle = fillStyle
-  // }
-
-  // set lineCap(lineCap) {
-  //   this.weixinCanvasContext.lineCap = lineCap
-  // }
+  static set lineCap(lineCap) {
+    console.warn(`toutiao is not support lineCap ${lineCap}`)
+  }
 }

@@ -1714,6 +1714,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+/* eslint-disable no-console */
 var CanvasContext = function () {
   function CanvasContext(weixinCanvasContext) {
     _classCallCheck(this, CanvasContext);
@@ -1997,26 +1998,31 @@ var CanvasContext = function () {
 
     // toutiao is not support
 
-    // set lineWidth(lineWidth) {
-    //   this.weixinCanvasContext.lineWidth = lineWidth
-    // }
-
-    // set textAlign(textAlign) {
-    //   this.weixinCanvasContext.textAlign = textAlign
-    // }
-
-    // set textBaseline(textBaseline) {
-    //   this.weixinCanvasContext.textBaseline = textBaseline
-    // }
-
-    // set fillStyle(fillStyle) {
-    //   this.weixinCanvasContext.fillStyle = fillStyle
-    // }
-
-    // set lineCap(lineCap) {
-    //   this.weixinCanvasContext.lineCap = lineCap
-    // }
-
+  }], [{
+    key: "lineWidth",
+    set: function set(lineWidth) {
+      console.warn("toutiao is not support lineCap lineWidth " + lineWidth);
+    }
+  }, {
+    key: "textAlign",
+    set: function set(textAlign) {
+      console.warn("toutiao is not support lineCap " + textAlign);
+    }
+  }, {
+    key: "textBaseline",
+    set: function set(textBaseline) {
+      console.warn("toutiao is not support textBaseline " + textBaseline);
+    }
+  }, {
+    key: "fillStyle",
+    set: function set(fillStyle) {
+      console.warn("toutiao is not support fillStyle " + fillStyle);
+    }
+  }, {
+    key: "lineCap",
+    set: function set(lineCap) {
+      console.warn("toutiao is not support lineCap " + lineCap);
+    }
   }]);
 
   return CanvasContext;
