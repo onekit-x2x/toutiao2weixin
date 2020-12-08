@@ -259,15 +259,19 @@ exports.__esModule = true;
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /* eslint-disable camelcase */
 /* eslint-disable max-len */
 /* eslint-disable no-console */
-// import CanvasContext from './api/CanvasContext'
+
 // import LivePlayerContext from './api/LivePlayerContext'
 
 
-var _VideoContext = __webpack_require__(15);
+var _CanvasContext = __webpack_require__(15);
+
+var _CanvasContext2 = _interopRequireDefault(_CanvasContext);
+
+var _VideoContext = __webpack_require__(16);
 
 var _VideoContext2 = _interopRequireDefault(_VideoContext);
 
-var _FileSystemManager = __webpack_require__(16);
+var _FileSystemManager = __webpack_require__(17);
 
 var _FileSystemManager2 = _interopRequireDefault(_FileSystemManager);
 
@@ -361,8 +365,8 @@ var tt = function () {
   };
 
   tt.createCanvasContext = function createCanvasContext(canvasId) {
-    // return new CanvasContext(wx.createCanvasContext(canvasId))
-    return wx.createCanvasContext(canvasId);
+    return new _CanvasContext2.default(wx.createCanvasContext(canvasId));
+    // return wx.createCanvasContext(canvasId)
   };
 
   tt.createLivePlayerContext = function createLivePlayerContext(livePlayerId) {
@@ -1708,6 +1712,297 @@ exports.__esModule = true;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var CanvasContext = function () {
+  function CanvasContext(weixinCanvasContext) {
+    _classCallCheck(this, CanvasContext);
+
+    this.weixinCanvasContext = weixinCanvasContext;
+  }
+
+  CanvasContext.prototype.draw = function draw() {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return this.weixinCanvasContext.draw.apply(this, args);
+  };
+
+  CanvasContext.prototype.beginPath = function beginPath() {
+    return this.weixinCanvasContext.beginPath();
+  };
+
+  CanvasContext.prototype.clip = function clip() {
+    return this.weixinCanvasContext.clip();
+  };
+
+  CanvasContext.prototype.lineTo = function lineTo() {
+    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    return this.weixinCanvasContext.lineTo.apply(this, args);
+  };
+
+  CanvasContext.prototype.setFontSize = function setFontSize() {
+    for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+      args[_key3] = arguments[_key3];
+    }
+
+    return this.weixinCanvasContext.setFontSize.apply(this, args);
+  };
+
+  CanvasContext.prototype.setFillStyle = function setFillStyle() {
+    for (var _len4 = arguments.length, args = Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+      args[_key4] = arguments[_key4];
+    }
+
+    return this.weixinCanvasContext.setFillStyle.apply(this, args);
+  };
+
+  CanvasContext.prototype.createLinearGradient = function createLinearGradient() {
+    for (var _len5 = arguments.length, args = Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+      args[_key5] = arguments[_key5];
+    }
+
+    return this.weixinCanvasContext.createLinearGradient.apply(this, args);
+  };
+
+  CanvasContext.prototype.setStrokeStyle = function setStrokeStyle() {
+    for (var _len6 = arguments.length, args = Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
+      args[_key6] = arguments[_key6];
+    }
+
+    return this.weixinCanvasContext.setStrokeStyle.apply(this, args);
+  };
+
+  CanvasContext.prototype.setGlobalAlpha = function setGlobalAlpha() {
+    for (var _len7 = arguments.length, args = Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
+      args[_key7] = arguments[_key7];
+    }
+
+    return this.weixinCanvasContext.setGlobalAlpha.apply(this, args);
+  };
+
+  CanvasContext.prototype.setShadow = function setShadow() {
+    for (var _len8 = arguments.length, args = Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
+      args[_key8] = arguments[_key8];
+    }
+
+    return this.weixinCanvasContext.setShadow.apply(this, args);
+  };
+
+  CanvasContext.prototype.setLineDash = function setLineDash() {
+    for (var _len9 = arguments.length, args = Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
+      args[_key9] = arguments[_key9];
+    }
+
+    return this.weixinCanvasContext.setLineDash.apply(this, args);
+  };
+
+  CanvasContext.prototype.fill = function fill() {
+    return this.weixinCanvasContext.fill();
+  };
+
+  CanvasContext.prototype.stroke = function stroke() {
+    return this.weixinCanvasContext.stroke();
+  };
+
+  CanvasContext.prototype.fillRect = function fillRect() {
+    for (var _len10 = arguments.length, args = Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
+      args[_key10] = arguments[_key10];
+    }
+
+    return this.weixinCanvasContext.fillRect.apply(this, args);
+  };
+
+  CanvasContext.prototype.strokeRect = function strokeRect() {
+    for (var _len11 = arguments.length, args = Array(_len11), _key11 = 0; _key11 < _len11; _key11++) {
+      args[_key11] = arguments[_key11];
+    }
+
+    return this.weixinCanvasContext.strokeRect.apply(this, args);
+  };
+
+  CanvasContext.prototype.drawImage = function drawImage() {
+    for (var _len12 = arguments.length, args = Array(_len12), _key12 = 0; _key12 < _len12; _key12++) {
+      args[_key12] = arguments[_key12];
+    }
+
+    return this.weixinCanvasContext.drawImage.apply(this, args);
+  };
+
+  CanvasContext.prototype.measureText = function measureText() {
+    for (var _len13 = arguments.length, args = Array(_len13), _key13 = 0; _key13 < _len13; _key13++) {
+      args[_key13] = arguments[_key13];
+    }
+
+    return this.weixinCanvasContext.measureText.apply(this, args);
+  };
+
+  CanvasContext.prototype.scale = function scale() {
+    for (var _len14 = arguments.length, args = Array(_len14), _key14 = 0; _key14 < _len14; _key14++) {
+      args[_key14] = arguments[_key14];
+    }
+
+    return this.weixinCanvasContext.scale.apply(this, args);
+  };
+
+  CanvasContext.prototype.rotate = function rotate() {
+    for (var _len15 = arguments.length, args = Array(_len15), _key15 = 0; _key15 < _len15; _key15++) {
+      args[_key15] = arguments[_key15];
+    }
+
+    return this.weixinCanvasContext.rotate.apply(this, args);
+  };
+
+  CanvasContext.prototype.translate = function translate() {
+    for (var _len16 = arguments.length, args = Array(_len16), _key16 = 0; _key16 < _len16; _key16++) {
+      args[_key16] = arguments[_key16];
+    }
+
+    return this.weixinCanvasContext.translate.apply(this, args);
+  };
+
+  CanvasContext.prototype.save = function save() {
+    return this.weixinCanvasContext.save();
+  };
+
+  CanvasContext.prototype.restore = function restore() {
+    return this.weixinCanvasContext.restore();
+  };
+
+  CanvasContext.prototype.clearRect = function clearRect() {
+    for (var _len17 = arguments.length, args = Array(_len17), _key17 = 0; _key17 < _len17; _key17++) {
+      args[_key17] = arguments[_key17];
+    }
+
+    return this.weixinCanvasContext.clearRect.apply(this, args);
+  };
+
+  CanvasContext.prototype.fillText = function fillText() {
+    for (var _len18 = arguments.length, args = Array(_len18), _key18 = 0; _key18 < _len18; _key18++) {
+      args[_key18] = arguments[_key18];
+    }
+
+    return this.weixinCanvasContext.fillText.apply(this, args);
+  };
+
+  CanvasContext.prototype.setTextAlign = function setTextAlign() {
+    for (var _len19 = arguments.length, args = Array(_len19), _key19 = 0; _key19 < _len19; _key19++) {
+      args[_key19] = arguments[_key19];
+    }
+
+    return this.weixinCanvasContext.setTextAlign.apply(this, args);
+  };
+
+  CanvasContext.prototype.setLineCap = function setLineCap() {
+    for (var _len20 = arguments.length, args = Array(_len20), _key20 = 0; _key20 < _len20; _key20++) {
+      args[_key20] = arguments[_key20];
+    }
+
+    return this.weixinCanvasContext.setLineCap.apply(this, args);
+  };
+
+  CanvasContext.prototype.setLineJoin = function setLineJoin() {
+    for (var _len21 = arguments.length, args = Array(_len21), _key21 = 0; _key21 < _len21; _key21++) {
+      args[_key21] = arguments[_key21];
+    }
+
+    return this.weixinCanvasContext.setLineJoin.apply(this, args);
+  };
+
+  CanvasContext.prototype.setLineWidth = function setLineWidth() {
+    for (var _len22 = arguments.length, args = Array(_len22), _key22 = 0; _key22 < _len22; _key22++) {
+      args[_key22] = arguments[_key22];
+    }
+
+    return this.weixinCanvasContext.setLineWidth.apply(this, args);
+  };
+
+  CanvasContext.prototype.setMiterLimit = function setMiterLimit() {
+    for (var _len23 = arguments.length, args = Array(_len23), _key23 = 0; _key23 < _len23; _key23++) {
+      args[_key23] = arguments[_key23];
+    }
+
+    return this.weixinCanvasContext.setMiterLimit.apply(this, args);
+  };
+
+  CanvasContext.prototype.setTextBaseline = function setTextBaseline() {
+    for (var _len24 = arguments.length, args = Array(_len24), _key24 = 0; _key24 < _len24; _key24++) {
+      args[_key24] = arguments[_key24];
+    }
+
+    return this.weixinCanvasContext.setTextBaseline.apply(this, args);
+  };
+
+  CanvasContext.prototype.transform = function transform() {
+    for (var _len25 = arguments.length, args = Array(_len25), _key25 = 0; _key25 < _len25; _key25++) {
+      args[_key25] = arguments[_key25];
+    }
+
+    return this.weixinCanvasContext.transform.apply(this, args);
+  };
+
+  CanvasContext.prototype.setTransform = function setTransform() {
+    for (var _len26 = arguments.length, args = Array(_len26), _key26 = 0; _key26 < _len26; _key26++) {
+      args[_key26] = arguments[_key26];
+    }
+
+    return this.weixinCanvasContext.setTransform.apply(this, args);
+  };
+
+  CanvasContext.prototype.moveTo = function moveTo() {
+    for (var _len27 = arguments.length, args = Array(_len27), _key27 = 0; _key27 < _len27; _key27++) {
+      args[_key27] = arguments[_key27];
+    }
+
+    return this.weixinCanvasContext.moveTo.apply(this, args);
+  };
+
+  CanvasContext.prototype.arc = function arc() {
+    for (var _len28 = arguments.length, args = Array(_len28), _key28 = 0; _key28 < _len28; _key28++) {
+      args[_key28] = arguments[_key28];
+    }
+
+    return this.weixinCanvasContext.arc.apply(this, args);
+  };
+
+  CanvasContext.prototype.quadraticCurveTo = function quadraticCurveTo() {
+    for (var _len29 = arguments.length, args = Array(_len29), _key29 = 0; _key29 < _len29; _key29++) {
+      args[_key29] = arguments[_key29];
+    }
+
+    return this.weixinCanvasContext.quadraticCurveTo.apply(this, args);
+  };
+
+  CanvasContext.prototype.bezierCurveTo = function bezierCurveTo() {
+    for (var _len30 = arguments.length, args = Array(_len30), _key30 = 0; _key30 < _len30; _key30++) {
+      args[_key30] = arguments[_key30];
+    }
+
+    return this.weixinCanvasContext.bezierCurveTo.apply(this, args);
+  };
+
+  CanvasContext.prototype.closePath = function closePath() {
+    return this.weixinCanvasContext.closePath();
+  };
+
+  return CanvasContext;
+}();
+
+exports.default = CanvasContext;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var VideoContext = function () {
   function VideoContext(weixinVideoContext) {
     _classCallCheck(this, VideoContext);
@@ -1745,7 +2040,7 @@ var VideoContext = function () {
 exports.default = VideoContext;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
