@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+	"navigationBarTitleText":"slider",
+	"usingComponents":{
+		"onekit-slider":"../toutiao2weixin/ui/slider/slider"
+	}
 }

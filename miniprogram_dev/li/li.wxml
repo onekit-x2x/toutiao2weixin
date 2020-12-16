@@ -1,5 +1,32 @@
-<onekit-view class="container">
-  <onekit-view class="body canvas-space">
-    <canvas canvas-id="canvas" class="canvas"></canvas>
-  </onekit-view>
-</onekit-view>
+
+<view class="container">
+  <view class="body body-space">
+    <view class="page-section">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block s-for="background">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section">
+      <view class="ttui-cells">
+        <view class="ttui-cell">
+          <view class="ttui-cell__bd">指示点</view>
+          <view class="ttui-cell__ft">
+            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots"></switch>
+          </view>
+        </view>
+        <view class="ttui-cell">
+          <view class="ttui-cell__bd">自动播放</view>
+          <view class="ttui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeAutoplay"></switch>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</view>
