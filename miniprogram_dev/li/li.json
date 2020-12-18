@@ -1,5 +1,5 @@
 {
-	"navigationBarTitleText":"slider",
+	"navigationBarTitleText":"form",
 	"usingComponents":{
 		"onekit-slider":"../toutiao2weixin/ui/slider/slider"
 	}

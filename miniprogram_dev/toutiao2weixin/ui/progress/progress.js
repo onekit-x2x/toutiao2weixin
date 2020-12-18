@@ -220,9 +220,6 @@ Component({
 
   // // console.log(borderRadius)
   // },
-  /**
-   * 组件的方法列表
-   */
   methods: {}
 });
 

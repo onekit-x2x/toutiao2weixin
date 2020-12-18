@@ -1,36 +1,34 @@
 import {OnekitPage} from '../toutiao2weixin/index';
 import {tt} from '../toutiao2weixin/index';
 OnekitPage({
-    data:{
-        background:[
-            'demo-text-1',
-            'demo-text-2',
-            'demo-text-3'
-        ],
-        indicatorDots:true,
-        vertical:false,
-        autoplay:false,
-        interval:2000,
-        duration:500
+    data: {
+      pickerHidden: true,
+      chosen: ''
     },
-    changeIndicatorDots:function(e){
-        this.setData({
-        indicatorDots:!this.data.indicatorDots
-    });
+    pickerConfirm: function (e) {
+      this.setData({
+        pickerHidden: true
+      })
+      this.setData({
+        chosen: e.detail.value
+      })
     },
-    changeAutoplay:function(e){
-        this.setData({
-        autoplay:!this.data.autoplay
-    });
+    pickerCancel: function (e) {
+      this.setData({
+        pickerHidden: true
+      })
     },
-    intervalChange:function(e){
-        this.setData({
-        interval:e.detail.value
-    });
+    pickerShow: function (e) {
+      this.setData({
+        pickerHidden: false
+      })
     },
-    durationChange:function(e){
-        this.setData({
-        duration:e.detail.value
-    });
+    formSubmit: function (e) {
+      console.log(e)
+    },
+    formReset: function (e) {
+      this.setData({
+        chosen: ''
+      })
     }
-});
+  })

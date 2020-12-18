@@ -51,25 +51,23 @@ Component({
     },
   },
   methods: {
-    video_play() {
-      this.triggerEvent('Play')
+    video_play(e) {
+      this.triggerEvent('Play', e)
     },
-    video_pause() {
-      this.triggerEvent('Pause')
+    video_pause(e) {
+      this.triggerEvent('Pause', e)
     },
-    video_ended() {
-      this.triggerEvent('Ended')
+    video_ended(e) {
+      this.triggerEvent('Ended', e)
     },
-    video_error() {
-      this.triggerEvent('Error')
+    video_error(e) {
+      this.triggerEvent('Error', e)
     },
-    video_timeupdate(wx_e) {
-      const wx_detail = wx_e.wx_detail
-      const tt_detail = wx_detail
-      this.triggerEvent('Timeupdate', tt_detail)
+    video_timeupdate(e) {
+      this.triggerEvent('Timeupdate', e.detail)
     },
-    video_fullscreenchange() {
-      this.triggerEvent('Fullscreenchange')
+    video_fullscreenchange(e) {
+      this.triggerEvent('Fullscreenchange', e)
     },
   }
 

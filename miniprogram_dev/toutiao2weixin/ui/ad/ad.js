@@ -184,26 +184,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* eslint-disable camelcase */
 Component({
   behaviors: [_onekit_behavior2.default, _toutiao_behavior2.default],
-
   options: {
     virtualHost: true
   },
-
-  data: {},
   properties: {
     preRollUnitId: { type: String, value: '' },
     adIntervals: { type: Number, value: 0 },
     type: { type: String, value: 'banner' }
   },
   methods: {
-    ad_load: function ad_load() {
-      this.triggerEvent('Load');
+    ad_load: function ad_load(e) {
+      this.triggerEvent('load', e);
     },
-    ad_error: function ad_error() {
-      this.triggerEvent('Error');
+    ad_error: function ad_error(e) {
+      this.triggerEvent('error', e);
     },
-    ad_close: function ad_close() {
-      this.triggerEvent('Close');
+    ad_close: function ad_close(e) {
+      this.triggerEvent('close', e);
     }
   }
 });

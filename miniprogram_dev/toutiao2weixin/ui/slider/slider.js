@@ -190,7 +190,7 @@ Component({
   /**
    * 组件的属性列表
    */
-  behaviors: [_onekit_behavior2.default, _toutiao_behavior2.default, 'wx://form-field-group'],
+  behaviors: [_onekit_behavior2.default, _toutiao_behavior2.default, 'wx://form-field'],
   options: {
     virtualHost: true
   },
@@ -208,31 +208,21 @@ Component({
     blockColor: { type: String, value: '#fff' },
     selectedColor: { type: String, value: '#1aad19' }
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {},
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
-    slider_change: function slider_change(wx_e) {
-      var wx_detail = wx_e.detail;
-      var tt_e = {}; // wx_e;
-      var tt_detail = wx_detail; // {};
-      tt_e.detail = tt_detail;
-      this.triggerEvent('Change', tt_e);
+    slider_change: function slider_change(e) {
+      this.triggerEvent('Change', e.detail);
     },
-    slider_changing: function slider_changing(wx_e) {
-      var wx_detail = wx_e.detail;
-      var tt_e = {}; // wx_e;
-      var tt_detail = wx_detail; // {};
-      tt_e.detail = tt_detail;
-      this.triggerEvent('Changing', tt_e);
+    slider_changing: function slider_changing(e) {
+      this.triggerEvent('Changing', e.detail);
     }
   }
+  // observers: {
+  //   value(value) {
+  //     this.setData({
+  //       value
+  //     })
+  //   }
+  // }
 });
 
 /***/ })

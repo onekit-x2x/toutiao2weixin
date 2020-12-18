@@ -27,31 +27,19 @@ Component({
     blockColor: {type: String, value: '#fff'},
     selectedColor: {type: String, value: '#1aad19'}
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
-    slider_change(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Change', tt_e)
+    slider_change(e) {
+      this.triggerEvent('Change', e.detail)
     },
-    slider_changing(wx_e) {
-      const wx_detail = wx_e.detail
-      const tt_e = {}// wx_e;
-      const tt_detail = wx_detail// {};
-      tt_e.detail = tt_detail
-      this.triggerEvent('Changing', tt_e)
+    slider_changing(e) {
+      this.triggerEvent('Changing', e.detail)
     }
-  }
+  },
+  // observers: {
+  //   value(value) {
+  //     this.setData({
+  //       value
+  //     })
+  //   }
+  // }
 })

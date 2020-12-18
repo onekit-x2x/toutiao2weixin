@@ -6,27 +6,23 @@ import toutiao_behavior from '../../behavior/toutiao_behavior'
 
 Component({
   behaviors: [onekit_behavior, toutiao_behavior],
-
   options: {
     virtualHost: true
   },
-
-  data: {},
   properties: {
     preRollUnitId: {type: String, value: ''},
     adIntervals: {type: Number, value: 0},
     type: {type: String, value: 'banner'},
   },
   methods: {
-    ad_load() {
-      this.triggerEvent('Load')
+    ad_load(e) {
+      this.triggerEvent('load', e)
     },
-    ad_error() {
-      this.triggerEvent('Error')
+    ad_error(e) {
+      this.triggerEvent('error', e)
     },
-    ad_close() {
-      this.triggerEvent('Close')
+    ad_close(e) {
+      this.triggerEvent('close', e)
     },
-
   }
 })

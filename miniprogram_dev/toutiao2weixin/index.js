@@ -170,7 +170,7 @@ module.exports = {
 
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OneKit = exports.tt = exports.OnekitPage = exports.OnekitComponent = exports.OnekitBehavior = exports.OnekitApp = void 0;
+exports.tt = exports.OnekitPage = exports.OnekitComponent = exports.OnekitBehavior = exports.OnekitApp = void 0;
 var OnekitApp_1 = __webpack_require__(10);
 exports.OnekitApp = OnekitApp_1.default;
 var OnekitBehavior_1 = __webpack_require__(11);
@@ -181,8 +181,6 @@ var OnekitPage_1 = __webpack_require__(13);
 exports.OnekitPage = OnekitPage_1.default;
 var tt_1 = __webpack_require__(14);
 exports.tt = tt_1.default;
-var OneKit_1 = __webpack_require__(2);
-exports.OneKit = OneKit_1.default;
 
 /***/ }),
 /* 10 */
