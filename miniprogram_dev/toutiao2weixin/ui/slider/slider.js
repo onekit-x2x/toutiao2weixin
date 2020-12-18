@@ -194,6 +194,9 @@ Component({
   options: {
     virtualHost: true
   },
+  data: {
+    value: ''
+  },
   properties: {
     min: { type: String, value: 0 },
     max: { type: Number, value: 100 },
@@ -203,26 +206,22 @@ Component({
     color: { type: String, value: '#e9e9e9' },
     showValue: { type: Boolean, value: false },
     activeColor: { type: String, value: '#f85959' },
-    backgroundColor: { type: String, value: '#ddd' },
-    blockSize: { type: Number, value: 22 },
+    backgroundColor: { type: String, value: '#e9e9e9' },
+    blockSize: { type: Number, value: 28 },
     blockColor: { type: String, value: '#fff' },
     selectedColor: { type: String, value: '#1aad19' }
   },
   methods: {
     slider_change: function slider_change(e) {
-      this.triggerEvent('Change', e.detail);
+      this.setData({
+        value: e.detail.value
+      });
+      this.triggerEvent('change', e.detail);
     },
     slider_changing: function slider_changing(e) {
-      this.triggerEvent('Changing', e.detail);
+      this.triggerEvent('changing', e.detail);
     }
   }
-  // observers: {
-  //   value(value) {
-  //     this.setData({
-  //       value
-  //     })
-  //   }
-  // }
 });
 
 /***/ })
